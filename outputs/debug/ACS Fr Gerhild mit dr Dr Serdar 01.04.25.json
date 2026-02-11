@@ -1,9 +1,0 @@
-{
-  "file": "ACS Fr Gerhild mit dr Dr Serdar 01.04.25.m4a",
-  "srt": "_srt_repo/transcripts/ACS Fr Gerhild mit dr Dr Serdar 01.04.25.srt",
-  "picked": {
-    "start": 47.24,
-    "end": 61.74,
-    "reason": "start=substr:wie alt sind sie; end=substr:wie gross sind sie; digits=3"
-  }
-}

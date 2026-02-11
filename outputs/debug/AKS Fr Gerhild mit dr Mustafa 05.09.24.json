@@ -1,9 +1,0 @@
-{
-  "file": "AKS Fr Gerhild mit dr Mustafa 05.09.24.m4a",
-  "srt": "_srt_repo/transcripts/AKS Fr Gerhild mit dr Mustafa 05.09.24.srt",
-  "picked": {
-    "start": 70.75,
-    "end": 213.66,
-    "reason": "start=substr:wie alt sind sie; end=fuzzy:gewicht:85; digits=10"
-  }
-}

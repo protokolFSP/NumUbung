@@ -1,9 +1,0 @@
-{
-  "file": "a Appendizitis dr Omer mit dr Hafsa 13.06.2024.m4a",
-  "srt": "_srt_repo/transcripts/a Appendizitis dr Omer mit dr Hafsa 13.06.2024.srt",
-  "picked": {
-    "start": 65.42,
-    "end": 123.92,
-    "reason": "start=substr:wie alt sind sie; end=substr:gewicht; digits=7"
-  }
-}
