@@ -7,16 +7,15 @@ Outputs:
 - outputs/clips/<stem>.txt
 - outputs/practice_first20.mp3
 - outputs/manifest.json
+- outputs/debug/<stem>.json   (optional, --debug)
 
-Matching:
-- Start: any of --start-regex patterns (defaults include common variants)
-- End question: last match of any --end-regex pattern within first_minutes
-- Answer included:
-  after end question, extend window to include number-containing answer segments,
-  and stop early if a new question begins after capturing numbers.
+Robust matching:
+- Regex + fuzzy matching (RapidFuzz) on normalized text
+- Window selection with scoring
+- Answer inclusion after end-question:
+  - include number segments
+  - stop if we saw numbers AND (gap > max_gap_s OR next segment looks like a new question)
 
-Why this version:
-- Uses ffmpeg filter_complex concat (no concat_list.txt parsing issues).
 """
 
 from __future__ import annotations
@@ -34,34 +33,40 @@ from urllib.parse import quote
 
 import requests
 
+try:
+    from rapidfuzz import fuzz  # type: ignore
+except Exception:  # pragma: no cover
+    fuzz = None  # type: ignore
+
+
 IA_METADATA_URL = "https://archive.org/metadata/{identifier}"
 IA_DOWNLOAD_URL = "https://archive.org/download/{identifier}/{filename}"
 
-DEFAULT_START_REGEXES = [
-    r"\bwie\s+alt\s+sind\s+sie\b",
-    r"\bwie\s+alt\s+bist\s+du\b",
-    r"\bihr\s+alter\b",
-    r"\bwelches\s+alter\b",
-    r"\bgeburtsdatum\b",
-    r"\bgeboren\b",
+DEFAULT_START_PHRASES = [
+    "wie alt sind sie",
+    "wie alt bist du",
+    "ihr alter",
+    "welches alter",
+    "geburtsdatum",
+    "wann sind sie geboren",
+    "wann sind sie gebohren",
+    "wann bist du geboren",
 ]
 
-DEFAULT_END_REGEXES = [
-    r"\bwie\s+viel\s+wiegen\s+sie\b",
-    r"\bwie\s+viel\s+wiegen\s+du\b",
-    r"\bwas\s+wiegen\s+sie\b",
-    r"\bgewicht\b",
-    r"\bwie\s+gro[ßs]\s+sind\s+sie\b",
-    r"\bwie\s+gro[ßs]\s+bist\s+du\b",
-    r"\bihre\s+gr(o|ö)[ßs]e\b",
-    r"\bk(o|ö)rpergr(o|ö)[ßs]e\b",
+DEFAULT_END_PHRASES = [
+    "wie viel wiegen sie",
+    "was wiegen sie",
+    "ihr gewicht",
+    "wie groß sind sie",
+    "wie gross sind sie",
+    "ihre größe",
+    "ihre groesse",
+    "körpergröße",
+    "koerpergroesse",
 ]
 
-NUM_RE = re.compile(
-    r"\d+|(\bnull\b|\bein\b|\beins\b|\bzwei\b|\bdrei\b|\bvier\b|\bfünf\b|\bfuenf\b|\bsechs\b|"
-    r"\bsieben\b|\bacht\b|\bneun\b|\bzehn\b|\belf\b|\bzwölf\b|\bzwoelf\b)",
-    re.IGNORECASE,
-)
+NUM_RE = re.compile(r"\d+|(\bnull\b|\bein\b|\beins\b|\bzwei\b|\bdrei\b|\bvier\b|\bfünf\b|\bfuenf\b|\bsechs\b|\bsieben\b|\bacht\b|\bneun\b|\bzehn\b|\belf\b|\bzwölf\b|\bzwoelf\b)", re.IGNORECASE)
+DOB_RE = re.compile(r"\b(\d{1,2}[./-]\d{1,2}[./-]\d{2,4})\b")
 QUESTIONISH_RE = re.compile(
     r"^\s*(wie|wann|wo|was|welche|welcher|wieviel|haben|nehmen|sind|ist|können|koennen|dürfen|duerfen)\b",
     re.IGNORECASE,
@@ -167,74 +172,135 @@ def rolling_text(segs: List[Segment], i: int, window: int = 2) -> str:
     return " ".join(segs[j].text for j in range(lo, i + 1)).strip()
 
 
-def compile_patterns(patterns: Iterable[str]) -> List[re.Pattern]:
-    return [re.compile(p, re.IGNORECASE) for p in patterns]
+def normalize_text(s: str) -> str:
+    s = s.lower()
+    s = s.replace("ß", "ss").replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
+    s = re.sub(r"[^a-z0-9\s./-]+", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
 
 
-def find_first_match_index(segs: List[Segment], patterns: List[re.Pattern], max_seconds: float) -> Optional[int]:
-    for i, s in enumerate(segs):
-        if s.start > max_seconds:
-            break
-        txt = rolling_text(segs, i, 2)
-        if any(p.search(txt) for p in patterns):
-            return i
+def fuzzy_contains(text: str, phrases: List[str], threshold: int) -> Optional[Tuple[str, int]]:
+    if fuzz is None:
+        return None
+    t = normalize_text(text)
+    best_phrase = ""
+    best_score = -1
+    for p in phrases:
+        score = fuzz.partial_ratio(t, p)
+        if score > best_score:
+            best_score = score
+            best_phrase = p
+    if best_score >= threshold:
+        return best_phrase, int(best_score)
     return None
 
 
-def find_last_match_index(segs: List[Segment], start_i: int, patterns: List[re.Pattern], max_seconds: float) -> Optional[int]:
-    last: Optional[int] = None
-    for j in range(start_i, len(segs)):
-        if segs[j].start > max_seconds:
+def is_start_hit(text: str, start_phrases: List[str], threshold: int) -> Optional[str]:
+    t = normalize_text(text)
+    for p in start_phrases:
+        if p in t:
+            return f"substr:{p}"
+    fz = fuzzy_contains(text, start_phrases, threshold)
+    if fz:
+        phrase, score = fz
+        return f"fuzzy:{phrase}:{score}"
+    return None
+
+
+def is_end_hit(text: str, end_phrases: List[str], threshold: int) -> Optional[str]:
+    t = normalize_text(text)
+    for p in end_phrases:
+        if p in t:
+            return f"substr:{p}"
+    fz = fuzzy_contains(text, end_phrases, threshold)
+    if fz:
+        phrase, score = fz
+        return f"fuzzy:{phrase}:{score}"
+    return None
+
+
+def pick_window_scored(
+    segs: List[Segment],
+    start_phrases: List[str],
+    end_phrases: List[str],
+    max_search_seconds: float,
+    fuzzy_threshold: int,
+    answer_tail_seconds: float,
+    max_gap_s: float,
+) -> Optional[Tuple[float, float, str, int, int]]:
+    """
+    Returns: (start_at, end_at, reason, start_idx, end_q_idx)
+    """
+
+    # collect candidate starts
+    start_candidates: List[Tuple[int, float, str]] = []
+    for i, s in enumerate(segs):
+        if s.start > max_search_seconds:
             break
-        txt = rolling_text(segs, j, 2)
-        if any(p.search(txt) for p in patterns):
-            last = j
-    return last
+        hit = is_start_hit(rolling_text(segs, i, 2), start_phrases, fuzzy_threshold)
+        if hit:
+            start_candidates.append((i, s.start, hit))
 
+    if not start_candidates:
+        return None
 
-def extend_end_to_include_answer(segs: List[Segment], end_q_idx: int, max_extra_seconds: float) -> float:
-    q_start = segs[end_q_idx].start
-    end_at = segs[end_q_idx].end
-    saw_number = False
+    # for each start, find last end question after it
+    best: Optional[Tuple[float, float, str, int, int, int]] = None  # score + details
 
-    for k in range(end_q_idx + 1, len(segs)):
-        if segs[k].start - q_start > max_extra_seconds:
-            break
+    for start_i, start_at, start_hit in start_candidates:
+        end_q_idx: Optional[int] = None
+        end_hit: Optional[str] = None
+        for j in range(start_i, len(segs)):
+            if segs[j].start > max_search_seconds:
+                break
+            h = is_end_hit(rolling_text(segs, j, 2), end_phrases, fuzzy_threshold)
+            if h:
+                end_q_idx = j
+                end_hit = h
 
-        t = segs[k].text.strip()
-        if t:
-            if NUM_RE.search(t):
-                saw_number = True
-            if saw_number and QUESTIONISH_RE.search(t) and not NUM_RE.search(t):
+        if end_q_idx is None:
+            continue
+
+        # extend to include answer
+        q_start = segs[end_q_idx].start
+        end_at = segs[end_q_idx].end
+        saw_number = False
+
+        for k in range(end_q_idx + 1, len(segs)):
+            if segs[k].start - q_start > answer_tail_seconds:
                 break
 
-        end_at = segs[k].end
+            gap = segs[k].start - segs[k - 1].end
+            t = segs[k].text.strip()
 
-    return end_at
+            if t and NUM_RE.search(t):
+                saw_number = True
 
+            if saw_number and gap >= max_gap_s:
+                break
+            if saw_number and t and QUESTIONISH_RE.search(t) and not NUM_RE.search(t):
+                break
 
-def pick_window(
-    segs: List[Segment],
-    start_patterns: List[re.Pattern],
-    end_patterns: List[re.Pattern],
-    max_search_seconds: float,
-    answer_tail_seconds: float,
-) -> Optional[Tuple[float, float, str]]:
-    start_i = find_first_match_index(segs, start_patterns, max_search_seconds)
-    if start_i is None:
+            end_at = segs[k].end
+
+        # score window: prefer windows that contain DOB + multiple numbers
+        window_text = " ".join(s.text for s in segs if s.start >= start_at and s.end <= end_at)
+        num_count = len(re.findall(r"\d+", window_text))
+        has_dob = 1 if DOB_RE.search(window_text) else 0
+        score = num_count + has_dob * 5
+
+        reason = f"start={start_hit}; end={end_hit}; nums={num_count}; dob={has_dob}; gap={max_gap_s}s"
+        if best is None or score > best[0]:
+            best = (score, start_at, end_at, reason, start_i, end_q_idx)
+
+    if best is None:
         return None
 
-    end_q_idx = find_last_match_index(segs, start_i, end_patterns, max_search_seconds)
-    if end_q_idx is None:
-        return None
-
-    start_at = segs[start_i].start
-    end_at = extend_end_to_include_answer(segs, end_q_idx, max_extra_seconds=answer_tail_seconds)
-
+    _score, start_at, end_at, reason, start_i, end_q_idx = best
     if end_at <= start_at:
         return None
-
-    return start_at, end_at, f"start_idx={start_i}; end_q_idx={end_q_idx}; tail={answer_tail_seconds}s"
+    return start_at, end_at, reason, start_i, end_q_idx
 
 
 def cut_clip_mp3(ffmpeg: str, preview_wav: Path, start: float, end: float, out_mp3: Path) -> None:
@@ -313,12 +379,7 @@ def wavs_to_mp3_filter_concat(ffmpeg: str, wavs: List[Path], out_mp3: Path) -> N
 
     out_mp3.parent.mkdir(parents=True, exist_ok=True)
 
-    cmd: List[str] = [
-        ffmpeg,
-        "-hide_banner",
-        "-loglevel",
-        "error",
-    ]
+    cmd: List[str] = [ffmpeg, "-hide_banner", "-loglevel", "error"]
     for w in wavs:
         cmd += ["-i", str(w)]
 
@@ -329,17 +390,7 @@ def wavs_to_mp3_filter_concat(ffmpeg: str, wavs: List[Path], out_mp3: Path) -> N
 
     inputs = "".join([f"[{i}:a]" for i in range(len(wavs))])
     filt = f"{inputs}concat=n={len(wavs)}:v=0:a=1[a]"
-    cmd += [
-        "-filter_complex",
-        filt,
-        "-map",
-        "[a]",
-        "-c:a",
-        "libmp3lame",
-        "-b:a",
-        "96k",
-        str(out_mp3),
-    ]
+    cmd += ["-filter_complex", filt, "-map", "[a]", "-c:a", "libmp3lame", "-b:a", "96k", str(out_mp3)]
     _run(cmd)
 
 
@@ -351,27 +402,35 @@ def main() -> int:
     ap.add_argument("--model", default="small")
     ap.add_argument("--language", default="de")
 
-    ap.add_argument("--preview-seconds", type=int, default=210)
-    ap.add_argument("--first-minutes", type=float, default=3.0)
+    ap.add_argument("--preview-seconds", type=int, default=300)  # slightly safer than 210
+    ap.add_argument("--first-minutes", type=float, default=4.0)
     ap.add_argument("--pre-pad", type=float, default=0.25)
     ap.add_argument("--post-pad", type=float, default=0.25)
 
-    ap.add_argument("--answer-tail-seconds", type=float, default=15.0)
+    ap.add_argument("--answer-tail-seconds", type=float, default=25.0)
+    ap.add_argument("--max-gap-seconds", type=float, default=1.2)
+
     ap.add_argument("--silence-seconds", type=float, default=0.6)
     ap.add_argument("--sample-rate", type=int, default=16000)
 
-    ap.add_argument("--start-regex", action="append", default=[])
-    ap.add_argument("--end-regex", action="append", default=[])
+    ap.add_argument("--fuzzy-threshold", type=int, default=85)
 
+    ap.add_argument("--start-phrase", action="append", default=[])
+    ap.add_argument("--end-phrase", action="append", default=[])
+
+    ap.add_argument("--debug", action="store_true")
     args = ap.parse_args()
 
     ffmpeg = _which_ffmpeg()
     out_dir = Path(args.out_dir)
     clips_dir = out_dir / "clips"
+    debug_dir = out_dir / "debug"
     clips_dir.mkdir(parents=True, exist_ok=True)
+    if args.debug:
+        debug_dir.mkdir(parents=True, exist_ok=True)
 
-    start_patterns = compile_patterns(args.start_regex or DEFAULT_START_REGEXES)
-    end_patterns = compile_patterns(args.end_regex or DEFAULT_END_REGEXES)
+    start_phrases = [normalize_text(x) for x in (args.start_phrase or DEFAULT_START_PHRASES)]
+    end_phrases = [normalize_text(x) for x in (args.end_phrase or DEFAULT_END_PHRASES)]
 
     files = fetch_m4a_files(args.identifier)[: args.limit]
     if not files:
@@ -403,18 +462,25 @@ def main() -> int:
                 print(f"  !! transcribe failed: {e}")
                 continue
 
-            win = pick_window(
+            picked = pick_window_scored(
                 segs=segs,
-                start_patterns=start_patterns,
-                end_patterns=end_patterns,
+                start_phrases=start_phrases,
+                end_phrases=end_phrases,
                 max_search_seconds=max_search_seconds,
+                fuzzy_threshold=args.fuzzy_threshold,
                 answer_tail_seconds=args.answer_tail_seconds,
+                max_gap_s=args.max_gap_seconds,
             )
-            if not win:
+            if not picked:
                 print("  !! window not found (skip)")
+                if args.debug:
+                    (debug_dir / f"{stem}.json").write_text(
+                        json.dumps({"file": fn, "url": url, "segments": [asdict(s) for s in segs]}, ensure_ascii=False, indent=2),
+                        encoding="utf-8",
+                    )
                 continue
 
-            start, end, reason = win
+            start, end, reason, start_i, end_q_i = picked
             start = max(0.0, start - args.pre_pad)
             end = min(float(args.preview_seconds), end + args.post_pad)
 
@@ -427,6 +493,21 @@ def main() -> int:
             except subprocess.CalledProcessError:
                 print("  !! cut failed")
                 continue
+
+            if args.debug:
+                (debug_dir / f"{stem}.json").write_text(
+                    json.dumps(
+                        {
+                            "file": fn,
+                            "url": url,
+                            "picked": {"start": start, "end": end, "reason": reason, "start_i": start_i, "end_q_i": end_q_i},
+                            "segments": [asdict(s) for s in segs],
+                        },
+                        ensure_ascii=False,
+                        indent=2,
+                    ),
+                    encoding="utf-8",
+                )
 
             manifest.append(
                 Clip(
@@ -444,11 +525,10 @@ def main() -> int:
 
     if not manifest:
         raise SystemExit(
-            "No clips produced. Increase --first-minutes (e.g. 4) or --answer-tail-seconds (e.g. 25), "
-            "or add --start-regex/--end-regex."
+            "No clips produced. Increase --first-minutes / --preview-seconds / --answer-tail-seconds, "
+            "or add --start-phrase / --end-phrase."
         )
 
-    # Build final practice mp3
     silence_wav = out_dir / "_silence.wav"
     make_silence_wav(ffmpeg, silence_wav, args.silence_seconds, args.sample_rate)
 
