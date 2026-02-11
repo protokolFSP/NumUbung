@@ -1,0 +1,9 @@
+{
+  "file": "a Pankreatitis dr Murat mit dr Melih 19.05.24.m4a",
+  "srt": "_srt_repo/transcripts/a Pankreatitis dr Murat mit dr Melih 19.05.24.srt",
+  "picked": {
+    "start": 39.71,
+    "end": 83.41,
+    "reason": "start=substr:jahre alt; end=fuzzy:wie viel wiegen sie:84; digits=5"
+  }
+}

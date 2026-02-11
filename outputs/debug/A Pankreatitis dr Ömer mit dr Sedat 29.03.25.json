@@ -1,0 +1,9 @@
+{
+  "file": "A Pankreatitis dr Ömer mit dr Sedat 29.03.25.m4a",
+  "srt": "_srt_repo/transcripts/A Pankreatitis dr Ömer mit dr Sedat 29.03.25.srt",
+  "picked": {
+    "start": 53.01,
+    "end": 100.11,
+    "reason": "start=substr:wie alt sind sie; end=substr:gewicht; digits=7"
+  }
+}

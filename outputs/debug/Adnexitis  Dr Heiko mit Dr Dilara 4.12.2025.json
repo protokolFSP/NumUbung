@@ -1,0 +1,9 @@
+{
+  "file": "Adnexitis  Dr Heiko mit Dr Dilara 4.12.2025.m4a",
+  "srt": "_srt_repo/transcripts/Adnexitis  Dr Heiko mit Dr Dilara 4.12.2025.srt",
+  "picked": {
+    "start": 32.75,
+    "end": 175.93,
+    "reason": "start=substr:wie alt sind sie; end=fuzzy:wie schwer sind sie:91; digits=18"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "file": "A Abdomen inkarzerierte Hernie dr Heiko mit dr Yunus 03.04.2025.m4a",
+  "srt": "_srt_repo/transcripts/A Abdomen inkarzerierte Hernie dr Heiko mit dr Yunus 03.04.2025.srt",
+  "picked": {
+    "start": 73.53,
+    "end": 125.11,
+    "reason": "start=substr:wie alt sind sie; end=substr:wie gross sind sie; digits=6"
+  }
+}

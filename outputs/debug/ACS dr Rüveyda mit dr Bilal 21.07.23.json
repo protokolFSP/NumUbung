@@ -1,0 +1,9 @@
+{
+  "file": "ACS dr Rüveyda mit dr Bilal 21.07.23.m4a",
+  "srt": "_srt_repo/transcripts/ACS dr Rüveyda mit dr Bilal 21.07.23.srt",
+  "picked": {
+    "start": 58.41,
+    "end": 97.47,
+    "reason": "start=substr:wie alt sind sie; end=substr:wie gross sind sie; digits=5"
+  }
+}
