@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Asthma Bronchiale dr Gerhild dr Ali Osman 02.09.24.srt",
+  "picked": {
+    "start": 56.86,
+    "end": 116.77,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

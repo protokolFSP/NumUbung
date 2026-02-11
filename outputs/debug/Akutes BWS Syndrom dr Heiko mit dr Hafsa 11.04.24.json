@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Akutes BWS Syndrom dr Heiko mit dr Hafsa 11.04.24.srt",
+  "picked": {
+    "start": 70.23,
+    "end": 91.99999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

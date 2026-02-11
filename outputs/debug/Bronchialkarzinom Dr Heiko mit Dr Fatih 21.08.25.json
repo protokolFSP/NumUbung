@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Bronchialkarzinom Dr Heiko mit Dr Fatih 21.08.25.srt",
+  "picked": {
+    "start": 65.61,
+    "end": 108.97999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

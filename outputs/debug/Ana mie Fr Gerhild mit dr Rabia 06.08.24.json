@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Ana mie Fr Gerhild mit dr Rabia 06.08.24.srt",
+  "picked": {
+    "start": 55.9,
+    "end": 91.5,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

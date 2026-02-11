@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/akute Pankreatitis Dr Murat mit Dr Sümeyra 28.12.2025.srt",
+  "picked": {
+    "start": 61.699999999999996,
+    "end": 98.41,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

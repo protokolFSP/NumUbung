@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Ana mie dr Murat mit dr Ali 01.06.24.srt",
+  "picked": {
+    "start": 70.99000000000001,
+    "end": 122.58,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

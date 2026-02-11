@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Akute Pankreatitis Dr Heiko mit Dr Serkan 30.01.25.srt",
+  "picked": {
+    "start": 59.449999999999996,
+    "end": 101.55999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

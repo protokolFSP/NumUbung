@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Arterielle Hypertonie Dr Akın mit Dr Sedat 07.04.25.srt",
+  "picked": {
+    "start": 42.9,
+    "end": 58.9,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

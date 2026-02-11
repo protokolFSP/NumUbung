@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Akute Pankreatitis Dr Heiko mit Dr Zulal 22.01.2026.srt",
+  "picked": {
+    "start": 0.0,
+    "end": 26.900000000000002,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

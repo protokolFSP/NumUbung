@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Aortenaneurysma Dr Ömer mit Dr Serdar 06.04.25.srt",
+  "picked": {
+    "start": 67.66000000000001,
+    "end": 88.66,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

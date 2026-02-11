@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/AppendiZitis Fr Gerhild mit Dr Esra 18.11.2025.srt",
+  "picked": {
+    "start": 30.279999999999998,
+    "end": 71.14,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

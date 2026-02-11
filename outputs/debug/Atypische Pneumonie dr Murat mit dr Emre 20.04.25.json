@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Atypische Pneumonie dr Murat mit dr Emre 20.04.25.srt",
+  "picked": {
+    "start": 53.11,
+    "end": 86.10999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}
