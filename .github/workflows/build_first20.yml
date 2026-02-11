@@ -1,25 +1,41 @@
 # file: .github/workflows/build_first20.yml
-name: Build number practice (first 20)
+name: Build number practice (batch resume)
 
 on:
   workflow_dispatch:
     inputs:
-      limit:
-        description: "Kaç dosya işlenecek"
+      limit_total:
+        description: "Toplam kaç dosya hedef (örn 252)"
+        required: true
+        default: "252"
+      batch_size:
+        description: "Bu run'da kaç clip ÜRETİLSİN (20 önerilir)"
         required: true
         default: "20"
-      first_minutes:
-        description: "Aramayı ilk kaç dakikada yapalım"
+      max_attempts:
+        description: "20 clip dolmazsa en fazla kaç dosya denensin"
         required: true
-        default: "3"
+        default: "120"
       preview_seconds:
-        description: "Sadece ilk kaç saniyeyi preview edip çözelim"
+        description: "İlk pass: kaç saniye preview (örn 300)"
         required: true
-        default: "210"
+        default: "300"
+      first_minutes:
+        description: "İlk pass: aramayı ilk kaç dakikada yapalım (örn 4)"
+        required: true
+        default: "4"
       answer_tail_seconds:
-        description: "Bitiş sorusundan sonra cevap için ekstra saniye"
+        description: "Bitiş sorusundan sonra cevap için ekstra saniye (örn 25)"
         required: true
-        default: "15"
+        default: "25"
+      retry_preview_seconds:
+        description: "2. pass: kaç saniye preview (örn 600)"
+        required: true
+        default: "600"
+      retry_first_minutes:
+        description: "2. pass: ilk kaç dakikada ara (örn 7)"
+        required: true
+        default: "7"
 
 permissions:
   contents: write
@@ -34,7 +50,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
 
@@ -47,20 +63,35 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Cache model downloads
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/whisper
+          key: whisper-cache-${{ runner.os }}-small-v1
+          restore-keys: |
+            whisper-cache-${{ runner.os }}-
+
       - name: Install deps
         run: |
           python -m pip install -U pip
           pip install -r requirements.txt
 
-      - name: Build practice audio
+      - name: Build batch (resume, produce 20 clips)
         run: |
-          python tools/build_practice_ia.py \
+          python tools/process_next_batch.py \
             --identifier "$IA_IDENTIFIER" \
-            --limit "${{ inputs.limit }}" \
-            --first-minutes "${{ inputs.first_minutes }}" \
+            --out-dir outputs \
+            --limit-total "${{ inputs.limit_total }}" \
+            --batch-size "${{ inputs.batch_size }}" \
+            --max-attempts "${{ inputs.max_attempts }}" \
             --preview-seconds "${{ inputs.preview_seconds }}" \
+            --first-minutes "${{ inputs.first_minutes }}" \
             --answer-tail-seconds "${{ inputs.answer_tail_seconds }}" \
-            --out-dir outputs
+            --retry-preview-seconds "${{ inputs.retry_preview_seconds }}" \
+            --retry-first-minutes "${{ inputs.retry_first_minutes }}" \
+            --debug
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -73,6 +104,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add outputs
-          git commit -m "Add practice outputs (first ${{ inputs.limit }})" || exit 0
+          git commit -m "Add batch outputs (resume)" || exit 0
           git pull --rebase
           git push
