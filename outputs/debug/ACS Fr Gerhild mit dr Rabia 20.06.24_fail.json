@@ -3,7 +3,7 @@
   "url": "https://archive.org/download/vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25/ACS%20Fr%20Gerhild%20mit%20dr%20Rabia%2020.06.24.m4a",
   "pass": 2,
   "preview_seconds": 600,
-  "first_minutes": 4.0,
+  "first_minutes": 7.0,
   "segments": [
     {
       "start": 0.14,
@@ -413,17 +413,17 @@
     {
       "start": 527.45,
       "end": 537.45,
-      "text": " Ja, also wenn ich merke, dass es wieder doller wird, dann nehme ich das, ja."
+      "text": " Ja, also wenn ich merke, dass es wieder doller wird, dann nehme ich das ja."
     },
     {
       "start": 537.45,
       "end": 544.45,
-      "text": " Sonst habe ich nix, ich war immer ganz gesund, ja."
+      "text": " Sonst habe ich nichts, ich war immer ganz gesund, ja."
     },
     {
       "start": 544.45,
       "end": 552.45,
-      "text": " Und abgesehen von dieser ACC nehmen Sie regelmäßig oder bei Bedarf andere Medikamenten ein."
+      "text": " Und abgesehen von dieser ASS nehmen Sie regelmäßig oder bei Bedarf andere Medikamenten ein."
     },
     {
       "start": 552.45,
@@ -433,32 +433,27 @@
     {
       "start": 555.45,
       "end": 557.45,
-      "text": " ACC, ja, ich würde sagen."
+      "text": " ACC, ja, ich schuldige Ihnen."
     },
     {
       "start": 557.45,
-      "end": 564.45,
-      "text": " Ja, naja, nie sonst, da habe ich natürlich nimm mal eine Aspirin, wenn man Kopfschmerzen hat oder so,"
-    },
-    {
-      "start": 564.45,
       "end": 567.45,
-      "text": " aber normal nehme ich eigentlich nix."
+      "text": " Ja, naja, nie sonst, da habe ich, weiß ich, natürlich nimmt man meine Aspirin, wenn man Kopfschmerzen hat oder so, aber normal nehme ich eigentlich nichts."
     },
     {
       "start": 567.45,
+      "end": 569.45,
+      "text": " Okay."
+    },
+    {
+      "start": 571.45,
       "end": 575.45,
-      "text": " Okay, sind Sie schon einmal operiert worden?"
+      "text": " Sind Sie schon einmal operiert worden?"
     },
     {
       "start": 576.45,
-      "end": 584.45,
-      "text": " Oh ja, das ist aber schon lange her, da war ich noch ganz jung, da hatte ich einen Unfall und da war der Unterschenkel gebrochen"
-    },
-    {
-      "start": 584.45,
       "end": 588.45,
-      "text": " und der ist operativ versorgt worden."
+      "text": " Oh ja, das ist aber schon lange her, da war ich noch ganz jung, da hatte ich einen Unfall und da war der Unterschenkel gebrochen und der ist operativ versorgt worden."
     },
     {
       "start": 588.45,

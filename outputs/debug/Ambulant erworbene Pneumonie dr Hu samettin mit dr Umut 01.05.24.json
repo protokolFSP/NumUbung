@@ -1,0 +1,343 @@
+{
+  "file": "Ambulant erworbene Pneumonie dr Hu samettin mit dr Umut 01.05.24.m4a",
+  "url": "https://archive.org/download/vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25/Ambulant%20erworbene%20Pneumonie%20dr%20Hu%20samettin%20mit%20dr%20Umut%2001.05.24.m4a",
+  "picked": {
+    "start": 63.61,
+    "end": 102.15,
+    "reason": "start=substr:wie alt sind sie; end=substr:wie gross sind sie; digits=6",
+    "preview_seconds": 300,
+    "first_minutes": 4.0
+  },
+  "segments": [
+    {
+      "start": 0.18,
+      "end": 2.18,
+      "text": " Ja, okay."
+    },
+    {
+      "start": 2.18,
+      "end": 4.7,
+      "text": " Okay, guten Tag. Mein Name ist Omutel Gigit und heute bin ich der"
+    },
+    {
+      "start": 4.7,
+      "end": 12.7,
+      "text": " Insalben der Ars auf der Sästation. Ich möchte mit Ihnen gerne das Erstgespräch führen."
+    },
+    {
+      "start": 12.7,
+      "end": 14.7,
+      "text": " Sind Sie damit einverstanden?"
+    },
+    {
+      "start": 14.7,
+      "end": 16.7,
+      "text": " Ja, bin ich."
+    },
+    {
+      "start": 16.7,
+      "end": 22.7,
+      "text": " Okay. Ja, ich möchte zuerst ein paar Fragen zu Ihrer Person stellen, dann kommen wir"
+    },
+    {
+      "start": 22.7,
+      "end": 28.7,
+      "text": " auch sofort zu Ihrem Beschweden. Wenn Sie etwas nicht verstehen oder Fragen haben,"
+    },
+    {
+      "start": 28.7,
+      "end": 32.7,
+      "text": " sagen Sie mir Bescheid oder fragen Sie nach. Okay?"
+    },
+    {
+      "start": 32.7,
+      "end": 34.7,
+      "text": " Alles klar. Sehr gut."
+    },
+    {
+      "start": 34.7,
+      "end": 37.7,
+      "text": " Ja, wie heißen Sie denn?"
+    },
+    {
+      "start": 37.7,
+      "end": 42.01,
+      "text": " Ich heiße Richard Schlenk."
+    },
+    {
+      "start": 42.01,
+      "end": 50.01,
+      "text": " Richard Schlenk. Herr Schlenk, könnte Sie bitte Ihren Namen buchstabieren?"
+    },
+    {
+      "start": 50.01,
+      "end": 53.01,
+      "text": " Vorname oder Nachname?"
+    },
+    {
+      "start": 53.01,
+      "end": 55.01,
+      "text": " Nachname."
+    },
+    {
+      "start": 55.01,
+      "end": 63.86,
+      "text": " Nachname. S-C-H-L-E-N-K Schlenk."
+    },
+    {
+      "start": 63.86,
+      "end": 67.86,
+      "text": " Vielen Dank, Herr Schlenk. Wie alt sind Sie?"
+    },
+    {
+      "start": 67.86,
+      "end": 70.86,
+      "text": " Ich bin 63 Jahre alt."
+    },
+    {
+      "start": 70.86,
+      "end": 72.86,
+      "text": " Du musst es jetzt sehen."
+    },
+    {
+      "start": 72.86,
+      "end": 75.86,
+      "text": " Was ist genau geboren?"
+    },
+    {
+      "start": 75.86,
+      "end": 85.37,
+      "text": " Das ist der 10. März 1961."
+    },
+    {
+      "start": 85.37,
+      "end": 87.37,
+      "text": " Wie groß sind Sie?"
+    },
+    {
+      "start": 87.37,
+      "end": 93.25,
+      "text": " 1,76 m."
+    },
+    {
+      "start": 93.25,
+      "end": 97.25,
+      "text": " Wie viel Sie seitdem wiegen?"
+    },
+    {
+      "start": 97.25,
+      "end": 101.9,
+      "text": " Ungefähr 82 kg."
+    },
+    {
+      "start": 101.9,
+      "end": 109.9,
+      "text": " Okay, vielen Dank für die Informationen. Herr Schlenk, was für Sie heute sonst, wie kann ich Ihnen helfen?"
+    },
+    {
+      "start": 109.9,
+      "end": 118.9,
+      "text": " Ich habe schon seit einigen Tagen Schmerzen in den Rippen und im Rücken."
+    },
+    {
+      "start": 118.9,
+      "end": 122.9,
+      "text": " Seit zwei Tagen huste ich auch."
+    },
+    {
+      "start": 122.9,
+      "end": 125.9,
+      "text": " Schmerzen?"
+    },
+    {
+      "start": 125.9,
+      "end": 128.9,
+      "text": " Schmerzen im Brustkopf, meinen Sie?"
+    },
+    {
+      "start": 128.9,
+      "end": 133.02,
+      "text": " Ja, Rippen und Rücken."
+    },
+    {
+      "start": 133.02,
+      "end": 135.02,
+      "text": " Okay."
+    },
+    {
+      "start": 135.02,
+      "end": 138.94,
+      "text": " Rücken."
+    },
+    {
+      "start": 138.94,
+      "end": 143.94,
+      "text": " Schmerzen in anderen Körperregionen?"
+    },
+    {
+      "start": 143.94,
+      "end": 146.94,
+      "text": " Ich meine Arme oder Hals?"
+    },
+    {
+      "start": 146.94,
+      "end": 149.94,
+      "text": " Nein, das nicht. Nur dort, wo ich gesagt habe."
+    },
+    {
+      "start": 149.94,
+      "end": 156.82,
+      "text": " Ich spüre sie manchmal im Rücken und manchmal tun mir die Rippen so seitlich weh."
+    },
+    {
+      "start": 156.82,
+      "end": 159.82,
+      "text": " Sie haben erwähnt, dass Sie Hüsten haben?"
+    },
+    {
+      "start": 159.82,
+      "end": 162.82,
+      "text": " Ja, seit zwei Tagen habe ich wussten."
+    },
+    {
+      "start": 162.82,
+      "end": 167.67,
+      "text": " Okay."
+    },
+    {
+      "start": 167.67,
+      "end": 171.75,
+      "text": " Schmerzen sind genau, Herr Schlenk, wenn man sich auf die Rippen und in den Brustkopf"
+    },
+    {
+      "start": 171.75,
+      "end": 173.75,
+      "text": " brennt."
+    },
+    {
+      "start": 173.75,
+      "end": 178.75,
+      "text": " Also, das sind mehr so drückend bis stechende Schmerzen."
+    },
+    {
+      "start": 178.75,
+      "end": 182.75,
+      "text": " Drückend, stehende. Okay."
+    },
+    {
+      "start": 182.75,
+      "end": 187.75,
+      "text": " Herr Schlenk, hatten Sie früher einen Schmerzen?"
+    },
+    {
+      "start": 187.75,
+      "end": 191.75,
+      "text": " Ähnliche Beschwerden, früher? Nein, habe ich nicht gehabt."
+    },
+    {
+      "start": 191.75,
+      "end": 197.25,
+      "text": " Okay, ich habe nicht einen Schmerzen."
+    },
+    {
+      "start": 197.25,
+      "end": 207.25,
+      "text": " Ja, Wichtag sind die Schmerzen auf einer Schmerzkeler von 1 bis 10, wobei ein sehr leid und 10 unerträglichen Schmerzen entspricht."
+    },
+    {
+      "start": 207.25,
+      "end": 212.25,
+      "text": " Also, dann würde ich sagen, das dürfte so 4 und 5 sein."
+    },
+    {
+      "start": 212.25,
+      "end": 215.25,
+      "text": " 4 und 5."
+    },
+    {
+      "start": 215.25,
+      "end": 221.25,
+      "text": " Okay, haben Sie etwas bemerkt, dass die Schmerzen lehndert oder versteckt?"
+    },
+    {
+      "start": 221.25,
+      "end": 225.25,
+      "text": " Äh, wenn ich nicht tief atme, sind die Schmerzen weniger."
+    },
+    {
+      "start": 225.25,
+      "end": 230.56,
+      "text": " Okay, so sind die Schmerzen Belastung abwägig?"
+    },
+    {
+      "start": 230.56,
+      "end": 236.56,
+      "text": " Äh, Belastungsabhängen, nur Atemabhängen. Also je tiefer ich atme, desto mehr habe ich Schmerzen."
+    },
+    {
+      "start": 236.56,
+      "end": 238.56,
+      "text": " Tiefer, Atmen."
+    },
+    {
+      "start": 238.56,
+      "end": 240.56,
+      "text": " Ja, okay."
+    },
+    {
+      "start": 240.56,
+      "end": 251.56,
+      "text": " Ja, Herr Schlenk, jetzt möchte ich unser Geschick unterbringen und ich möchte einige Massnahmen bei Ihnen durchführen."
+    },
+    {
+      "start": 251.56,
+      "end": 268.56,
+      "text": " Ich meine, ich würde eine EKG schreiben und dann ich würde Ihr Sauerstoff-Sättigung messen und ich würde Ihr Körper, Ihr Lunge abhören."
+    },
+    {
+      "start": 268.56,
+      "end": 269.56,
+      "text": " Wenn alles gut ist."
+    },
+    {
+      "start": 269.56,
+      "end": 272.56,
+      "text": " Die Lunge, Lunge, Lunge abhören."
+    },
+    {
+      "start": 272.56,
+      "end": 278.56,
+      "text": " Ja, die Lunge abhören und wenn alles in Ordnung ist, können wir unser Gespräch fortsetzen."
+    },
+    {
+      "start": 278.56,
+      "end": 279.56,
+      "text": " Okay?"
+    },
+    {
+      "start": 279.56,
+      "end": 281.56,
+      "text": " Ja, ist okay. Ja, klar."
+    },
+    {
+      "start": 281.56,
+      "end": 283.56,
+      "text": " Ja, okay, so."
+    },
+    {
+      "start": 283.56,
+      "end": 292.56,
+      "text": " Äh, gibt es etwas auffällig bei der Ergebnis oder können wir fortsetzen?"
+    },
+    {
+      "start": 292.56,
+      "end": 297.56,
+      "text": " Man bei den Untersuchungen, ob da was auffälliges war jetzt?"
+    },
+    {
+      "start": 297.56,
+      "end": 299.56,
+      "text": " Ja, ich..."
+    }
+  ]
+}
