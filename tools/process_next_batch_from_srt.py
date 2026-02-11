@@ -1,6 +1,21 @@
-# =========================================
 # file: tools/process_next_batch_from_srt.py
-# =========================================
+"""
+Create number-practice clips using EXISTING SRT timestamps (no Whisper), with robust window picking.
+
+Why this version is better:
+- Handles variable order: weight before height, combined questions, detours/complaints.
+- Uses a small state-machine (age/dob/height/weight) instead of "end question + fixed tail".
+- Stops when a non-demographic question starts AFTER collecting at least one of height/weight.
+
+Outputs:
+- outputs/clips/<stem>.mp3
+- outputs/clips/<stem>.txt
+- outputs/ubung/batch_###.mp3
+- outputs/state.json
+- outputs/failures.json
+- outputs/debug/<stem>.json (optional)
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -21,7 +36,6 @@ try:
 except Exception:
     fuzz = None  # type: ignore
 
-
 IA_METADATA_URL = "https://archive.org/metadata/{identifier}"
 IA_DOWNLOAD_URL = "https://archive.org/download/{identifier}/{filename}"
 
@@ -32,24 +46,57 @@ START_PHRASES = [
     "geburtsdatum",
     "wann sind sie geboren",
     "wann bist du geboren",
+    "wann genau sind sie geboren",
     "geboren am",
+    "wie alt sind sie und wann sind sie geboren",
 ]
 
-END_PHRASES = [
+HEIGHT_Q_PHRASES = [
     "wie gross sind sie",
     "wie groß sind sie",
-    "wie schwer sind sie",
-    "wie viel wiegen sie",
-    "ihr gewicht",
-    "gewicht",
     "wie gross und wie schwer",
     "wie groß und wie schwer",
-    "kennen sie ihr gewicht",
-    "aktuelles gewicht",
+    "koerpergroesse",
+    "körpergröße",
 ]
 
-NUM_RE = re.compile(r"\d+|\b(kilo|kg|meter|m)\b", re.IGNORECASE)
-QUESTIONISH_RE = re.compile(r"^\s*(wie|wann|wo|was|welche|welcher|wieviel|haben|nehmen|sind|ist)\b", re.IGNORECASE)
+WEIGHT_Q_PHRASES = [
+    "wie viel wiegen sie",
+    "wie viel wiegen sie zurzeit",
+    "wie viel wiegen sie momentan",
+    "wie schwer sind sie",
+    "ihr gewicht",
+    "gewicht",
+    "kennen sie ihr gewicht",
+    "aktuelles gewicht",
+    "aktuelle gewicht",
+    "kennen sie ihre aktuellen gewicht",
+]
+
+# Very common "complaint / next section" starters (to stop at the right time)
+NON_DEMOG_Q_RE = re.compile(
+    r"^\s*(was|warum|wobei|woran|wo|seit wann|haben sie (schon|noch)|"
+    r"wo tut|wo genau|wie stark|welche beschwerden|was führt sie|was bringt sie|"
+    r"was betrifft|was kann ich|was ist der grund)\b",
+    re.IGNORECASE,
+)
+
+QUESTIONISH_RE = re.compile(
+    r"^\s*(wie|wann|wo|was|welche|welcher|wieviel|haben|nehmen|sind|ist|können|koennen|dürfen|duerfen)\b",
+    re.IGNORECASE,
+)
+
+# Signals for answers
+KG_RE = re.compile(r"\b(\d{2,3})\s*(kg|kilo)\b", re.IGNORECASE)
+M_RE = re.compile(r"\b(\d([,.]\d{1,2})?)\s*(m|meter)\b", re.IGNORECASE)  # 1,74 m
+METER_SPLIT_RE = re.compile(r"\b1\s*meter\s*(\d{2})\b", re.IGNORECASE)  # "1 Meter 65"
+AGE_RE = re.compile(r"\b(\d{1,3})\s*(jahre)?\b", re.IGNORECASE)
+DOB_DOT_RE = re.compile(r"\b(\d{1,2})\.(\d{1,2})\.(\d{2,4})\b")
+DOB_MONTH_RE = re.compile(
+    r"\b(\d{1,2})\.\s*(januar|februar|märz|maerz|april|mai|juni|juli|august|"
+    r"september|oktober|november|dezember)\s*(\d{4})\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass(frozen=True)
@@ -158,62 +205,133 @@ def fuzzy_hit(text: str, phrases: List[str], threshold: int) -> Optional[str]:
     return None
 
 
-def pick_window(
+def _is_age(text: str) -> bool:
+    t = normalize_text(text)
+    if "jahre alt" in t:
+        return True
+    m = AGE_RE.search(t)
+    if not m:
+        return False
+    v = int(m.group(1))
+    return 1 <= v <= 110
+
+
+def _is_dob(text: str) -> bool:
+    t = normalize_text(text)
+    return bool(DOB_DOT_RE.search(t) or DOB_MONTH_RE.search(t))
+
+
+def _is_height_answer(text: str) -> bool:
+    t = normalize_text(text)
+    if M_RE.search(t):
+        return True
+    if METER_SPLIT_RE.search(t):
+        return True
+    # allow "1,80" without unit if line contains "gross" / "groß"
+    if ("gross" in t or "gro" in t) and re.search(r"\b1[,.]\d{2}\b|\b1\d{2}\b", t):
+        return True
+    return False
+
+
+def _is_weight_answer(text: str) -> bool:
+    t = normalize_text(text)
+    if KG_RE.search(t):
+        return True
+    if ("kilo" in t or "kg" in t or "gewicht" in t) and re.search(r"\b\d{2,3}\b", t):
+        return True
+    return False
+
+
+def _is_height_q(text: str, thr: int) -> bool:
+    return fuzzy_hit(text, HEIGHT_Q_PHRASES, thr) is not None
+
+
+def _is_weight_q(text: str, thr: int) -> bool:
+    return fuzzy_hit(text, WEIGHT_Q_PHRASES, thr) is not None
+
+
+def pick_demog_window(
     entries: List[SrtEntry],
     first_minutes: float,
-    answer_tail_seconds: float,
+    tail_seconds: float,
     fuzzy_threshold: int = 84,
 ) -> Optional[Tuple[float, float, str]]:
     max_search = first_minutes * 60.0
 
-    start_idxs: List[Tuple[int, str]] = []
+    # Find the earliest plausible start
+    start_i: Optional[int] = None
+    start_hit: str = ""
     for i, e in enumerate(entries):
         if e.start > max_search:
             break
         hit = fuzzy_hit(e.text, START_PHRASES, fuzzy_threshold)
         if hit:
-            start_idxs.append((i, hit))
-    if not start_idxs:
+            start_i = i
+            start_hit = hit
+            break
+    if start_i is None:
         return None
 
-    best: Optional[Tuple[int, float, float, str]] = None
+    found_age = False
+    found_dob = False
+    found_h = False
+    found_w = False
 
-    for si, sh in start_idxs:
-        end_idx: Optional[Tuple[int, str]] = None
-        for j in range(si, len(entries)):
-            if entries[j].start > max_search:
-                break
-            hit = fuzzy_hit(entries[j].text, END_PHRASES, fuzzy_threshold)
-            if hit:
-                end_idx = (j, hit)
-        if not end_idx:
-            continue
+    last_demog_time = entries[start_i].end
+    end_time = entries[start_i].end
 
-        ej, eh = end_idx
-        q_start = entries[ej].start
-        end_at = entries[ej].end
+    for j in range(start_i, len(entries)):
+        e = entries[j]
+        if e.start > max_search:
+            break
 
-        saw_num = False
-        for k in range(ej + 1, len(entries)):
-            if entries[k].start - q_start > answer_tail_seconds:
-                break
-            t = entries[k].text.strip()
-            if t and NUM_RE.search(t):
-                saw_num = True
-            if saw_num and t and QUESTIONISH_RE.search(t) and not NUM_RE.search(t):
-                break
-            end_at = entries[k].end
+        t = e.text.strip()
+        nt = normalize_text(t)
 
-        window_text = " ".join(e.text for e in entries if e.start >= entries[si].start and e.end <= end_at)
-        score = len(re.findall(r"\d+", window_text))
-        reason = f"start={sh}; end={eh}; digits={score}"
-        if best is None or score > best[0]:
-            best = (score, entries[si].start, end_at, reason)
+        # Track questions
+        hq = _is_height_q(t, fuzzy_threshold)
+        wq = _is_weight_q(t, fuzzy_threshold)
 
-    if not best:
+        # Track answers/signals
+        if _is_age(t):
+            found_age = True
+            last_demog_time = e.end
+        if _is_dob(t):
+            found_dob = True
+            last_demog_time = e.end
+        if _is_height_answer(t):
+            found_h = True
+            last_demog_time = e.end
+        if _is_weight_answer(t):
+            found_w = True
+            last_demog_time = e.end
+
+        if hq or wq:
+            last_demog_time = e.end
+
+        # Decide when to stop:
+        # If we already saw at least one of (height/weight) and a new non-demographic question starts, stop BEFORE it.
+        if (found_h or found_w) and NON_DEMOG_Q_RE.search(t):
+            break
+
+        # If we already saw at least one of (height/weight) and we drift too far from last demog mention, stop.
+        if (found_h or found_w) and (e.start - last_demog_time) > tail_seconds:
+            break
+
+        end_time = e.end
+
+    # Score window; accept if we have at least age/dob + (height or weight), OR height+weight
+    score = 0
+    score += 2 if found_age else 0
+    score += 2 if found_dob else 0
+    score += 2 if found_h else 0
+    score += 2 if found_w else 0
+
+    if score < 4:
         return None
-    _, st, en, rs = best
-    return (st, en, rs) if en > st else None
+
+    reason = f"start={start_hit}; age={found_age}; dob={found_dob}; h={found_h}; w={found_w}"
+    return entries[start_i].start, end_time, reason
 
 
 def cut_clip_from_url(ffmpeg: str, url: str, start: float, end: float, out_mp3: Path) -> None:
@@ -317,11 +435,9 @@ def next_batch_index(ubung_dir: Path) -> int:
 
 
 def find_srt_exact(srt_dir: Path, stem: str) -> Optional[Path]:
-    # since you confirmed exact match, this is the fast path
     p = srt_dir / f"{stem}.srt"
     if p.exists():
         return p
-    # tolerate case variants
     p2 = srt_dir / f"{stem}.SRT"
     if p2.exists():
         return p2
@@ -368,7 +484,6 @@ def main() -> int:
 
     done_stems = {p.stem for p in clips_dir.glob("*.mp3")}
     all_files = fetch_m4a_files(args.identifier)[: args.limit_total]
-
     srt_dir = Path(args.srt_dir)
 
     pending: List[str] = []
@@ -387,7 +502,7 @@ def main() -> int:
         "pending": len(pending),
         "target_produced": args.batch_size,
         "max_attempts": args.max_attempts,
-        "mode": "srt_exact",
+        "mode": "srt_exact_state_machine",
     }
     _save_json(out_dir / "state.json", state)
 
@@ -398,9 +513,7 @@ def main() -> int:
     produced: List[Path] = []
     tried = 0
 
-    with tempfile.TemporaryDirectory(prefix="numubung_srt_") as td:
-        tdir = Path(td)
-
+    with tempfile.TemporaryDirectory(prefix="numubung_srt_") as _td:
         for fn in pending:
             if len(produced) >= args.batch_size:
                 break
@@ -424,7 +537,11 @@ def main() -> int:
                 continue
 
             entries = parse_srt(srt_path)
-            picked = pick_window(entries, args.first_minutes, args.answer_tail_seconds)
+            picked = pick_demog_window(
+                entries=entries,
+                first_minutes=args.first_minutes,
+                tail_seconds=args.answer_tail_seconds,
+            )
             if not picked:
                 ent = failures.get(stem, {"attempts": 0, "permanent": False})
                 ent["attempts"] = int(ent.get("attempts", 0)) + 1
