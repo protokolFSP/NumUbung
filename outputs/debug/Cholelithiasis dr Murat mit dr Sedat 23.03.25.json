@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholelithiasis dr Murat mit dr Sedat 23.03.25.srt",
+  "picked": {
+    "start": 44.57,
+    "end": 84.85999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholezystitis dr Hu sameddin mit dr Abdullah 24.09.24.srt",
+  "picked": {
+    "start": 40.69,
+    "end": 80.69,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

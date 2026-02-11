@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholelithiasis Fr Gerhild mit Dr Ibrahim 21.08.2025.srt",
+  "picked": {
+    "start": 27.79,
+    "end": 77.39,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

@@ -1,0 +1,6 @@
+Wie alt sind Sie?
+Frau Frank, ich bin 42 Jahre alt.
+Sie sind Frau, ich bin 42.
+Wie groß sind Sie?
+Wie viel wiegeln Sie so seit?
+80 kg.

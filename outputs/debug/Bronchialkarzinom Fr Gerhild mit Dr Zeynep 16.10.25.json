@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Bronchialkarzinom Fr Gerhild mit Dr Zeynep 16.10.25.srt",
+  "picked": {
+    "start": 53.92,
+    "end": 86.16999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

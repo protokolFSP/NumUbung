@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholelithiasis dr Murat mit dr Umut 05.05.24.srt",
+  "picked": {
+    "start": 44.379999999999995,
+    "end": 75.55999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

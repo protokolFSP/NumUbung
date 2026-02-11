@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Colitis UlCerosa § MChron Dr Omer Mit Dr Emre 02.05.25.srt",
+  "picked": {
+    "start": 95.22,
+    "end": 129.29,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

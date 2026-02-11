@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Chronische Pankreatitis Fr Gerhild mit Dr Ilay. 08.05.25.srt",
+  "picked": {
+    "start": 33.54,
+    "end": 74.03,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

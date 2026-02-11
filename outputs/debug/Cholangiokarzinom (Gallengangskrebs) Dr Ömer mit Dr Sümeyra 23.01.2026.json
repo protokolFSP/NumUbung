@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholangiokarzinom (Gallengangskrebs) Dr Ömer mit Dr Sümeyra 23.01.2026.srt",
+  "picked": {
+    "start": 125.17,
+    "end": 161.77,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

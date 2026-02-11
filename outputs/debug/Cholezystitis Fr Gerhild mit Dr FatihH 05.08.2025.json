@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholezystitis Fr Gerhild mit Dr FatihH 05.08.2025.srt",
+  "picked": {
+    "start": 61.19,
+    "end": 112.86999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

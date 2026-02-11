@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Chronische Pankreatitis  Fr Gerhild mit Dr Zahit 06.01.2026.srt",
+  "picked": {
+    "start": 48.699999999999996,
+    "end": 109.75999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

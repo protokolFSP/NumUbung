@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Bronchialkarzinom dr Murat mit dr Abdullah 27.10.24.srt",
+  "picked": {
+    "start": 22.119999999999997,
+    "end": 67.3,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

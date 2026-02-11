@@ -1,55 +1,70 @@
 {
   "a Abdomen dr Heiko mit dr Merve 17.10.2024": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "ACS Dr Heiko mit Dr İsmail 05.02.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "ACS Fr Gerhild mit dr Rabia 20.06.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "AECOPD dr Akin mit dr Isa 27.05.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Akutes Koronarsyndrom Fr Gerhild und Dr Gül 29.05.25": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Ambulant erworbene Pneumonie dr Hu samettin mit dr Umut 01.05.24": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Angina Pectoris Dr Gerhild Dr İsmail 28.11.24": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Appendizitis Dr Heiko mit Dr. Gül 23.01.25": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Asthma Bronchiale Dr Murat mit Dr Selim 08.12.24": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Bandscheibenvorfall Bandscheibenvorwölbung dr hüseyin dr ismail 19.11.24": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Bronchial Karzinom Dr Gerhild mit Dr Gül 17.12.24": {
+    "attempts": 2,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "Bronchialkarzinom dr Hu samettin mit dr Isa 11.04.24": {
+    "attempts": 1,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "Choledocholithiasis dr O mer mit dr Mehmet 09.05.24": {
+    "attempts": 1,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "Cholezystitis Dr Gerhild mit Dr İskender 21.11.24": {
     "attempts": 1,
     "permanent": false,
     "last_reason": "window_not_found_srt"

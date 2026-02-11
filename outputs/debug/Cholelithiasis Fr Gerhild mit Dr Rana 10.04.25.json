@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholelithiasis Fr Gerhild mit Dr Rana 10.04.25.srt",
+  "picked": {
+    "start": 50.99,
+    "end": 96.25,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

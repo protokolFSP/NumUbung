@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholelithiasis_CED_Dr Ömer mit Dr Kemal 30.01.2026.srt",
+  "picked": {
+    "start": 120.77000000000001,
+    "end": 156.01,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

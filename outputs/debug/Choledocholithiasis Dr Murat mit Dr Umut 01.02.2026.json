@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Choledocholithiasis Dr Murat mit Dr Umut 01.02.2026.srt",
+  "picked": {
+    "start": 45.9,
+    "end": 77.89999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

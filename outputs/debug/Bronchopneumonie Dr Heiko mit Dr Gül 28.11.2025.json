@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Bronchopneumonie Dr Heiko mit Dr Gül 28.11.2025.srt",
+  "picked": {
+    "start": 34.9,
+    "end": 63.9,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

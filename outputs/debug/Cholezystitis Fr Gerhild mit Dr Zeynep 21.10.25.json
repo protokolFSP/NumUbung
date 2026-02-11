@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Cholezystitis Fr Gerhild mit Dr Zeynep 21.10.25.srt",
+  "picked": {
+    "start": 73.44000000000001,
+    "end": 133.28,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}
