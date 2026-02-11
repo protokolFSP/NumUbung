@@ -8,17 +8,12 @@ Output:
 - outputs/practice_first20.mp3
 - outputs/manifest.json
 
-How matching works (robust):
-- Start: matches ANY of --start-regex patterns (defaults include common variants)
-- End question: last match of ANY --end-regex pattern within first_minutes
-  (defaults include weight + height variants)
-- Answer inclusion:
-  after end question, extend window to include answer segments (numbers),
-  and optionally stop when a new question starts after we already captured numbers.
-
-You can adapt:
-- add patterns: --start-regex "..." --end-regex "..."
-- adjust window: --first-minutes, --preview-seconds, --answer-tail-seconds
+Matching:
+- Start: any of --start-regex patterns (defaults include common variants)
+- End question: last match of any --end-regex pattern within first_minutes
+- Answer included:
+  after end question, extend window to include number-containing answer segments,
+  and stop early if a new question begins after capturing numbers.
 """
 
 from __future__ import annotations
@@ -39,7 +34,6 @@ import requests
 IA_METADATA_URL = "https://archive.org/metadata/{identifier}"
 IA_DOWNLOAD_URL = "https://archive.org/download/{identifier}/{filename}"
 
-
 DEFAULT_START_REGEXES = [
     r"\bwie\s+alt\s+sind\s+sie\b",
     r"\bwie\s+alt\s+bist\s+du\b",
@@ -56,9 +50,15 @@ DEFAULT_END_REGEXES = [
     r"\bk(o|ö)rpergr(o|ö)[ßs]e\b",
 ]
 
-# Heuristics
-NUM_RE = re.compile(r"\d+|(\bnull\b|\bein\b|\beins\b|\bzwei\b|\bdrei\b|\bvier\b|\bfünf\b|\bfuenf\b|\bsechs\b|\bsieben\b|\bacht\b|\bneun\b|\bzehn\b|\belf\b|\bzwölf\b|\bzwoelf\b)", re.IGNORECASE)
-QUESTIONISH_RE = re.compile(r"^\s*(wie|wann|wo|was|welche|welcher|wieviel|haben|nehmen|sind|ist|können|koennen|dürfen|duerfen)\b", re.IGNORECASE)
+NUM_RE = re.compile(
+    r"\d+|(\bnull\b|\bein\b|\beins\b|\bzwei\b|\bdrei\b|\bvier\b|\bfünf\b|\bfuenf\b|\bsechs\b|"
+    r"\bsieben\b|\bacht\b|\bneun\b|\bzehn\b|\belf\b|\bzwölf\b|\bzwoelf\b)",
+    re.IGNORECASE,
+)
+QUESTIONISH_RE = re.compile(
+    r"^\s*(wie|wann|wo|was|welche|welcher|wieviel|haben|nehmen|sind|ist|können|koennen|dürfen|duerfen)\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass(frozen=True)
@@ -160,11 +160,11 @@ def rolling_text(segs: List[Segment], i: int, window: int = 2) -> str:
     return " ".join(segs[j].text for j in range(lo, i + 1)).strip()
 
 
-def find_first_match_index(
-    segs: List[Segment],
-    patterns: List[re.Pattern],
-    max_seconds: float,
-) -> Optional[int]:
+def compile_patterns(patterns: Iterable[str]) -> List[re.Pattern]:
+    return [re.compile(p, re.IGNORECASE) for p in patterns]
+
+
+def find_first_match_index(segs: List[Segment], patterns: List[re.Pattern], max_seconds: float) -> Optional[int]:
     for i, s in enumerate(segs):
         if s.start > max_seconds:
             break
@@ -174,12 +174,7 @@ def find_first_match_index(
     return None
 
 
-def find_last_match_index(
-    segs: List[Segment],
-    start_i: int,
-    patterns: List[re.Pattern],
-    max_seconds: float,
-) -> Optional[int]:
+def find_last_match_index(segs: List[Segment], start_i: int, patterns: List[re.Pattern], max_seconds: float) -> Optional[int]:
     last: Optional[int] = None
     for j in range(start_i, len(segs)):
         if segs[j].start > max_seconds:
@@ -190,19 +185,7 @@ def find_last_match_index(
     return last
 
 
-def extend_end_to_include_answer(
-    segs: List[Segment],
-    end_q_idx: int,
-    max_extra_seconds: float,
-) -> float:
-    """
-    Extend end after the ending question to include the answer.
-
-    Heuristic:
-    - Walk forward up to max_extra_seconds from the end question start.
-    - Keep extending end.
-    - Once we saw numbers, stop early if a new question starts.
-    """
+def extend_end_to_include_answer(segs: List[Segment], end_q_idx: int, max_extra_seconds: float) -> float:
     q_start = segs[end_q_idx].start
     end_at = segs[end_q_idx].end
     saw_number = False
@@ -244,8 +227,7 @@ def pick_window(
     if end_at <= start_at:
         return None
 
-    reason = f"start_idx={start_i}; end_q_idx={end_q_idx}; tail={answer_tail_seconds}s"
-    return start_at, end_at, reason
+    return start_at, end_at, f"start_idx={start_i}; end_q_idx={end_q_idx}; tail={answer_tail_seconds}s"
 
 
 def cut_clip_mp3(ffmpeg: str, preview_wav: Path, start: float, end: float, out_mp3: Path) -> None:
@@ -318,10 +300,22 @@ def mp3_to_wav(ffmpeg: str, mp3: Path, wav: Path, sample_rate: int) -> None:
     _run(cmd)
 
 
+def _escape_concat_path(path: Path) -> str:
+    # concat demuxer supports backslash escapes. Keep it simple & safe.
+    s = str(path)
+    s = s.replace("\\", "\\\\")
+    s = s.replace("'", "\\'")
+    return s
+
+
 def concat_wavs_to_mp3(ffmpeg: str, wavs: List[Path], out_mp3: Path) -> None:
     out_mp3.parent.mkdir(parents=True, exist_ok=True)
     concat_txt = out_mp3.parent / "concat_list.txt"
-    lines = [f"file '{str(p).replace(\"'\", \"'\\\\''\")}'" for p in wavs]
+
+    lines: List[str] = []
+    for p in wavs:
+        esc = _escape_concat_path(p)
+        lines.append(f"file '{esc}'")
     concat_txt.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     cmd = [
@@ -342,10 +336,6 @@ def concat_wavs_to_mp3(ffmpeg: str, wavs: List[Path], out_mp3: Path) -> None:
         str(out_mp3),
     ]
     _run(cmd)
-
-
-def compile_patterns(patterns: Iterable[str]) -> List[re.Pattern]:
-    return [re.compile(p, re.IGNORECASE) for p in patterns]
 
 
 def main() -> int:
@@ -393,20 +383,19 @@ def main() -> int:
         for idx, fn in enumerate(files, start=1):
             stem = Path(fn).with_suffix("").name
             url = ia_url(args.identifier, fn)
-
             print(f"[{idx}/{len(files)}] {fn}")
 
             preview_wav = tdir / f"{idx:03d}_preview.wav"
             try:
                 ffmpeg_preview_to_wav(ffmpeg, url, preview_wav, args.preview_seconds, args.sample_rate)
             except subprocess.CalledProcessError:
-                print(f"  !! preview failed: {fn}")
+                print("  !! preview failed")
                 continue
 
             try:
                 segs = transcribe_preview(preview_wav, args.model, args.language)
             except Exception as e:
-                print(f"  !! transcribe failed: {fn} ({e})")
+                print(f"  !! transcribe failed: {e}")
                 continue
 
             win = pick_window(
@@ -451,7 +440,6 @@ def main() -> int:
     if not manifest:
         raise SystemExit("No clips produced. Increase --first-minutes or --answer-tail-seconds, or add regex patterns.")
 
-    # Concatenate all clips
     silence_wav = out_dir / "_silence.wav"
     make_silence_wav(ffmpeg, silence_wav, args.silence_seconds, args.sample_rate)
 
