@@ -1,0 +1,95 @@
+# =========================================
+# file: .github/workflows/build_from_srt.yml
+# =========================================
+name: Build number practice (SRT -> clips, resume)
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit_total:
+        description: "Toplam kaç dosya hedef (örn 252)"
+        required: true
+        default: "252"
+      batch_size:
+        description: "Bu run'da kaç clip ÜRETİLSİN (örn 20)"
+        required: true
+        default: "20"
+      max_attempts:
+        description: "20 clip dolmazsa en fazla kaç dosya denensin"
+        required: true
+        default: "160"
+      first_minutes:
+        description: "Aramayı ilk kaç dakikada yapalım (örn 6)"
+        required: true
+        default: "6"
+      answer_tail_seconds:
+        description: "Bitiş sorusundan sonra cevap için ekstra saniye (örn 25)"
+        required: true
+        default: "25"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: numubung-build
+  cancel-in-progress: false
+
+env:
+  IA_IDENTIFIER: vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 250
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout SRT repo (FSPtranskript)
+        uses: actions/checkout@v4
+        with:
+          repository: protokolFSP/FSPtranskript
+          ref: main
+          path: _srt_repo
+          fetch-depth: 1
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+
+      - name: Build batch from SRT (resume, 20 clips)
+        run: |
+          python tools/process_next_batch_from_srt.py \
+            --identifier "$IA_IDENTIFIER" \
+            --srt-dir "_srt_repo/transcripts" \
+            --out-dir outputs \
+            --limit-total "${{ inputs.limit_total }}" \
+            --batch-size "${{ inputs.batch_size }}" \
+            --max-attempts "${{ inputs.max_attempts }}" \
+            --first-minutes "${{ inputs.first_minutes }}" \
+            --answer-tail-seconds "${{ inputs.answer_tail_seconds }}" \
+            --debug
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: outputs
+          path: outputs/**
+
+      - name: Commit & push outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outputs
+          git commit -m "Add SRT-based practice batch" || exit 0
+          git pull --rebase
+          git push
