@@ -1,0 +1,78 @@
+# file: .github/workflows/build_first20.yml
+name: Build number practice (first 20)
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Kaç dosya işlenecek"
+        required: true
+        default: "20"
+      first_minutes:
+        description: "Aramayı ilk kaç dakikada yapalım"
+        required: true
+        default: "3"
+      preview_seconds:
+        description: "Sadece ilk kaç saniyeyi preview edip çözelim"
+        required: true
+        default: "210"
+      answer_tail_seconds:
+        description: "Bitiş sorusundan sonra cevap için ekstra saniye"
+        required: true
+        default: "15"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: numubung-build
+  cancel-in-progress: false
+
+env:
+  IA_IDENTIFIER: vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+
+      - name: Build practice audio
+        run: |
+          python tools/build_practice_ia.py \
+            --identifier "$IA_IDENTIFIER" \
+            --limit "${{ inputs.limit }}" \
+            --first-minutes "${{ inputs.first_minutes }}" \
+            --preview-seconds "${{ inputs.preview_seconds }}" \
+            --answer-tail-seconds "${{ inputs.answer_tail_seconds }}" \
+            --out-dir outputs
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: outputs
+          path: outputs/**
+
+      - name: Commit & push outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outputs
+          git commit -m "Add practice outputs (first ${{ inputs.limit }})" || exit 0
+          git pull --rebase
+          git push
