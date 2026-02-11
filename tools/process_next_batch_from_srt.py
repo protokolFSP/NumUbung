@@ -1,21 +1,4 @@
 # file: tools/process_next_batch_from_srt.py
-"""
-Create number-practice clips using EXISTING SRT timestamps (no Whisper), with robust window picking.
-
-Why this version is better:
-- Handles variable order: weight before height, combined questions, detours/complaints.
-- Uses a small state-machine (age/dob/height/weight) instead of "end question + fixed tail".
-- Stops when a non-demographic question starts AFTER collecting at least one of height/weight.
-
-Outputs:
-- outputs/clips/<stem>.mp3
-- outputs/clips/<stem>.txt
-- outputs/ubung/batch_###.mp3
-- outputs/state.json
-- outputs/failures.json
-- outputs/debug/<stem>.json (optional)
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -36,6 +19,7 @@ try:
 except Exception:
     fuzz = None  # type: ignore
 
+
 IA_METADATA_URL = "https://archive.org/metadata/{identifier}"
 IA_DOWNLOAD_URL = "https://archive.org/download/{identifier}/{filename}"
 
@@ -48,19 +32,18 @@ START_PHRASES = [
     "wann bist du geboren",
     "wann genau sind sie geboren",
     "geboren am",
-    "wie alt sind sie und wann sind sie geboren",
 ]
 
-HEIGHT_Q_PHRASES = [
+HEIGHT_PHRASES = [
     "wie gross sind sie",
     "wie groß sind sie",
-    "wie gross und wie schwer",
-    "wie groß und wie schwer",
     "koerpergroesse",
     "körpergröße",
+    "wie gross und wie schwer",
+    "wie groß und wie schwer",
 ]
 
-WEIGHT_Q_PHRASES = [
+WEIGHT_PHRASES = [
     "wie viel wiegen sie",
     "wie viel wiegen sie zurzeit",
     "wie viel wiegen sie momentan",
@@ -70,26 +53,31 @@ WEIGHT_Q_PHRASES = [
     "kennen sie ihr gewicht",
     "aktuelles gewicht",
     "aktuelle gewicht",
-    "kennen sie ihre aktuellen gewicht",
 ]
 
-# Very common "complaint / next section" starters (to stop at the right time)
+TRANSITION_PHRASES = [
+    "was fuehrt sie zu uns",
+    "was fuehrt sie heute zu uns",
+    "was fuehrt sie her",
+    "was bringt sie zu uns",
+    "was kann ich fuer sie tun",
+    "womit kann ich ihnen helfen",
+    "was fuer beschwerden haben sie",
+    "welche beschwerden haben sie",
+    "was sind ihre beschwerden",
+]
+
 NON_DEMOG_Q_RE = re.compile(
-    r"^\s*(was|warum|wobei|woran|wo|seit wann|haben sie (schon|noch)|"
-    r"wo tut|wo genau|wie stark|welche beschwerden|was führt sie|was bringt sie|"
-    r"was betrifft|was kann ich|was ist der grund)\b",
+    r"\b(was\s+f(ü|ue)hrt\s+sie(\s+zu\s+uns|\s+heute|\s+her)?)\b|"
+    r"\b(was\s+kann\s+ich\s+f(ü|ue)r\s+sie\s+tun)\b|"
+    r"\b(was\s+bringt\s+sie\s+zu\s+uns)\b|"
+    r"\b(beschwerden)\b",
     re.IGNORECASE,
 )
 
-QUESTIONISH_RE = re.compile(
-    r"^\s*(wie|wann|wo|was|welche|welcher|wieviel|haben|nehmen|sind|ist|können|koennen|dürfen|duerfen)\b",
-    re.IGNORECASE,
-)
-
-# Signals for answers
 KG_RE = re.compile(r"\b(\d{2,3})\s*(kg|kilo)\b", re.IGNORECASE)
-M_RE = re.compile(r"\b(\d([,.]\d{1,2})?)\s*(m|meter)\b", re.IGNORECASE)  # 1,74 m
-METER_SPLIT_RE = re.compile(r"\b1\s*meter\s*(\d{2})\b", re.IGNORECASE)  # "1 Meter 65"
+M_RE = re.compile(r"\b(\d([,.]\d{1,2})?)\s*(m|meter)\b", re.IGNORECASE)
+METER_SPLIT_RE = re.compile(r"\b1\s*meter\s*(\d{2})\b", re.IGNORECASE)
 AGE_RE = re.compile(r"\b(\d{1,3})\s*(jahre)?\b", re.IGNORECASE)
 DOB_DOT_RE = re.compile(r"\b(\d{1,2})\.(\d{1,2})\.(\d{2,4})\b")
 DOB_MONTH_RE = re.compile(
@@ -188,150 +176,113 @@ def parse_srt(path: Path) -> List[SrtEntry]:
     return out
 
 
-def fuzzy_hit(text: str, phrases: List[str], threshold: int) -> Optional[str]:
+def fuzzy_any(text: str, phrases: List[str], threshold: int) -> bool:
     t = normalize_text(text)
     for p in phrases:
         if p in t:
-            return f"substr:{p}"
+            return True
     if fuzz is None:
-        return None
-    best_p, best_s = "", -1
-    for p in phrases:
-        sc = fuzz.partial_ratio(t, p)
-        if sc > best_s:
-            best_s, best_p = sc, p
-    if best_s >= threshold:
-        return f"fuzzy:{best_p}:{int(best_s)}"
-    return None
+        return False
+    best = max(fuzz.partial_ratio(t, p) for p in phrases)
+    return best >= threshold
 
 
-def _is_age(text: str) -> bool:
+def is_transition(text: str, threshold: int) -> bool:
+    return bool(NON_DEMOG_Q_RE.search(text)) or fuzzy_any(text, TRANSITION_PHRASES, threshold)
+
+
+def is_age(text: str) -> bool:
     t = normalize_text(text)
     if "jahre alt" in t:
         return True
     m = AGE_RE.search(t)
-    if not m:
-        return False
-    v = int(m.group(1))
-    return 1 <= v <= 110
+    return bool(m and 1 <= int(m.group(1)) <= 110)
 
 
-def _is_dob(text: str) -> bool:
+def is_dob(text: str) -> bool:
     t = normalize_text(text)
     return bool(DOB_DOT_RE.search(t) or DOB_MONTH_RE.search(t))
 
 
-def _is_height_answer(text: str) -> bool:
+def is_height(text: str, threshold: int) -> bool:
     t = normalize_text(text)
-    if M_RE.search(t):
+    if M_RE.search(t) or METER_SPLIT_RE.search(t):
         return True
-    if METER_SPLIT_RE.search(t):
-        return True
-    # allow "1,80" without unit if line contains "gross" / "groß"
-    if ("gross" in t or "gro" in t) and re.search(r"\b1[,.]\d{2}\b|\b1\d{2}\b", t):
-        return True
-    return False
+    return fuzzy_any(text, HEIGHT_PHRASES, threshold)
 
 
-def _is_weight_answer(text: str) -> bool:
+def is_weight(text: str, threshold: int) -> bool:
     t = normalize_text(text)
     if KG_RE.search(t):
         return True
-    if ("kilo" in t or "kg" in t or "gewicht" in t) and re.search(r"\b\d{2,3}\b", t):
-        return True
-    return False
+    return fuzzy_any(text, WEIGHT_PHRASES, threshold)
 
 
-def _is_height_q(text: str, thr: int) -> bool:
-    return fuzzy_hit(text, HEIGHT_Q_PHRASES, thr) is not None
-
-
-def _is_weight_q(text: str, thr: int) -> bool:
-    return fuzzy_hit(text, WEIGHT_Q_PHRASES, thr) is not None
-
-
-def pick_demog_window(
+def pick_window_strict_first_minutes(
     entries: List[SrtEntry],
     first_minutes: float,
-    tail_seconds: float,
-    fuzzy_threshold: int = 84,
+    max_clip_seconds: float,
+    fuzzy_threshold: int,
+    transition_fuzzy_threshold: int,
+    demog_tail_seconds: float = 0.8,
 ) -> Optional[Tuple[float, float, str]]:
     max_search = first_minutes * 60.0
 
-    # Find the earliest plausible start
     start_i: Optional[int] = None
-    start_hit: str = ""
     for i, e in enumerate(entries):
         if e.start > max_search:
             break
-        hit = fuzzy_hit(e.text, START_PHRASES, fuzzy_threshold)
-        if hit:
+        if fuzzy_any(e.text, START_PHRASES, fuzzy_threshold):
             start_i = i
-            start_hit = hit
             break
     if start_i is None:
         return None
 
+    start_at = entries[start_i].start
+    last_demog = entries[start_i].end
+    end_at = entries[start_i].end
+
     found_age = False
     found_dob = False
-    found_h = False
-    found_w = False
-
-    last_demog_time = entries[start_i].end
-    end_time = entries[start_i].end
+    found_h_or_w = False
 
     for j in range(start_i, len(entries)):
         e = entries[j]
         if e.start > max_search:
             break
 
-        t = e.text.strip()
-        nt = normalize_text(t)
+        # Transition => cut BEFORE transition line, still clamp to <= max_search
+        if found_h_or_w and is_transition(e.text, transition_fuzzy_threshold):
+            end_at = min(max_search, max(last_demog + 0.4, e.start - 0.05))
+            break
 
-        # Track questions
-        hq = _is_height_q(t, fuzzy_threshold)
-        wq = _is_weight_q(t, fuzzy_threshold)
-
-        # Track answers/signals
-        if _is_age(t):
+        if is_age(e.text):
             found_age = True
-            last_demog_time = e.end
-        if _is_dob(t):
+            last_demog = e.end
+        if is_dob(e.text):
             found_dob = True
-            last_demog_time = e.end
-        if _is_height_answer(t):
-            found_h = True
-            last_demog_time = e.end
-        if _is_weight_answer(t):
-            found_w = True
-            last_demog_time = e.end
+            last_demog = e.end
 
-        if hq or wq:
-            last_demog_time = e.end
+        if is_height(e.text, fuzzy_threshold) or is_weight(e.text, fuzzy_threshold):
+            found_h_or_w = True
+            last_demog = e.end
 
-        # Decide when to stop:
-        # If we already saw at least one of (height/weight) and a new non-demographic question starts, stop BEFORE it.
-        if (found_h or found_w) and NON_DEMOG_Q_RE.search(t):
+        end_at = e.end
+
+        # hard max clip length
+        if (end_at - start_at) >= max_clip_seconds:
+            end_at = start_at + max_clip_seconds
             break
 
-        # If we already saw at least one of (height/weight) and we drift too far from last demog mention, stop.
-        if (found_h or found_w) and (e.start - last_demog_time) > tail_seconds:
-            break
+    # Always clamp inside first_minutes window and near last demog
+    end_at = min(max_search, min(end_at, last_demog + demog_tail_seconds))
 
-        end_time = e.end
-
-    # Score window; accept if we have at least age/dob + (height or weight), OR height+weight
-    score = 0
-    score += 2 if found_age else 0
-    score += 2 if found_dob else 0
-    score += 2 if found_h else 0
-    score += 2 if found_w else 0
-
-    if score < 4:
+    if not ((found_age or found_dob) and found_h_or_w):
+        return None
+    if end_at <= start_at:
         return None
 
-    reason = f"start={start_hit}; age={found_age}; dob={found_dob}; h={found_h}; w={found_w}"
-    return entries[start_i].start, end_time, reason
+    return start_at, end_at, f"age={found_age};dob={found_dob};h_or_w={found_h_or_w};max_search={max_search}"
 
 
 def cut_clip_from_url(ffmpeg: str, url: str, start: float, end: float, out_mp3: Path) -> None:
@@ -455,13 +406,18 @@ def main() -> int:
     ap.add_argument("--max-attempts", type=int, default=160)
     ap.add_argument("--max-failures", type=int, default=3)
 
-    ap.add_argument("--first-minutes", type=float, default=6.0)
-    ap.add_argument("--answer-tail-seconds", type=float, default=25.0)
-    ap.add_argument("--pre-pad", type=float, default=0.25)
-    ap.add_argument("--post-pad", type=float, default=0.25)
+    ap.add_argument("--first-minutes", type=float, default=3.0)
+    ap.add_argument("--max-clip-seconds", type=float, default=70.0)
+
+    ap.add_argument("--fuzzy-threshold", type=int, default=84)
+    ap.add_argument("--transition-fuzzy-threshold", type=int, default=82)
+
+    ap.add_argument("--pre-pad", type=float, default=0.10)
+    ap.add_argument("--post-pad", type=float, default=0.10)
 
     ap.add_argument("--silence-seconds", type=float, default=0.6)
     ap.add_argument("--sample-rate", type=int, default=16000)
+
     ap.add_argument("--debug", action="store_true")
     args = ap.parse_args()
 
@@ -489,22 +445,24 @@ def main() -> int:
     pending: List[str] = []
     for fn in all_files:
         stem = Path(fn).with_suffix("").name
-        if stem in done_stems:
-            continue
-        if is_perm_skipped(stem):
+        if stem in done_stems or is_perm_skipped(stem):
             continue
         pending.append(fn)
 
-    state = {
-        "identifier": args.identifier,
-        "limit_total": args.limit_total,
-        "done": len(done_stems),
-        "pending": len(pending),
-        "target_produced": args.batch_size,
-        "max_attempts": args.max_attempts,
-        "mode": "srt_exact_state_machine",
-    }
-    _save_json(out_dir / "state.json", state)
+    _save_json(
+        out_dir / "state.json",
+        {
+            "identifier": args.identifier,
+            "limit_total": args.limit_total,
+            "done": len(done_stems),
+            "pending": len(pending),
+            "target_produced": args.batch_size,
+            "max_attempts": args.max_attempts,
+            "mode": "srt_strict_first_minutes",
+            "first_minutes": args.first_minutes,
+            "max_clip_seconds": args.max_clip_seconds,
+        },
+    )
 
     if not pending:
         print("Nothing pending.")
@@ -515,15 +473,11 @@ def main() -> int:
 
     with tempfile.TemporaryDirectory(prefix="numubung_srt_") as _td:
         for fn in pending:
-            if len(produced) >= args.batch_size:
-                break
-            if tried >= args.max_attempts:
+            if len(produced) >= args.batch_size or tried >= args.max_attempts:
                 break
             tried += 1
 
             stem = Path(fn).with_suffix("").name
-            url = ia_url(args.identifier, fn)
-
             srt_path = find_srt_exact(srt_dir, stem)
             if not srt_path:
                 ent = failures.get(stem, {"attempts": 0, "permanent": False})
@@ -533,14 +487,15 @@ def main() -> int:
                     ent["permanent"] = True
                 failures[stem] = ent
                 _save_json(failures_path, failures)
-                print(f"[{tried}] {fn}: !! SRT missing (skip)")
                 continue
 
             entries = parse_srt(srt_path)
-            picked = pick_demog_window(
+            picked = pick_window_strict_first_minutes(
                 entries=entries,
                 first_minutes=args.first_minutes,
-                tail_seconds=args.answer_tail_seconds,
+                max_clip_seconds=args.max_clip_seconds,
+                fuzzy_threshold=args.fuzzy_threshold,
+                transition_fuzzy_threshold=args.transition_fuzzy_threshold,
             )
             if not picked:
                 ent = failures.get(stem, {"attempts": 0, "permanent": False})
@@ -551,18 +506,18 @@ def main() -> int:
                 failures[stem] = ent
                 _save_json(failures_path, failures)
                 if args.debug:
-                    _save_json(debug_dir / f"{stem}_fail.json", {"file": fn, "srt": str(srt_path)})
-                print(f"[{tried}] {fn}: !! window not found (skip)")
+                    _save_json(debug_dir / f"{stem}_fail.json", {"srt": str(srt_path)})
                 continue
 
             st, en, reason = picked
             st = max(0.0, st - args.pre_pad)
             en = en + args.post_pad
 
+            url = ia_url(args.identifier, fn)
             out_mp3 = clips_dir / f"{stem}.mp3"
             out_txt = clips_dir / f"{stem}.txt"
 
-            print(f"[{tried}] produce {len(produced)+1}/{args.batch_size}: {fn} ({st:.2f}-{en:.2f}) {reason}")
+            print(f"[{tried}] produce {len(produced)+1}/{args.batch_size}: {stem} ({st:.2f}-{en:.2f}) {reason}")
             try:
                 cut_clip_from_url(ffmpeg, url, st, en, out_mp3)
             except subprocess.CalledProcessError:
@@ -573,25 +528,22 @@ def main() -> int:
                     ent["permanent"] = True
                 failures[stem] = ent
                 _save_json(failures_path, failures)
-                print("  !! ffmpeg cut failed")
                 continue
 
             parts = [e.text.strip() for e in entries if e.start >= st and e.end <= en and e.text.strip()]
             out_txt.write_text("\n".join(parts).strip() + "\n", encoding="utf-8")
 
             if args.debug:
-                _save_json(debug_dir / f"{stem}.json", {"file": fn, "srt": str(srt_path), "picked": {"start": st, "end": en, "reason": reason}})
+                _save_json(debug_dir / f"{stem}.json", {"srt": str(srt_path), "picked": {"start": st, "end": en, "reason": reason}})
 
             produced.append(out_mp3)
 
     if not produced:
-        state["this_run_produced"] = 0
-        state["this_run_tried"] = tried
-        _save_json(out_dir / "state.json", state)
-        _save_json(failures_path, failures)
+        _save_json(out_dir / "failures.json", failures)
         print("No clips produced.")
         return 0
 
+    # build batch mp3
     batch_idx = next_batch_index(ubung_dir)
     batch_mp3 = ubung_dir / f"batch_{batch_idx:03d}.mp3"
 
@@ -604,15 +556,12 @@ def main() -> int:
         mp3_to_wav(ffmpeg, mp3, wav, args.sample_rate)
         wavs.extend([wav, silence_wav])
     wavs = wavs[:-1]
-
-    print(f"Creating {batch_mp3} (clips={len(produced)})")
     wavs_to_mp3_filter_concat(ffmpeg, wavs, batch_mp3)
 
-    state["this_run_produced"] = len(produced)
-    state["this_run_tried"] = tried
-    state["last_batch_mp3"] = str(batch_mp3)
+    _save_json(out_dir / "failures.json", failures)
+    state = _load_json(out_dir / "state.json", {})
+    state.update({"this_run_produced": len(produced), "this_run_tried": tried, "last_batch_mp3": str(batch_mp3)})
     _save_json(out_dir / "state.json", state)
-    _save_json(failures_path, failures)
     return 0
 
 
