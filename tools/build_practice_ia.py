@@ -2,7 +2,7 @@
 """
 Build a German number-practice audio from an Internet Archive item (first N .m4a files).
 
-Output:
+Outputs:
 - outputs/clips/<stem>.mp3
 - outputs/clips/<stem>.txt
 - outputs/practice_first20.mp3
@@ -14,6 +14,9 @@ Matching:
 - Answer included:
   after end question, extend window to include number-containing answer segments,
   and stop early if a new question begins after capturing numbers.
+
+Why this version:
+- Uses ffmpeg filter_complex concat (no concat_list.txt parsing issues).
 """
 
 from __future__ import annotations
@@ -39,11 +42,15 @@ DEFAULT_START_REGEXES = [
     r"\bwie\s+alt\s+bist\s+du\b",
     r"\bihr\s+alter\b",
     r"\bwelches\s+alter\b",
+    r"\bgeburtsdatum\b",
+    r"\bgeboren\b",
 ]
 
 DEFAULT_END_REGEXES = [
     r"\bwie\s+viel\s+wiegen\s+sie\b",
     r"\bwie\s+viel\s+wiegen\s+du\b",
+    r"\bwas\s+wiegen\s+sie\b",
+    r"\bgewicht\b",
     r"\bwie\s+gro[ßs]\s+sind\s+sie\b",
     r"\bwie\s+gro[ßs]\s+bist\s+du\b",
     r"\bihre\s+gr(o|ö)[ßs]e\b",
@@ -300,35 +307,33 @@ def mp3_to_wav(ffmpeg: str, mp3: Path, wav: Path, sample_rate: int) -> None:
     _run(cmd)
 
 
-def _escape_concat_path(path: Path) -> str:
-    # concat demuxer supports backslash escapes. Keep it simple & safe.
-    s = str(path)
-    s = s.replace("\\", "\\\\")
-    s = s.replace("'", "\\'")
-    return s
+def wavs_to_mp3_filter_concat(ffmpeg: str, wavs: List[Path], out_mp3: Path) -> None:
+    if not wavs:
+        raise SystemExit("No WAVs to concat (all clips skipped).")
 
-
-def concat_wavs_to_mp3(ffmpeg: str, wavs: List[Path], out_mp3: Path) -> None:
     out_mp3.parent.mkdir(parents=True, exist_ok=True)
-    concat_txt = out_mp3.parent / "concat_list.txt"
 
-    lines: List[str] = []
-    for p in wavs:
-        esc = _escape_concat_path(p)
-        lines.append(f"file '{esc}'")
-    concat_txt.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
-    cmd = [
+    cmd: List[str] = [
         ffmpeg,
         "-hide_banner",
         "-loglevel",
         "error",
-        "-f",
-        "concat",
-        "-safe",
-        "0",
-        "-i",
-        str(concat_txt),
+    ]
+    for w in wavs:
+        cmd += ["-i", str(w)]
+
+    if len(wavs) == 1:
+        cmd += ["-c:a", "libmp3lame", "-b:a", "96k", str(out_mp3)]
+        _run(cmd)
+        return
+
+    inputs = "".join([f"[{i}:a]" for i in range(len(wavs))])
+    filt = f"{inputs}concat=n={len(wavs)}:v=0:a=1[a]"
+    cmd += [
+        "-filter_complex",
+        filt,
+        "-map",
+        "[a]",
         "-c:a",
         "libmp3lame",
         "-b:a",
@@ -438,8 +443,12 @@ def main() -> int:
             clip_mp3s.append(out_mp3)
 
     if not manifest:
-        raise SystemExit("No clips produced. Increase --first-minutes or --answer-tail-seconds, or add regex patterns.")
+        raise SystemExit(
+            "No clips produced. Increase --first-minutes (e.g. 4) or --answer-tail-seconds (e.g. 25), "
+            "or add --start-regex/--end-regex."
+        )
 
+    # Build final practice mp3
     silence_wav = out_dir / "_silence.wav"
     make_silence_wav(ffmpeg, silence_wav, args.silence_seconds, args.sample_rate)
 
@@ -453,7 +462,8 @@ def main() -> int:
         wavs_for_concat = wavs_for_concat[:-1]
 
     practice_mp3 = out_dir / "practice_first20.mp3"
-    concat_wavs_to_mp3(ffmpeg, wavs_for_concat, practice_mp3)
+    print(f"Concatenating {len(wavs_for_concat)} wav parts -> {practice_mp3}")
+    wavs_to_mp3_filter_concat(ffmpeg, wavs_for_concat, practice_mp3)
 
     (out_dir / "manifest.json").write_text(
         json.dumps([asdict(c) for c in manifest], ensure_ascii=False, indent=2),
