@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/A Cholezystitis dr Heiko mit dr Hafsa 13.05.24.srt",
+  "picked": {
+    "start": 58.8,
+    "end": 89.4,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

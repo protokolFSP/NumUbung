@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Adnexitis  Dr Heiko mit Dr Dilara 4.12.2025.srt",
+  "picked": {
+    "start": 32.9,
+    "end": 103.1,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

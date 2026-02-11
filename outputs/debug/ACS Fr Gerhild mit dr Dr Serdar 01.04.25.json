@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/ACS Fr Gerhild mit dr Dr Serdar 01.04.25.srt",
+  "picked": {
+    "start": 47.39,
+    "end": 72.38999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

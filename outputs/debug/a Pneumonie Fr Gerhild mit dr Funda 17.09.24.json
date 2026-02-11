@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/a Pneumonie Fr Gerhild mit dr Funda 17.09.24.srt",
+  "picked": {
+    "start": 51.309999999999995,
+    "end": 89.71,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

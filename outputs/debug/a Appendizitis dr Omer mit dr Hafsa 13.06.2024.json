@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/a Appendizitis dr Omer mit dr Hafsa 13.06.2024.srt",
+  "picked": {
+    "start": 65.57000000000001,
+    "end": 90.17,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

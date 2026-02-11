@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/ACS dr Ömer mit dr Esad 23.05.24.srt",
+  "picked": {
+    "start": 100.63000000000001,
+    "end": 170.83,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

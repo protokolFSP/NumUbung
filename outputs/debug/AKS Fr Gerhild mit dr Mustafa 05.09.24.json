@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/AKS Fr Gerhild mit dr Mustafa 05.09.24.srt",
+  "picked": {
+    "start": 70.9,
+    "end": 122.30999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

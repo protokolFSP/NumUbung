@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/A Pankreatitis dr Ömer mit dr Umut 25.04.24.srt",
+  "picked": {
+    "start": 99.36,
+    "end": 125.88,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

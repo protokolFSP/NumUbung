@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Akute Appendizitis Dr. Gerhild mit Dr İsa 05.12.24.srt",
+  "picked": {
+    "start": 70.78,
+    "end": 112.38,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

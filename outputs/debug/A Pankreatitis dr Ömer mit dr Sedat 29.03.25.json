@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/A Pankreatitis dr Ömer mit dr Sedat 29.03.25.srt",
+  "picked": {
+    "start": 53.16,
+    "end": 106.75999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

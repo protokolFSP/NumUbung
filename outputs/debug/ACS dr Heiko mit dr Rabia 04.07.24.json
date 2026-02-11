@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/ACS dr Heiko mit dr Rabia 04.07.24.srt",
+  "picked": {
+    "start": 73.38000000000001,
+    "end": 107.83,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

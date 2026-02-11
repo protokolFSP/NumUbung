@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/ACS Fr Gerhild mit dr Mehmet 23.05.24.srt",
+  "picked": {
+    "start": 69.52000000000001,
+    "end": 101.6,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}
