@@ -1,0 +1,373 @@
+{
+  "file": "ACS dr Rüveyda mit dr Bilal 21.07.23.m4a",
+  "url": "https://archive.org/download/vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25/ACS%20dr%20R%C3%BCveyda%20mit%20dr%20Bilal%2021.07.23.m4a",
+  "picked": {
+    "start": 58.13,
+    "end": 110.03,
+    "reason": "start=substr:wie alt sind sie; end=substr:wie gross sind sie; digits=12",
+    "preview_seconds": 300,
+    "first_minutes": 4.0
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "text": " Hallo, merhaba."
+    },
+    {
+      "start": 3.0,
+      "end": 5.0,
+      "text": " Hallo, guten Tag."
+    },
+    {
+      "start": 5.0,
+      "end": 6.0,
+      "text": " Guten Tag."
+    },
+    {
+      "start": 6.0,
+      "end": 12.0,
+      "text": " Mein Name ist Bilal Altan. Ich bin hier auf dieser Station als Instabender Arzt tätig."
+    },
+    {
+      "start": 12.0,
+      "end": 16.0,
+      "text": " Ich werde mit Ihnen das Aufnahmegespräch durchführen."
+    },
+    {
+      "start": 16.0,
+      "end": 18.0,
+      "text": " Sind Sie damit einverstanden?"
+    },
+    {
+      "start": 18.0,
+      "end": 20.0,
+      "text": " Ja, gerne."
+    },
+    {
+      "start": 20.0,
+      "end": 27.0,
+      "text": " Bevor wir über Ihr aktuelles Gespräch sprechen, möchte ich ganz schnell Ihre persönliche Daten aufnehmen."
+    },
+    {
+      "start": 27.0,
+      "end": 29.0,
+      "text": " Ich heiße Sie."
+    },
+    {
+      "start": 29.0,
+      "end": 31.0,
+      "text": " Bitte."
+    },
+    {
+      "start": 31.0,
+      "end": 33.0,
+      "text": " Wie heißen Sie bitte?"
+    },
+    {
+      "start": 33.0,
+      "end": 41.38,
+      "text": " Ich heiße Peter Müller."
+    },
+    {
+      "start": 41.38,
+      "end": 47.38,
+      "text": " Könnten Sie bitte vorne und nach Hause buchen zu tabülen?"
+    },
+    {
+      "start": 47.38,
+      "end": 51.38,
+      "text": " Peter ist P-E-T-E-R."
+    },
+    {
+      "start": 51.38,
+      "end": 56.38,
+      "text": " Müller M-Ü-L-L-E-R."
+    },
+    {
+      "start": 56.38,
+      "end": 58.38,
+      "text": " Vielen Dank."
+    },
+    {
+      "start": 58.38,
+      "end": 60.38,
+      "text": " Wie alt sind Sie?"
+    },
+    {
+      "start": 60.38,
+      "end": 62.38,
+      "text": " Herr Müller."
+    },
+    {
+      "start": 62.38,
+      "end": 64.38,
+      "text": " Ich bin 60 Jahre alt."
+    },
+    {
+      "start": 64.38,
+      "end": 66.38,
+      "text": " 60 Jahre alt."
+    },
+    {
+      "start": 66.38,
+      "end": 70.38,
+      "text": " Und wann genau sind Sie geboren?"
+    },
+    {
+      "start": 70.38,
+      "end": 78.78,
+      "text": " Ich bin geboren 1943."
+    },
+    {
+      "start": 78.78,
+      "end": 82.78,
+      "text": " 1963, Entschuldigung."
+    },
+    {
+      "start": 82.78,
+      "end": 85.78,
+      "text": " 1. Mai 1963."
+    },
+    {
+      "start": 85.78,
+      "end": 87.78,
+      "text": " 1. Mai."
+    },
+    {
+      "start": 87.78,
+      "end": 89.78,
+      "text": " 2. Mai."
+    },
+    {
+      "start": 89.78,
+      "end": 91.78,
+      "text": " Das sind die in Bezug."
+    },
+    {
+      "start": 91.78,
+      "end": 93.78,
+      "text": " Bitte."
+    },
+    {
+      "start": 93.78,
+      "end": 97.78,
+      "text": " Wie viel wiegen Sie und wie groß sind Sie, Herr Müller?"
+    },
+    {
+      "start": 97.78,
+      "end": 103.78,
+      "text": " Ich bin ungefähr 1,83 groß und wiege ungefähr 90 kg."
+    },
+    {
+      "start": 103.78,
+      "end": 105.78,
+      "text": " 90 kg."
+    },
+    {
+      "start": 105.78,
+      "end": 109.78,
+      "text": " Danke schön. Was sind Sie von Beruf?"
+    },
+    {
+      "start": 109.78,
+      "end": 114.78,
+      "text": " Ich bin Bauarbeiter."
+    },
+    {
+      "start": 114.78,
+      "end": 117.78,
+      "text": " Darf ich Ihre Familie fragen?"
+    },
+    {
+      "start": 117.78,
+      "end": 119.78,
+      "text": " Ich bin verheiratet."
+    },
+    {
+      "start": 119.78,
+      "end": 121.78,
+      "text": " Und haben Sie Kinder?"
+    },
+    {
+      "start": 121.78,
+      "end": 123.78,
+      "text": " Ich habe zwei Kinder."
+    },
+    {
+      "start": 123.78,
+      "end": 125.78,
+      "text": " Vielen Dank."
+    },
+    {
+      "start": 125.78,
+      "end": 129.78,
+      "text": " Herr Müller, was für Sie zu uns?"
+    },
+    {
+      "start": 129.78,
+      "end": 132.78,
+      "text": " Wie kann ich Ihnen erzählen?"
+    },
+    {
+      "start": 132.78,
+      "end": 141.78,
+      "text": " Wie Sie bestimmt schon wissen, bin ich zu Hause fast bewusst los geworden."
+    },
+    {
+      "start": 141.78,
+      "end": 144.78,
+      "text": " Ich bin umgekippt."
+    },
+    {
+      "start": 144.78,
+      "end": 147.78,
+      "text": " Und Tattiff, bitte."
+    },
+    {
+      "start": 147.78,
+      "end": 153.78,
+      "text": " Wann sind Sie bewusstlos gewesen?"
+    },
+    {
+      "start": 153.78,
+      "end": 155.78,
+      "text": " Geworfen."
+    },
+    {
+      "start": 155.78,
+      "end": 158.78,
+      "text": " Ihre gewesen geht auch. Wann sind Sie bewusstlos gewesen?"
+    },
+    {
+      "start": 158.78,
+      "end": 164.78,
+      "text": " Ich bin gestern Abend gekommen."
+    },
+    {
+      "start": 164.78,
+      "end": 172.78,
+      "text": " Gestern, bevor ich gekommen bin, habe ich Schmerzen auf der Brust gehabt."
+    },
+    {
+      "start": 172.78,
+      "end": 175.78,
+      "text": " Und dann bin ich bewusstlos geworden."
+    },
+    {
+      "start": 175.78,
+      "end": 183.78,
+      "text": " Gestern Abend, nur einmal, oder?"
+    },
+    {
+      "start": 183.78,
+      "end": 189.78,
+      "text": " Sind Sie zweimal bewusstlos geworden?"
+    },
+    {
+      "start": 189.78,
+      "end": 192.78,
+      "text": " Einmal. Gestern Abend."
+    },
+    {
+      "start": 192.78,
+      "end": 200.46,
+      "text": " Gestern Abend sind Sie bewusstlos geworden?"
+    },
+    {
+      "start": 200.46,
+      "end": 203.46,
+      "text": " Ein Moment."
+    },
+    {
+      "start": 203.46,
+      "end": 206.46,
+      "text": " Bitte entweder auf die Terrace oder auf die Brust."
+    },
+    {
+      "start": 206.46,
+      "end": 209.46,
+      "text": " Ich stört."
+    },
+    {
+      "start": 209.46,
+      "end": 213.46,
+      "text": " Ich habe gestern auf dem Bau gearbeitet."
+    },
+    {
+      "start": 213.46,
+      "end": 216.46,
+      "text": " Und dann habe ich Schmerzen auf der Brust gekriegt."
+    },
+    {
+      "start": 216.46,
+      "end": 219.46,
+      "text": " Und dann bin ich umgekippt."
+    },
+    {
+      "start": 220.46,
+      "end": 233.81,
+      "text": " Haben Sie so einige Beschwerden früher gehabt?"
+    },
+    {
+      "start": 233.81,
+      "end": 236.81,
+      "text": " Eigentlich nicht."
+    },
+    {
+      "start": 236.81,
+      "end": 242.81,
+      "text": " Manchmal, manchmal, aber immer nur ganz kurz, ein bisschen."
+    },
+    {
+      "start": 242.81,
+      "end": 246.81,
+      "text": " Aber nicht bewusstlos geworden, das ist das erste Mal."
+    },
+    {
+      "start": 246.81,
+      "end": 252.28,
+      "text": " Nur früher hatte Sie Brutschmerz?"
+    },
+    {
+      "start": 252.28,
+      "end": 257.28,
+      "text": " Ja, wie so ein Stechen habe ich gehabt."
+    },
+    {
+      "start": 257.28,
+      "end": 260.28,
+      "text": " Ganz kurz, aber diesmal hat es länger angehalten."
+    },
+    {
+      "start": 260.28,
+      "end": 265.28,
+      "text": " Also diesmal hat es eine halbe Stunde angehalten."
+    },
+    {
+      "start": 265.28,
+      "end": 268.28,
+      "text": " Normalerweise ganz kurz immer."
+    },
+    {
+      "start": 268.28,
+      "end": 273.28,
+      "text": " Okay."
+    },
+    {
+      "start": 273.28,
+      "end": 281.28,
+      "text": " Wo genau sind die Schmerzen hinter dem Brustbein?"
+    },
+    {
+      "start": 281.28,
+      "end": 289.53,
+      "text": " Also es tut mir halt auch der Brust tut weh."
+    },
+    {
+      "start": 289.53,
+      "end": 293.53,
+      "text": " Das ist wie so ein Stechen."
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "file": "Adenokarzinom dr Hu sameddin mit dr Mehmet 22.05.24.m4a",
+  "url": "https://archive.org/download/vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25/Adenokarzinom%20dr%20Hu%20sameddin%20mit%20dr%20Mehmet%2022.05.24.m4a",
+  "picked": {
+    "start": 58.13,
+    "end": 115.61,
+    "reason": "start=substr:wie alt sind sie; end=substr:wie gross sind sie; digits=12",
+    "preview_seconds": 300,
+    "first_minutes": 4.0
+  },
+  "segments": [
+    {
+      "start": 0.37,
+      "end": 2.37,
+      "text": " Bitte schön."
+    },
+    {
+      "start": 2.37,
+      "end": 4.37,
+      "text": " Hallo schön und guten Tag."
+    },
+    {
+      "start": 4.37,
+      "end": 8.87,
+      "text": " Mehmetis ist mein Name. Ich bin der zuständige Arzt auf dieser Station."
+    },
+    {
+      "start": 8.87,
+      "end": 12.37,
+      "text": " Ich würde gerne mit Ihnen das Aufnahmegespräch durchführen."
+    },
+    {
+      "start": 12.37,
+      "end": 14.37,
+      "text": " Ist das in Ordnung?"
+    },
+    {
+      "start": 14.37,
+      "end": 15.37,
+      "text": " Ja gerne."
+    },
+    {
+      "start": 15.37,
+      "end": 17.37,
+      "text": " Okay, kurz zum Ablauf."
+    },
+    {
+      "start": 17.37,
+      "end": 24.37,
+      "text": " Ich werde kurz ein paar Fragen so Ihrer Person stellen, dann werde ich so Ihrer aktuellen Bescheid kommen."
+    },
+    {
+      "start": 24.37,
+      "end": 29.37,
+      "text": " Am Ende werde ich ein paar Fragen, bis ich Ihre Familienvorgehung habe."
+    },
+    {
+      "start": 29.37,
+      "end": 31.37,
+      "text": " Okay, wie heißen Sie denn?"
+    },
+    {
+      "start": 31.37,
+      "end": 35.37,
+      "text": " Ich heiße Martin Meyer."
+    },
+    {
+      "start": 35.37,
+      "end": 40.37,
+      "text": " Martin Meyer, können Sie bitte Ihren Nachnamen büsten?"
+    },
+    {
+      "start": 40.37,
+      "end": 46.37,
+      "text": " Ja, also M-E-I-E-R, Meyer."
+    },
+    {
+      "start": 46.37,
+      "end": 51.38,
+      "text": " M-E-I-E-R, richtig?"
+    },
+    {
+      "start": 51.38,
+      "end": 55.38,
+      "text": " Ja, E-I-E-R, Meyer."
+    },
+    {
+      "start": 55.38,
+      "end": 58.38,
+      "text": " Okay, Herr Meyer."
+    },
+    {
+      "start": 58.38,
+      "end": 61.38,
+      "text": " Wie alt sind Sie, Herr Meyer?"
+    },
+    {
+      "start": 61.38,
+      "end": 64.38,
+      "text": " Ich bin 63 Jahre alt."
+    },
+    {
+      "start": 64.38,
+      "end": 68.38,
+      "text": " 63, wann sind Sie genau geboren?"
+    },
+    {
+      "start": 68.38,
+      "end": 80.38,
+      "text": " Ich bin geboren am 14.5.1961."
+    },
+    {
+      "start": 80.38,
+      "end": 82.38,
+      "text": " 62, Oliver?"
+    },
+    {
+      "start": 82.38,
+      "end": 86.38,
+      "text": " 1961."
+    },
+    {
+      "start": 88.95,
+      "end": 89.95,
+      "text": " Okay."
+    },
+    {
+      "start": 89.95,
+      "end": 93.95,
+      "text": " Wie viel, sobald Sie wegen?"
+    },
+    {
+      "start": 93.95,
+      "end": 96.95,
+      "text": " Wie viel Sie aktuell wegen?"
+    },
+    {
+      "start": 96.95,
+      "end": 102.95,
+      "text": " Ja, ich wege momentan 99 kg."
+    },
+    {
+      "start": 102.95,
+      "end": 104.95,
+      "text": " 99 kg."
+    },
+    {
+      "start": 104.95,
+      "end": 106.95,
+      "text": " Wie groß sind Sie?"
+    },
+    {
+      "start": 106.95,
+      "end": 109.95,
+      "text": " 1,90 m."
+    },
+    {
+      "start": 109.95,
+      "end": 115.36,
+      "text": " Ja, 90, ja Sie sind sehr groß."
+    },
+    {
+      "start": 115.36,
+      "end": 119.36,
+      "text": " Und was fühlst du uns, Herr Meyer?"
+    },
+    {
+      "start": 119.36,
+      "end": 122.36,
+      "text": " Was für Beschwöre haben Sie?"
+    },
+    {
+      "start": 122.36,
+      "end": 125.36,
+      "text": " Also, mir geht es nicht gut."
+    },
+    {
+      "start": 125.36,
+      "end": 127.36,
+      "text": " Irgendwie habe ich geschwindelt."
+    },
+    {
+      "start": 127.36,
+      "end": 130.36,
+      "text": " Ich habe keine Leistung mehr."
+    },
+    {
+      "start": 130.36,
+      "end": 132.36,
+      "text": " Ich bin völlig kaputt."
+    },
+    {
+      "start": 132.36,
+      "end": 138.36,
+      "text": " Und ich kann seit ungefähr einem halben Jahr nicht mal so richtig schlucken."
+    },
+    {
+      "start": 138.36,
+      "end": 142.36,
+      "text": " Ein halbes Jahr, Sie können nicht schlücken."
+    },
+    {
+      "start": 142.36,
+      "end": 148.66,
+      "text": " Ja, vor allem so feste Speisen kriege ich nicht runter."
+    },
+    {
+      "start": 148.66,
+      "end": 150.66,
+      "text": " Die kommen wieder raus."
+    },
+    {
+      "start": 150.66,
+      "end": 152.66,
+      "text": " Ja."
+    },
+    {
+      "start": 152.66,
+      "end": 157.66,
+      "text": " Wie lange haben Sie diese Beschwöre gesagt?"
+    },
+    {
+      "start": 157.66,
+      "end": 159.66,
+      "text": " Vor einem halben Jahr?"
+    },
+    {
+      "start": 159.66,
+      "end": 171.11,
+      "text": " Vor einem halben Jahr."
+    },
+    {
+      "start": 171.11,
+      "end": 174.11,
+      "text": " Können Sie bitte Ihre Beschwerden generell ersetzen?"
+    },
+    {
+      "start": 174.11,
+      "end": 177.11,
+      "text": " Was fühlen Sie?"
+    },
+    {
+      "start": 177.11,
+      "end": 182.11,
+      "text": " Was für Begleitende Beschwöre haben Sie?"
+    },
+    {
+      "start": 182.11,
+      "end": 186.11,
+      "text": " Das tut ein bisschen weh in dem Bereich."
+    },
+    {
+      "start": 186.11,
+      "end": 190.11,
+      "text": " In der Brust?"
+    },
+    {
+      "start": 190.11,
+      "end": 196.11,
+      "text": " Ja, in der Brust, in der Mitte, weiter unten Richtung, wo die Rippen anfangen."
+    },
+    {
+      "start": 196.11,
+      "end": 198.11,
+      "text": " Da tut es ein bisschen weh."
+    },
+    {
+      "start": 198.11,
+      "end": 201.11,
+      "text": " Und wenn ich schlucke, geht es einfach nicht durch."
+    },
+    {
+      "start": 201.11,
+      "end": 204.11,
+      "text": " Ich kann nur so sucken, vielleicht ein bisschen Flüssigkeit."
+    },
+    {
+      "start": 204.11,
+      "end": 207.11,
+      "text": " Aber auch da nur immer ganz wenig."
+    },
+    {
+      "start": 207.11,
+      "end": 210.11,
+      "text": " Okay, ich verstehe."
+    },
+    {
+      "start": 210.11,
+      "end": 218.67,
+      "text": " Befindet Ihre Schmerzen hinter den Brustbeinen oder in den Magen gegend?"
+    },
+    {
+      "start": 218.67,
+      "end": 220.67,
+      "text": " Hauptsachlich."
+    },
+    {
+      "start": 220.67,
+      "end": 224.67,
+      "text": " Also wie gesagt, ich weiß gar nicht, wo der Magen ist."
+    },
+    {
+      "start": 224.67,
+      "end": 231.67,
+      "text": " Aber das ist genau dort, wo der Brustkorb beginnt, da tut es weh."
+    },
+    {
+      "start": 231.67,
+      "end": 243.67,
+      "text": " Okay, Sie haben gesagt, dass Sie Schmerzen haben."
+    },
+    {
+      "start": 243.67,
+      "end": 246.67,
+      "text": " Wie stark sind Ihre Schmerzen?"
+    },
+    {
+      "start": 246.67,
+      "end": 249.67,
+      "text": " Auf einer Schmerzkala von 1 bis 10,"
+    },
+    {
+      "start": 249.67,
+      "end": 254.67,
+      "text": " wobei 1 sehr leicht und 10 sehr starker Schmerzen entspricht."
+    },
+    {
+      "start": 254.67,
+      "end": 260.24,
+      "text": " Also wenn Sie so fragen, wie muss ich mit denn die 10 vorstellen?"
+    },
+    {
+      "start": 260.24,
+      "end": 262.24,
+      "text": " Was heißt denn 10?"
+    },
+    {
+      "start": 262.24,
+      "end": 265.24,
+      "text": " 10 ist unerträgliche Schmerzen."
+    },
+    {
+      "start": 265.24,
+      "end": 268.24,
+      "text": " Also so unerträglich sind Sie nicht, in dem Falle würde ich sagen,"
+    },
+    {
+      "start": 268.24,
+      "end": 272.24,
+      "text": " dass es so 5 ist."
+    },
+    {
+      "start": 272.24,
+      "end": 280.31,
+      "text": " Die Strahlen und jede Schmerzen in andere Körperregionen aus?"
+    },
+    {
+      "start": 280.31,
+      "end": 282.31,
+      "text": " Ob die Schmerzen ausstrahlen möchten?"
+    },
+    {
+      "start": 282.31,
+      "end": 283.31,
+      "text": " Ja."
+    },
+    {
+      "start": 283.31,
+      "end": 285.31,
+      "text": " Nein, das tun Sie nicht."
+    },
+    {
+      "start": 285.31,
+      "end": 294.93,
+      "text": " Sind Ihre Schmerzen da oder verschwinden Sie seitweise?"
+    },
+    {
+      "start": 294.93,
+      "end": 296.93,
+      "text": " Nein, die sind immer da."
+    },
+    {
+      "start": 296.93,
+      "end": 298.93,
+      "text": " Immer da."
+    }
+  ]
+}

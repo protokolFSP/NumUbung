@@ -1,0 +1,423 @@
+{
+  "file": "ACS Fr Gerhild mit dr Dr Serdar 01.04.25.m4a",
+  "url": "https://archive.org/download/vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25/ACS%20Fr%20Gerhild%20mit%20dr%20Dr%20Serdar%2001.04.25.m4a",
+  "picked": {
+    "start": 47.24,
+    "end": 73.74,
+    "reason": "start=substr:wie alt sind sie; end=substr:wissen sie zurzeit wie viel sie wiegen; digits=5",
+    "preview_seconds": 300,
+    "first_minutes": 4.0
+  },
+  "segments": [
+    {
+      "start": 1.49,
+      "end": 3.49,
+      "text": " Bitte schön."
+    },
+    {
+      "start": 3.49,
+      "end": 4.49,
+      "text": " Okay, bekannte ich da."
+    },
+    {
+      "start": 4.49,
+      "end": 6.49,
+      "text": " Ja, schönen guten Abend."
+    },
+    {
+      "start": 6.49,
+      "end": 8.49,
+      "text": " Aktaj ist mein Name."
+    },
+    {
+      "start": 8.49,
+      "end": 11.49,
+      "text": " Ich bin auf dieser Station als Assistenz,"
+    },
+    {
+      "start": 11.49,
+      "end": 16.49,
+      "text": " als tätig und würde gerne das Aufnahmegespräch mit Ihnen führen."
+    },
+    {
+      "start": 16.49,
+      "end": 19.49,
+      "text": " Bevor wir genau über Ihre Beschwerden sprechen,"
+    },
+    {
+      "start": 19.49,
+      "end": 22.49,
+      "text": " bräuchte ich ein paar persönliche Daten."
+    },
+    {
+      "start": 22.49,
+      "end": 24.49,
+      "text": " Wie heißen Sie denn?"
+    },
+    {
+      "start": 24.49,
+      "end": 26.49,
+      "text": " Ich heiße Ralph Kühler."
+    },
+    {
+      "start": 26.49,
+      "end": 30.49,
+      "text": " Könntest du bitte Ihre Name buchstabieren?"
+    },
+    {
+      "start": 30.49,
+      "end": 35.49,
+      "text": " Der Vorname ist Ralph, R-A-L-F."
+    },
+    {
+      "start": 35.49,
+      "end": 43.49,
+      "text": " Und der Familienname ist Kühler, K-U-Umlaut, H-L-E-R."
+    },
+    {
+      "start": 43.49,
+      "end": 47.49,
+      "text": " Okay, Herr Kühler."
+    },
+    {
+      "start": 47.49,
+      "end": 50.49,
+      "text": " Wie alt sind Sie, Herr Kühler?"
+    },
+    {
+      "start": 50.49,
+      "end": 52.49,
+      "text": " Noch bin ich 58."
+    },
+    {
+      "start": 52.49,
+      "end": 56.49,
+      "text": " Und wie groß sind Sie?"
+    },
+    {
+      "start": 56.49,
+      "end": 61.49,
+      "text": " Ich bin 1,78 m."
+    },
+    {
+      "start": 61.49,
+      "end": 64.49,
+      "text": " Und wissen Sie zurzeit, wie viel Sie wiegen?"
+    },
+    {
+      "start": 64.49,
+      "end": 68.49,
+      "text": " Ich wiege immer so um die 87 kg rum."
+    },
+    {
+      "start": 68.49,
+      "end": 70.49,
+      "text": " 87 kg."
+    },
+    {
+      "start": 70.49,
+      "end": 73.49,
+      "text": " Okay, wie heißt Ihr Hausarzt?"
+    },
+    {
+      "start": 73.49,
+      "end": 76.49,
+      "text": " Das ist Dr. Schröter."
+    },
+    {
+      "start": 76.49,
+      "end": 78.49,
+      "text": " Schröter."
+    },
+    {
+      "start": 78.49,
+      "end": 82.49,
+      "text": " Und haben Sie Angehörige, die wir benachrichtigen sollten?"
+    },
+    {
+      "start": 82.49,
+      "end": 87.49,
+      "text": " Ja, also ich belebe von meiner Frau im Augenblick getrennt."
+    },
+    {
+      "start": 87.49,
+      "end": 90.49,
+      "text": " Und jetzt hat mich ein Kollege hierher gebracht,"
+    },
+    {
+      "start": 90.49,
+      "end": 94.49,
+      "text": " weil es bei der Arbeit mit dem Problem losgegangen ist."
+    },
+    {
+      "start": 94.49,
+      "end": 98.49,
+      "text": " Aber dann müssten Sie vielleicht,"
+    },
+    {
+      "start": 98.49,
+      "end": 100.49,
+      "text": " wenn es irgendwie Probleme gibt,"
+    },
+    {
+      "start": 100.49,
+      "end": 103.49,
+      "text": " sich mit meiner Frau in Verbindung setzen."
+    },
+    {
+      "start": 103.49,
+      "end": 106.49,
+      "text": " Okay, Frau Kühler, können wir benachrichten."
+    },
+    {
+      "start": 106.49,
+      "end": 108.49,
+      "text": " Okay."
+    },
+    {
+      "start": 108.49,
+      "end": 111.49,
+      "text": " Und was führt Sie zu uns, Herr Kühler?"
+    },
+    {
+      "start": 111.49,
+      "end": 113.49,
+      "text": " Was für Beschwerden haben Sie?"
+    },
+    {
+      "start": 113.49,
+      "end": 118.49,
+      "text": " Ja, wissen Sie, ich habe solche schrecklichen Schmerzen"
+    },
+    {
+      "start": 118.49,
+      "end": 122.49,
+      "text": " und solche enge Gefühle gehabt, die mein jetzt ist es ein bisschen besser."
+    },
+    {
+      "start": 122.49,
+      "end": 127.49,
+      "text": " Aber ich hatte so ganz brennende und dumpfe Schmerzen."
+    },
+    {
+      "start": 127.49,
+      "end": 131.49,
+      "text": " Hier oben so auf der Brust."
+    },
+    {
+      "start": 131.49,
+      "end": 134.49,
+      "text": " Und das hat ausgestrahlt bis in den Unterkiefer."
+    },
+    {
+      "start": 134.49,
+      "end": 137.49,
+      "text": " Und das tat alles weh."
+    },
+    {
+      "start": 137.49,
+      "end": 141.49,
+      "text": " Und ich konnte überhaupt nicht mehr weiterlaufen."
+    },
+    {
+      "start": 141.49,
+      "end": 144.49,
+      "text": " Ich bin ganz schnell die Treppe hochgelaufen."
+    },
+    {
+      "start": 144.49,
+      "end": 146.49,
+      "text": " Ich hatte es ganz eilig."
+    },
+    {
+      "start": 146.49,
+      "end": 150.49,
+      "text": " Und mit einmal fing es an, ich konnte nicht mehr weitergehen."
+    },
+    {
+      "start": 150.49,
+      "end": 158.49,
+      "text": " Und ja, dann haben meine Kollegen, haben mich aufgefunden"
+    },
+    {
+      "start": 158.49,
+      "end": 163.49,
+      "text": " und sind dann mit mir gleich hierhergekommen."
+    },
+    {
+      "start": 163.49,
+      "end": 165.49,
+      "text": " Ja, okay."
+    },
+    {
+      "start": 165.49,
+      "end": 171.49,
+      "text": " Seit wann haben Sie diese Drucken gefehlt auf der Brust?"
+    },
+    {
+      "start": 171.49,
+      "end": 174.49,
+      "text": " Ja, das hat, ich weiß gar nicht, wie lange das jetzt her ist,"
+    },
+    {
+      "start": 174.49,
+      "end": 176.49,
+      "text": " aber das hat vor ganz kurzem angefangen."
+    },
+    {
+      "start": 176.49,
+      "end": 179.49,
+      "text": " Und jetzt ist es zum Glück ein klein bisschen besser,"
+    },
+    {
+      "start": 179.49,
+      "end": 182.49,
+      "text": " weil ich habe, mir war so schlecht."
+    },
+    {
+      "start": 182.49,
+      "end": 185.49,
+      "text": " Ich habe mich nicht übergeben, aber ich hatte das Gefühl,"
+    },
+    {
+      "start": 185.49,
+      "end": 188.49,
+      "text": " ich müsste mich sofort übergeben."
+    },
+    {
+      "start": 188.49,
+      "end": 192.49,
+      "text": " Und ich habe für den Moment überhaupt gar keine Luft bekommen."
+    },
+    {
+      "start": 192.49,
+      "end": 194.49,
+      "text": " Ich habe geschwitzt mit einmal."
+    },
+    {
+      "start": 194.49,
+      "end": 196.49,
+      "text": " Also, es war ganz beängstigend."
+    },
+    {
+      "start": 196.49,
+      "end": 199.49,
+      "text": " Jetzt ist es aber, glaube ich, ein bisschen besser."
+    },
+    {
+      "start": 199.49,
+      "end": 202.49,
+      "text": " Momentan ein bisschen besser."
+    },
+    {
+      "start": 202.49,
+      "end": 210.49,
+      "text": " Und momentan, wie stark sind die Schmerzen auf einer Skala von 1 bis 10?"
+    },
+    {
+      "start": 210.49,
+      "end": 214.49,
+      "text": " Kann das nicht gut einschätzen."
+    },
+    {
+      "start": 214.49,
+      "end": 221.49,
+      "text": " Vielleicht so bei 7 oder, die waren sicherlich bei 8 oder so."
+    },
+    {
+      "start": 221.49,
+      "end": 225.49,
+      "text": " Jetzt sind sie vielleicht bei 6 oder 7, ja."
+    },
+    {
+      "start": 225.49,
+      "end": 227.49,
+      "text": " Okay."
+    },
+    {
+      "start": 227.49,
+      "end": 236.49,
+      "text": " Ich denke, wir müssen jetzt Ihre Lebensparameter messen."
+    },
+    {
+      "start": 236.49,
+      "end": 242.49,
+      "text": " Also Sauerstoff und ein EKG machen wir."
+    },
+    {
+      "start": 242.49,
+      "end": 250.49,
+      "text": " Und danach können wir weitergehen mit unserem Aufnahmegespräch."
+    },
+    {
+      "start": 250.49,
+      "end": 256.49,
+      "text": " Und jetzt können wir weitergehen."
+    },
+    {
+      "start": 256.49,
+      "end": 260.49,
+      "text": " Ja, wir haben schon EKG durchgeführt."
+    },
+    {
+      "start": 260.49,
+      "end": 265.49,
+      "text": " Sie haben diese Beschwerden seit heute Morgen, oder hatten Sie früher?"
+    },
+    {
+      "start": 265.49,
+      "end": 266.49,
+      "text": " Nein, nein, nein."
+    },
+    {
+      "start": 266.49,
+      "end": 269.49,
+      "text": " Das hat erst jetzt heute Abend angefangen."
+    },
+    {
+      "start": 269.49,
+      "end": 274.49,
+      "text": " Ich hatte einen wichtigen Termin in meinem Büro und habe mich ein bisschen verspätet"
+    },
+    {
+      "start": 274.49,
+      "end": 276.49,
+      "text": " und bin dann ganz schnell losgelaufen."
+    },
+    {
+      "start": 276.49,
+      "end": 279.49,
+      "text": " Oh ja, dann ist es halt passiert."
+    },
+    {
+      "start": 279.49,
+      "end": 282.49,
+      "text": " Seit heute Abend haben Sie diese Beschwerden."
+    },
+    {
+      "start": 282.49,
+      "end": 287.49,
+      "text": " Und früher hatten Sie ähnliche Beschwerden, oder das ist erster Mal?"
+    },
+    {
+      "start": 287.49,
+      "end": 290.49,
+      "text": " Ja, also ich habe immer mal so ein bisschen Probleme gehabt,"
+    },
+    {
+      "start": 290.49,
+      "end": 293.49,
+      "text": " wenn ich mich sehr belastet habe."
+    },
+    {
+      "start": 293.49,
+      "end": 296.49,
+      "text": " Aber also früher bin ich doch völlig problemlos."
+    },
+    {
+      "start": 296.49,
+      "end": 299.49,
+      "text": " Ich habe vier Etagen hochgelaufen, aber nie."
+    }
+  ]
+}

@@ -1,0 +1,528 @@
+{
+  "file": "a Divertikulitis dr Murat mit dr Hatice 29.09.24.m4a",
+  "url": "https://archive.org/download/vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25/a%20Divertikulitis%20dr%20Murat%20mit%20dr%20Hatice%2029.09.24.m4a",
+  "picked": {
+    "start": 37.62,
+    "end": 67.24,
+    "reason": "start=substr:wie alt sind sie; end=substr:wie schwer sind sie; digits=6",
+    "preview_seconds": 300,
+    "first_minutes": 4.0
+  },
+  "segments": [
+    {
+      "start": 1.46,
+      "end": 3.46,
+      "text": " Bitte schön."
+    },
+    {
+      "start": 3.46,
+      "end": 17.46,
+      "text": " Guten Tag. Mein Name ist Jümisch. Ich bin hier des Ust-Stand-Garagstin für Sie. Ich werde mich um Ihre Beschwerden kümmern, aber vorher möchte ich Ihre persönliche Daten aufpassen. Bitte geben Sie mich Bescheid, wenn Sie etwas nicht verstanden."
+    },
+    {
+      "start": 17.46,
+      "end": 19.46,
+      "text": " Sind Sie damit einverstanden?"
+    },
+    {
+      "start": 19.46,
+      "end": 21.46,
+      "text": " Ich bin damit einverstanden."
+    },
+    {
+      "start": 21.46,
+      "end": 24.46,
+      "text": " Okay. Wie ist Ihr Name, bitte?"
+    },
+    {
+      "start": 24.46,
+      "end": 27.46,
+      "text": " Mein Name ist Müller, Klaus Müller."
+    },
+    {
+      "start": 27.46,
+      "end": 33.87,
+      "text": " Frau Müller."
+    },
+    {
+      "start": 33.87,
+      "end": 35.87,
+      "text": " Herr Müller, Klaus."
+    },
+    {
+      "start": 35.87,
+      "end": 37.87,
+      "text": " Müller, okay."
+    },
+    {
+      "start": 37.87,
+      "end": 39.87,
+      "text": " Wie alt sind Sie, Herr Müller?"
+    },
+    {
+      "start": 39.87,
+      "end": 43.73,
+      "text": " Ich bin 60 Jahre alt."
+    },
+    {
+      "start": 43.73,
+      "end": 45.73,
+      "text": " Wann sind Sie genau geboren?"
+    },
+    {
+      "start": 45.73,
+      "end": 49.71,
+      "text": " Am 2. August 1964."
+    },
+    {
+      "start": 49.71,
+      "end": 51.71,
+      "text": " Wie groß sind Sie?"
+    },
+    {
+      "start": 51.71,
+      "end": 57.68,
+      "text": " Ich bin 1,80 m groß."
+    },
+    {
+      "start": 57.68,
+      "end": 59.68,
+      "text": " Wie schwer sind Sie?"
+    },
+    {
+      "start": 59.68,
+      "end": 61.68,
+      "text": " Ungefähr 95 Kilogramm."
+    },
+    {
+      "start": 61.68,
+      "end": 64.99,
+      "text": " Okay. Was für Sie?"
+    },
+    {
+      "start": 64.99,
+      "end": 66.99,
+      "text": " Herr Müller."
+    },
+    {
+      "start": 66.99,
+      "end": 74.75,
+      "text": " Also ich habe jetzt schon ungefähr seit mehr als 5 Tagen habe ich Schmerzen im Bauch."
+    },
+    {
+      "start": 74.75,
+      "end": 76.75,
+      "text": " Wo genau sind Sie, Herr Müller?"
+    },
+    {
+      "start": 76.75,
+      "end": 78.75,
+      "text": " Im Unterbauch."
+    },
+    {
+      "start": 78.75,
+      "end": 80.75,
+      "text": " Unterbauch."
+    },
+    {
+      "start": 80.75,
+      "end": 82.75,
+      "text": " Rechte oder saubende Mittel?"
+    },
+    {
+      "start": 82.75,
+      "end": 86.75,
+      "text": " Die sind eher unten, eher linksseitig."
+    },
+    {
+      "start": 86.75,
+      "end": 90.13,
+      "text": " Linksseitig."
+    },
+    {
+      "start": 90.13,
+      "end": 92.13,
+      "text": " Was sind Sie?"
+    },
+    {
+      "start": 92.13,
+      "end": 96.13,
+      "text": " Ich bin jetzt schon ungefähr seit mehr als 5 Tagen im Bauch."
+    },
+    {
+      "start": 96.13,
+      "end": 98.13,
+      "text": " Linksseitig."
+    },
+    {
+      "start": 98.13,
+      "end": 100.13,
+      "text": " Linksseitig."
+    },
+    {
+      "start": 100.13,
+      "end": 102.13,
+      "text": " Was sind Sie, Herr Müller?"
+    },
+    {
+      "start": 102.13,
+      "end": 105.38,
+      "text": " Ich bin ein bisschen in der Leiste."
+    },
+    {
+      "start": 105.38,
+      "end": 107.38,
+      "text": " Leiste."
+    },
+    {
+      "start": 107.38,
+      "end": 109.38,
+      "text": " Okay."
+    },
+    {
+      "start": 109.38,
+      "end": 113.2,
+      "text": " Wobei sind Sie aufgetreten?"
+    },
+    {
+      "start": 113.2,
+      "end": 115.2,
+      "text": " Wie bitte?"
+    },
+    {
+      "start": 115.2,
+      "end": 117.2,
+      "text": " Wobei sind Sie aufgetreten?"
+    },
+    {
+      "start": 117.2,
+      "end": 119.2,
+      "text": " Weiß ich nicht."
+    },
+    {
+      "start": 119.2,
+      "end": 121.2,
+      "text": " Okay."
+    },
+    {
+      "start": 121.2,
+      "end": 123.2,
+      "text": " Können Sie die Schmerzen genau beschreiben,"
+    },
+    {
+      "start": 123.2,
+      "end": 125.2,
+      "text": " Sie dürfen sich dahin oder brennen?"
+    },
+    {
+      "start": 125.2,
+      "end": 129.2,
+      "text": " Das sind ja so stechende Drücke in den Schmerzen."
+    },
+    {
+      "start": 129.2,
+      "end": 131.2,
+      "text": " Wie stark sind die Schmerzen auf einer Skalafone,"
+    },
+    {
+      "start": 131.2,
+      "end": 136.46,
+      "text": " wobei nur keine Schmerzen unterm sehr stark sind,"
+    },
+    {
+      "start": 136.46,
+      "end": 138.46,
+      "text": " bedurte ich?"
+    },
+    {
+      "start": 138.46,
+      "end": 140.46,
+      "text": " Also wenn ich starke Schmerzen habe,"
+    },
+    {
+      "start": 140.46,
+      "end": 142.46,
+      "text": " sind ich schon bei 7."
+    },
+    {
+      "start": 142.46,
+      "end": 144.46,
+      "text": " Es gibt auch Zeiten, wo ich weniger Schmerzen habe,"
+    },
+    {
+      "start": 144.46,
+      "end": 146.46,
+      "text": " aber manchmal sind die sehr stark."
+    },
+    {
+      "start": 146.46,
+      "end": 148.46,
+      "text": " Okay."
+    },
+    {
+      "start": 148.46,
+      "end": 152.46,
+      "text": " Sind die Schmerzen dauerhaft oder gehen Sie auch wieder weg?"
+    },
+    {
+      "start": 152.46,
+      "end": 154.46,
+      "text": " Nein."
+    },
+    {
+      "start": 154.46,
+      "end": 158.46,
+      "text": " Sind die Schmerzen dauerhaft oder gehen Sie auch wieder weg?"
+    },
+    {
+      "start": 158.46,
+      "end": 168.35,
+      "text": " Die gehen nicht weg, aber die werden weniger."
+    },
+    {
+      "start": 168.35,
+      "end": 172.35,
+      "text": " Sind die Schmerzen plöselig oder langsam aufgetreten?"
+    },
+    {
+      "start": 172.35,
+      "end": 174.35,
+      "text": " Die werden jetzt immer mehr."
+    },
+    {
+      "start": 174.35,
+      "end": 183.49,
+      "text": " Okay."
+    },
+    {
+      "start": 183.49,
+      "end": 188.8,
+      "text": " Hatte Sie für euch schon einmal ein, 5 Verden?"
+    },
+    {
+      "start": 188.8,
+      "end": 192.8,
+      "text": " Ich habe das schon mal gehabt, vor ungefähr 2 Jahren."
+    },
+    {
+      "start": 192.8,
+      "end": 194.8,
+      "text": " Aber das ist dann von alleine wieder"
+    },
+    {
+      "start": 194.8,
+      "end": 196.8,
+      "text": " weggegangen."
+    },
+    {
+      "start": 196.8,
+      "end": 198.8,
+      "text": " Also das habe ich nichts gemacht."
+    },
+    {
+      "start": 198.8,
+      "end": 200.8,
+      "text": " Ich habe das mit, ich habe das abgewartet."
+    },
+    {
+      "start": 200.8,
+      "end": 202.8,
+      "text": " Okay."
+    },
+    {
+      "start": 202.8,
+      "end": 204.8,
+      "text": " Sind bei Ihnen,"
+    },
+    {
+      "start": 204.8,
+      "end": 206.8,
+      "text": " sind bei Ihnen"
+    },
+    {
+      "start": 206.8,
+      "end": 208.8,
+      "text": " Probleme beim Wasserlassen?"
+    },
+    {
+      "start": 208.8,
+      "end": 210.8,
+      "text": " Beim Wasserlassen habe ich keine Probleme."
+    },
+    {
+      "start": 210.8,
+      "end": 212.8,
+      "text": " Nein."
+    },
+    {
+      "start": 212.8,
+      "end": 214.8,
+      "text": " Okay."
+    },
+    {
+      "start": 214.8,
+      "end": 216.8,
+      "text": " Haben Sie Probleme, Stuhlgang?"
+    },
+    {
+      "start": 216.8,
+      "end": 218.8,
+      "text": " Ja, das ist so."
+    },
+    {
+      "start": 218.8,
+      "end": 220.8,
+      "text": " Das ist so."
+    },
+    {
+      "start": 220.8,
+      "end": 222.8,
+      "text": " Haben Sie Probleme, Stuhlgang?"
+    },
+    {
+      "start": 222.8,
+      "end": 226.8,
+      "text": " Ja, das ist jetzt unregelmäßig geworden."
+    },
+    {
+      "start": 226.8,
+      "end": 232.8,
+      "text": " Das ist manchmal fest, manchmal etwas flüssiger, weich."
+    },
+    {
+      "start": 232.8,
+      "end": 234.8,
+      "text": " Das ist immer unterschiedlich."
+    },
+    {
+      "start": 234.8,
+      "end": 236.8,
+      "text": " Das wundert mich ein bisschen."
+    },
+    {
+      "start": 236.8,
+      "end": 240.8,
+      "text": " Seit wann haben Sie die Beschwerden?"
+    },
+    {
+      "start": 240.8,
+      "end": 244.8,
+      "text": " Ja, jetzt ungefähr seit einer Woche schon."
+    },
+    {
+      "start": 244.8,
+      "end": 246.8,
+      "text": " Eine Woche."
+    },
+    {
+      "start": 246.8,
+      "end": 250.8,
+      "text": " Sind Sie deswegen schon bei einem anderen Arschgewiesel?"
+    },
+    {
+      "start": 250.8,
+      "end": 252.8,
+      "text": " Nein, ich habe leider noch keine Zeit gehabt."
+    },
+    {
+      "start": 252.8,
+      "end": 254.8,
+      "text": " Ich musste die ganze Tage arbeiten,"
+    },
+    {
+      "start": 254.8,
+      "end": 256.8,
+      "text": " leider keine Zeit gehabt."
+    },
+    {
+      "start": 256.8,
+      "end": 258.8,
+      "text": " Ist Ihnen Öbel?"
+    },
+    {
+      "start": 258.8,
+      "end": 260.8,
+      "text": " Ich habe Übelkeit, ja."
+    },
+    {
+      "start": 260.8,
+      "end": 262.8,
+      "text": " Seit wann?"
+    },
+    {
+      "start": 262.8,
+      "end": 264.8,
+      "text": " Auch seit 2 Tagen jetzt."
+    },
+    {
+      "start": 264.8,
+      "end": 266.8,
+      "text": " 2 Tage."
+    },
+    {
+      "start": 266.8,
+      "end": 268.8,
+      "text": " Müssen Sie Ebrechen?"
+    },
+    {
+      "start": 268.8,
+      "end": 270.8,
+      "text": " Bis jetzt noch nicht."
+    },
+    {
+      "start": 270.8,
+      "end": 274.5,
+      "text": " Okay."
+    },
+    {
+      "start": 274.5,
+      "end": 276.5,
+      "text": " Ich esse aber deutlich weniger."
+    },
+    {
+      "start": 276.5,
+      "end": 278.5,
+      "text": " Wie bitte?"
+    },
+    {
+      "start": 278.5,
+      "end": 280.5,
+      "text": " Ich esse deutlich weniger."
+    },
+    {
+      "start": 280.5,
+      "end": 286.96,
+      "text": " Okay, weniger."
+    },
+    {
+      "start": 286.96,
+      "end": 288.96,
+      "text": " Also, damit ich keine Übelkeit habe,"
+    },
+    {
+      "start": 288.96,
+      "end": 290.96,
+      "text": " esse ich weniger."
+    },
+    {
+      "start": 290.96,
+      "end": 294.96,
+      "text": " Okay. Wie ist Ihr Appetit?"
+    },
+    {
+      "start": 294.96,
+      "end": 296.96,
+      "text": " Eigentlich gut."
+    },
+    {
+      "start": 296.96,
+      "end": 298.96,
+      "text": " Aber wie gesagt, weil ich Übelkeit habe,"
+    },
+    {
+      "start": 298.96,
+      "end": 300.96,
+      "text": " esse ich etwas weniger."
+    }
+  ]
+}

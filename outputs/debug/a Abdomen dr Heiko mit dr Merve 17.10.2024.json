@@ -1,0 +1,268 @@
+{
+  "file": "a Abdomen dr Heiko mit dr Merve 17.10.2024.m4a",
+  "url": "https://archive.org/download/vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25/a%20Abdomen%20dr%20Heiko%20mit%20dr%20Merve%2017.10.2024.m4a",
+  "picked": {
+    "start": 63.62,
+    "end": 85.1,
+    "reason": "start=token_start; end=substr:wie schwer sind sie; digits=4",
+    "preview_seconds": 300,
+    "first_minutes": 4.0
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 13.82,
+      "text": " Guten Tag, mein Name ist Shingüjü. Ich bin Erstenherr und würde gerne mit Ihnen das Aufnahmegespräch führen. Sind Sie damit einverstanden?"
+    },
+    {
+      "start": 13.82,
+      "end": 15.82,
+      "text": " Ja, bin ich."
+    },
+    {
+      "start": 15.82,
+      "end": 24.82,
+      "text": " Okay. Du hast benötigt, ich einmal ein paar Personen hier dazunehmen. Wie heißen Sie denn?"
+    },
+    {
+      "start": 24.82,
+      "end": 29.87,
+      "text": " Ich heiße Patrick Grundmann."
+    },
+    {
+      "start": 29.87,
+      "end": 34.87,
+      "text": " Kannst du mir hier vor- und nach-namen besteheln?"
+    },
+    {
+      "start": 34.87,
+      "end": 46.87,
+      "text": " Ja, Patrick schreibt sich P, A, T, R, I, C, K, Patrick."
+    },
+    {
+      "start": 46.87,
+      "end": 47.87,
+      "text": " Okay."
+    },
+    {
+      "start": 47.87,
+      "end": 60.87,
+      "text": " Und Grundmann, G, R, U, N, D, M, A, N, N. Grundmann."
+    },
+    {
+      "start": 60.87,
+      "end": 63.87,
+      "text": " Okay, Herr Grundmann, wie heißen Sie?"
+    },
+    {
+      "start": 63.87,
+      "end": 65.87,
+      "text": " 67 Jahre."
+    },
+    {
+      "start": 65.87,
+      "end": 69.87,
+      "text": " Und wie groß und wie schwer sind Sie?"
+    },
+    {
+      "start": 69.87,
+      "end": 77.87,
+      "text": " 1,84 m groß und 96 kg schwer."
+    },
+    {
+      "start": 77.87,
+      "end": 84.85,
+      "text": " Und was fühlt Sie so?"
+    },
+    {
+      "start": 84.85,
+      "end": 91.85,
+      "text": " Ja, ich habe seit zwei Tagen ungefähr Bauchschmerzen und die werden aber immer schlimmer."
+    },
+    {
+      "start": 91.85,
+      "end": 95.85,
+      "text": " Die haben langsam angefangen und werden jetzt immer schlimmer."
+    },
+    {
+      "start": 95.85,
+      "end": 101.85,
+      "text": " Und das halte ich nicht mehr aus. Deswegen komme ich jetzt zu Ihnen in die Klinik."
+    },
+    {
+      "start": 101.85,
+      "end": 104.85,
+      "text": " Okay."
+    },
+    {
+      "start": 104.85,
+      "end": 109.85,
+      "text": " Können Sie am Ende des Geschenks hier erschmerzen?"
+    },
+    {
+      "start": 109.85,
+      "end": 112.85,
+      "text": " Und wie geht es Ihnen?"
+    },
+    {
+      "start": 112.85,
+      "end": 116.85,
+      "text": " Nein, ich kann es im Augenblick noch aushalten."
+    },
+    {
+      "start": 116.85,
+      "end": 118.85,
+      "text": " Okay, das ist sehr gut."
+    },
+    {
+      "start": 119.85,
+      "end": 126.85,
+      "text": " Können Sie mir sagen, wo genau diese Schmerzen haben?"
+    },
+    {
+      "start": 126.85,
+      "end": 135.85,
+      "text": " Also so angefangen haben die Schmerzen links vom Bauchnabel, auf der linken Seite vom Bauchnabel."
+    },
+    {
+      "start": 135.85,
+      "end": 139.85,
+      "text": " Aber inzwischen tut der ganze Bauch weh."
+    },
+    {
+      "start": 139.85,
+      "end": 144.54,
+      "text": " Okay."
+    },
+    {
+      "start": 145.54,
+      "end": 150.54,
+      "text": " Können Sie diese Schmerzen genau beschreiben?"
+    },
+    {
+      "start": 150.54,
+      "end": 156.54,
+      "text": " Zum Beispiel dumpf, schmerzend, berührend, oder korikaltig?"
+    },
+    {
+      "start": 156.54,
+      "end": 164.54,
+      "text": " Die Schmerzen sind mehr dumpf und auch krampfartig, aber mehr dumpf."
+    },
+    {
+      "start": 164.54,
+      "end": 169.54,
+      "text": " Sie sind immer da."
+    },
+    {
+      "start": 169.54,
+      "end": 172.54,
+      "text": " Okay."
+    },
+    {
+      "start": 172.54,
+      "end": 177.54,
+      "text": " Und wie ist die Schmerz in anderer Körperregion?"
+    },
+    {
+      "start": 177.54,
+      "end": 180.54,
+      "text": " Nein, die sind nur im Bauch."
+    },
+    {
+      "start": 180.54,
+      "end": 188.52,
+      "text": " Und wie ist die Schmerz von 0 bis 10?"
+    },
+    {
+      "start": 188.52,
+      "end": 200.22,
+      "text": " Wobei 0 keine Schmerzen sind, wie ist die Schmerz von 7 bis 8?"
+    },
+    {
+      "start": 200.22,
+      "end": 203.22,
+      "text": " Habt ihr die Fieber?"
+    },
+    {
+      "start": 203.22,
+      "end": 205.22,
+      "text": " Nein, die Fieber habe ich nicht."
+    },
+    {
+      "start": 205.22,
+      "end": 209.69,
+      "text": " Okay."
+    },
+    {
+      "start": 209.69,
+      "end": 213.69,
+      "text": " Habt ihr die Übelkeit oder die Erbrechung?"
+    },
+    {
+      "start": 213.69,
+      "end": 223.42,
+      "text": " Seit einigen Stunden habe ich Übelkeit und ich habe auch schon zweimal jetzt erbrochen in den letzten Stunden."
+    },
+    {
+      "start": 223.42,
+      "end": 225.42,
+      "text": " Habt ihr die Durchfall?"
+    },
+    {
+      "start": 225.42,
+      "end": 232.54,
+      "text": " Nein, Durchfall habe ich nicht."
+    },
+    {
+      "start": 232.54,
+      "end": 238.54,
+      "text": " Okay. Hatten Sie diese Beschwerden früher schon einmal oder ist das das erste Mal?"
+    },
+    {
+      "start": 238.54,
+      "end": 241.54,
+      "text": " Nein, sowas habe ich noch nie gehabt."
+    },
+    {
+      "start": 242.54,
+      "end": 246.95,
+      "text": " Haben Sie Verstuppen?"
+    },
+    {
+      "start": 246.95,
+      "end": 251.95,
+      "text": " Nein, ich habe normalerweise immer regelmäßig Stuhlgang."
+    },
+    {
+      "start": 251.95,
+      "end": 261.95,
+      "text": " Seitdem ich die Schmerzen habe, habe ich glaube ich gar keinen Stuhlgang mehr gehabt, aber ich habe auch kaum mehr etwas gegessen, weil mir ja übel war."
+    },
+    {
+      "start": 261.95,
+      "end": 266.95,
+      "text": " Und ich habe keinen Appetit gehabt, seitdem die Schmerzen angefangen haben."
+    },
+    {
+      "start": 266.95,
+      "end": 272.42,
+      "text": " Okay."
+    },
+    {
+      "start": 272.42,
+      "end": 276.42,
+      "text": " Und haben Sie noch andere Beschwerden?"
+    },
+    {
+      "start": 276.42,
+      "end": 293.33,
+      "text": " Mir ist übel, ich habe diese Schmerzen und nein, sonst habe ich im Augenblick keine anderen Schmerzen, aber das ist schon genug, weil das so weh tut."
+    },
+    {
+      "start": 293.33,
+      "end": 300.33,
+      "text": " Okay. Und diese Schmerzen ist immer noch ungankt, denn Nabil, ja?"
+    }
+  ]
+}
