@@ -1,9 +1,0 @@
-{
-  "file": "A Cholezystitis dr Heiko mit dr Mehtap 15.08.24.m4a",
-  "srt": "_srt_repo/transcripts/A Cholezystitis dr Heiko mit dr Mehtap 15.08.24.srt",
-  "picked": {
-    "start": 62.2,
-    "end": 91.7,
-    "reason": "start=substr:wie alt sind sie; age=True; dob=False; h=False; w=True"
-  }
-}
