@@ -1,0 +1,9 @@
+{
+  "file": "a Divertikulitis dr Murat mit dr Hatice 29.09.24.m4a",
+  "srt": "_srt_repo/transcripts/a Divertikulitis dr Murat mit dr Hatice 29.09.24.srt",
+  "picked": {
+    "start": 37.59,
+    "end": 65.15,
+    "reason": "start=substr:wie alt sind sie; age=True; dob=True; h=False; w=True"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "file": "ACS dr Ömer mit dr Halime 05.10.24.m4a",
+  "srt": "_srt_repo/transcripts/ACS dr Ömer mit dr Halime 05.10.24.srt",
+  "picked": {
+    "start": 48.7,
+    "end": 108.41,
+    "reason": "start=substr:wie alt sind sie; age=True; dob=True; h=False; w=True"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "file": "ACS Dr Heiko mit Dr Sümeyra 29.01.2026.m4a",
+  "srt": "_srt_repo/transcripts/ACS Dr Heiko mit Dr Sümeyra 29.01.2026.srt",
+  "picked": {
+    "start": 82.07,
+    "end": 115.25,
+    "reason": "start=substr:jahre alt; age=True; dob=True; h=False; w=True"
+  }
+}
