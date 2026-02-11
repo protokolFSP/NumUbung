@@ -1,6 +1,4 @@
-# =========================================
 # file: .github/workflows/build_from_srt.yml
-# =========================================
 name: Build number practice (SRT -> clips, resume)
 
 on:
@@ -19,13 +17,13 @@ on:
         required: true
         default: "160"
       first_minutes:
-        description: "Aramayı ilk kaç dakikada yapalım (örn 6)"
+        description: "SADECE ilk kaç dakikada ara/kes (3 önerilir)"
         required: true
-        default: "6"
-      answer_tail_seconds:
-        description: "Bitiş sorusundan sonra cevap için ekstra saniye (örn 25)"
+        default: "3"
+      max_clip_seconds:
+        description: "Klip maksimum kaç sn olsun (örn 70)"
         required: true
-        default: "25"
+        default: "70"
 
 permissions:
   contents: write
@@ -66,7 +64,7 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt
 
-      - name: Build batch from SRT (resume, 20 clips)
+      - name: Build batch from SRT (strict first-3-min)
         run: |
           python tools/process_next_batch_from_srt.py \
             --identifier "$IA_IDENTIFIER" \
@@ -76,7 +74,7 @@ jobs:
             --batch-size "${{ inputs.batch_size }}" \
             --max-attempts "${{ inputs.max_attempts }}" \
             --first-minutes "${{ inputs.first_minutes }}" \
-            --answer-tail-seconds "${{ inputs.answer_tail_seconds }}" \
+            --max-clip-seconds "${{ inputs.max_clip_seconds }}" \
             --debug
 
       - name: Upload artifacts
