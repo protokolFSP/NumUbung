@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/hypertensive Krise Fr Gerhild mit Dr Ilay 27.05.25.srt",
+  "picked": {
+    "start": 33.589999999999996,
+    "end": 68.44,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

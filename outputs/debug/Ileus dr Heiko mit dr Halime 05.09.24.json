@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Ileus dr Heiko mit dr Halime 05.09.24.srt",
+  "picked": {
+    "start": 76.64,
+    "end": 106.58,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

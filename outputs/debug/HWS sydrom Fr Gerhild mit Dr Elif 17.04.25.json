@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/HWS sydrom Fr Gerhild mit Dr Elif 17.04.25.srt",
+  "picked": {
+    "start": 67.09,
+    "end": 106.04,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

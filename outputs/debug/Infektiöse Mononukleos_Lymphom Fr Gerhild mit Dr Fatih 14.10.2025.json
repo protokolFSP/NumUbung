@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Infektiöse Mononukleos_Lymphom Fr Gerhild mit Dr Fatih 14.10.2025.srt",
+  "picked": {
+    "start": 96.81,
+    "end": 131.52,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

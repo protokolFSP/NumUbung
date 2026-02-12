@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/infekTiöse Mononukleose Dr Heiko Dr Oğuzhan 06.02.25.srt",
+  "picked": {
+    "start": 74.83000000000001,
+    "end": 106.44,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

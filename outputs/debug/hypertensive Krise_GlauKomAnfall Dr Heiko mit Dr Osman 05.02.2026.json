@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/hypertensive Krise_GlauKomAnfall Dr Heiko mit Dr Osman 05.02.2026.srt",
+  "picked": {
+    "start": 58.449999999999996,
+    "end": 112.14999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

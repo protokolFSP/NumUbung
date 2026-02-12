@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Infektiöse Mononukleose Fr Gerhild mit Dr Alim 26.06.25.srt",
+  "picked": {
+    "start": 43.32,
+    "end": 66.11999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

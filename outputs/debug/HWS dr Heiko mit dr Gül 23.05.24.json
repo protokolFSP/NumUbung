@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/HWS dr Heiko mit dr Gül 23.05.24.srt",
+  "picked": {
+    "start": 91.01,
+    "end": 118.89,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

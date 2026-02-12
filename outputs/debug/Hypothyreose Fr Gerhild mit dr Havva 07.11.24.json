@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Hypothyreose Fr Gerhild mit dr Havva 07.11.24.srt",
+  "picked": {
+    "start": 66.02000000000001,
+    "end": 84.94,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

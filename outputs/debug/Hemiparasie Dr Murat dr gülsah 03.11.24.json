@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Hemiparasie Dr Murat dr gülsah 03.11.24.srt",
+  "picked": {
+    "start": 39.19,
+    "end": 69.44,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

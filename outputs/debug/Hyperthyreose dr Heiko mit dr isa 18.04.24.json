@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Hyperthyreose dr Heiko mit dr isa 18.04.24.srt",
+  "picked": {
+    "start": 127.11,
+    "end": 153.11,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}
