@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/CVI Veno ses Ulcus cruris Fr Gerhild mit dr Hafsa 02.05.24.srt",
+  "picked": {
+    "start": 31.24,
+    "end": 72.24,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

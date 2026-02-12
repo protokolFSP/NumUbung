@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Diskusprolapsus Dr ömer mit dr Yunus 17.01.25.srt",
+  "picked": {
+    "start": 49.96,
+    "end": 73.80999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

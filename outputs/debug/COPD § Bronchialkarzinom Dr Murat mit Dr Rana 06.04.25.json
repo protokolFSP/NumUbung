@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/COPD § Bronchialkarzinom Dr Murat mit Dr Rana 06.04.25.srt",
+  "picked": {
+    "start": 66.52000000000001,
+    "end": 94.52,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

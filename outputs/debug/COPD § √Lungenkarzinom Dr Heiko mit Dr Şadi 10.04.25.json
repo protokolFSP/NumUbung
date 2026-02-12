@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/COPD § √Lungenkarzinom Dr Heiko mit Dr Şadi 10.04.25.srt",
+  "picked": {
+    "start": 83.96000000000001,
+    "end": 118.32,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Dekompensierte Leberzirrhose Dr. Akın dr Berk 18.11.24.srt",
+  "picked": {
+    "start": 12.9,
+    "end": 40.24,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

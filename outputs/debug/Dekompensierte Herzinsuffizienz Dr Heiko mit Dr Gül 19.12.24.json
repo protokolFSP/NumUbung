@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Dekompensierte Herzinsuffizienz Dr Heiko mit Dr Gül 19.12.24.srt",
+  "picked": {
+    "start": 68.9,
+    "end": 85.1,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

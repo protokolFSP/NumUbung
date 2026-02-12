@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Covid 19 dr O mer mit dr Funda 13.09.24.srt",
+  "picked": {
+    "start": 24.599999999999998,
+    "end": 65.64,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

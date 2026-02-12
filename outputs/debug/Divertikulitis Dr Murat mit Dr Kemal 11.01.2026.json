@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Divertikulitis Dr Murat mit Dr Kemal 11.01.2026.srt",
+  "picked": {
+    "start": 55.54,
+    "end": 83.24999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

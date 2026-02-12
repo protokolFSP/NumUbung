@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/dekompensierten HI Dr Heiko mit Dr Gül 14.05.25.srt",
+  "picked": {
+    "start": 89.30000000000001,
+    "end": 108.3,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}
