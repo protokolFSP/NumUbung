@@ -1,0 +1,196 @@
+--- 01 | Allergisches Asthma bronchiale Fr Gerhild mit Dr Kemal Düsseldorf 29.01.2026 | 46.0s | digits=21 | score=54.00 ---
+Herr Bach, wie alt sind Sie und wann genau sind Sie geboren?
+Ich bin noch 51 Jahre alt.
+51.
+Und wann genau sind Sie geboren?
+Am 8. 04.74.
+Das ist ein sehr guter Punkt.
+Am 8. 04.74.
+Am 8. 04.1900.
+1974.
+74.
+Wie groß sind Sie und wie viel wegen Sie, Herr Bach?
+Ich bin 1,81 m und wiege so um die 75 kg.
+75 kg.
+75.
+Nicht 70, 75.
+75, okay.
+
+--- 02 | Leberzirrhose Fr Gerhild mit Dr Şule31.07.25 | 50.0s | digits=22 | score=54.00 ---
+Ich bin 48 Jahre alt.
+48, okay. Und wann sind Sie genau geboren?
+Am 6.07.77.
+6.07.77.
+Könnten Sie wiederholen?
+Am 6.07.77.
+7.07.77.
+Okay, ja, ich verstehe. Danke schön.
+Und wie groß sind Sie?
+Ich bin 81.
+80.
+1,80 Meter, ne?
+Ja. Und wie viel wiegen Sie?
+Über so 86, 87 Kilo.
+7,80. Okay.
+
+--- 03 | MS neuroborreliose dr Heiko dr iskender 10.10.24 | 60.1s | digits=20 | score=48.00 ---
+Wie alt sind Sie?
+43.
+42.
+Und wann sind Sie? Genau, Herr Bohrmann.
+Am 16. April 1981.
+81.
+Und wie groß sind Sie?
+1,72 m und 65 kg schwer.
+Ungefähr.
+1,72 m groß und 65 kg schwer.
+Hören Sie mich noch?
+Okay, ich habe akustisch nicht gut verstanden.
+Also, Sie sind 1,62 m groß und 60 kg schwer.
+1,72 m.
+1,72 m und 65 kg schwer.
+65 kg schwer.
+
+--- 04 | Akute Appendizitis Dr. Gerhild mit Dr İsa 05.12.24 | 41.6s | digits=19 | score=46.00 ---
+Okay, wie alt sind Sie?
+Ich bin 37.
+37.
+Und darf ich fragen, wie groß und wie schwer sind Sie?
+Dürfen Sie, ja.
+Ich bin 168 und wiegeln 69 kg.
+1 Meter 81 und?
+Nee, 1 Meter 68.
+68 und?
+Wiegeln 69 kg.
+69 kg.
+Könnten Sie bitte Ihre Gewusstatung verraten, Frau Müller?
+Ja, 13.787.
+13.7190?
+1907 und 80.
+1707 und 80.
+
+--- 05 | ACS dr Ömer mit dr Halime 05.10.24 | 56.3s | digits=15 | score=42.00 ---
+Okay, Herr Kanton. Wie alt sind Sie?
+Ich bin 48 Jahre alt.
+Wie waren Sie genau geboren?
+Am 23. August, 1900, was habe ich gesagt, 48?
+76? Nein, 78.
+78, ja.
+76?
+Ja, 76.
+Pardon.
+Wie groß sind Sie, Herr Kanton?
+1,95 m.
+Wie viel wiegen Sie zurzeit?
+Ja, ein Moment, ein bisschen viel, 123 kg.
+132?
+23.
+23, okay.
+
+--- 06 | akute Gastroenteritis_LebenSmitteLvergiftung  Fr Gerhild mit Dr Zülal 20.01.2026 | 39.9s | digits=15 | score=42.00 ---
+Wie alt sind Sie, Frau Döpfer?
+Noch bin ich 60 Jahre alt.
+60 Jahre alt?
+Und wann sind Sie genau geboren?
+Am 1. 3. 64.
+64, okay.
+Ich werde in einem Monat, 1,5 Monaten, werde ich eigentlich ein.
+Ja, okay.
+Und wie groß sind Sie?
+1,69.
+1,69, wie viel wiegt sie zur Zeit?
+Ja, bestimmt 70 Kilo.
+70 Kilo, okay.
+70, okay.
+
+--- 07 | PodAgra_Akuter_Gichtanfall Fr Gerhild mit Dr Zahit 06.11.2025 | 39.2s | digits=15 | score=42.00 ---
+Okay, und wie alt sind Sie?
+Ich bin 46 Jahre.
+46 Jahre?
+Und wann wurden Sie genauer geboren?
+Am 8.03.1979.
+8.03.1979 und?
+70.
+70. Okay, und wie groß sind Sie?
+Oh, ich bin so 1.78.
+70. Und wie viel wiegen Sie zuzeit?
+114 Kilo.
+114 Kilo.
+
+--- 08 | Myokardinfarkt Fr Gerhild mit Dr Şule 29.07.25 | 46.5s | digits=15 | score=42.00 ---
+Okay, Schubert. Wie alt sind Sie?
+Ich bin 57 Jahre alt.
+57.
+Okay, wann sind Sie genau geboren?
+Am 4.12.67.
+4.12. Okay.
+Und wie groß sind Sie?
+Ja, das steht immer im Pass drin. 1.77 bin ich.
+1.77, okay.
+1.77, ja.
+Und wie viel wiegen Sie?
+Ja, ich gehe immer zu 79 kg.
+79 kg, okay.
+
+--- 09 | Morbus Crohn dr Murat mit dr Ilay 18.05.25 | 44.7s | digits=16 | score=41.00 ---
+Wie alt sind Sie, Frau Müller?
+Ich bin 24 Jahre alt.
+24, wann sind Sie geboren?
+Ich bin am 12. Dezember 1925 geboren.
+2.000.
+Sorry.
+2.000.
+12. Dezember 2000.
+2.000, okay. Wie groß sind Sie?
+Ich bin 1,72 m groß und wiege ungefähr 63 Kilogramm.
+63.
+
+--- 10 | Chronische Pankreatitis Fr Gerhild mit Dr Ilay. 08.05.25 | 40.5s | digits=15 | score=42.00 ---
+Herr Weber, wie alt sind Sie?
+Ich bin 59 Jahre alt.
+59 Jahre alt. Wann sind Sie geboren?
+Am 1.7.65.
+75 oder 60?
+65.
+60.
+Also 9965.
+Wie groß sind Sie?
+1,83.
+1,83.
+Wie viel wiegen Sie zurzeit?
+Ich wiege so 74 Kilo.
+
+--- 11 | Anemie_Eisenmangel Dr Murat mit Dr Zülal 18.01.2026 | 46.8s | digits=14 | score=40.00 ---
+Wie alt sind Sie, Frau Müller?
+Ich bin geboren, 14.08.1979.
+Ja.
+14 oder 40. Ich konnte nicht gut verstehen.
+14.08.1979. Ich bin 46 Jahre alt.
+46 Jahre alt. Okay, okay. Dankeschön.
+Und wie groß sind Sie, Frau Müller?
+Ich bin 1,65 m groß und ich wege ungefähr 70 kg.
+70 kg, okay. Wie heißt Ihre Hausärztin oder Ihr Hausarzt?
+
+--- 12 | Chronische Pankreatitis  Fr Gerhild mit Dr Zahit 06.01.2026 | 61.1s | digits=14 | score=40.00 ---
+Okay, und wie alt sind Sie, Herr Wagner?
+Ich bin genau 60.
+Wann wurden Sie genau geboren?
+Heute ist Ihre Geburtstag.
+Am 1.7.65.
+Ein...un...
+Können Sie bitte noch mal sagen, wie es so ist?
+Am 1.7.65.
+Und herzlichen Glückwunsch.
+Wie so 1.7?
+Das ist im Juli.
+Sorry.
+Juli.
+Ja, sorry.
+Und wie groß sind Sie und wie viel wegen Sie so seit?
+Ich bin noch 74 Kilo und ich bin 1,83 groß.
+Okay, Herr Wagner, haben Sie sehr starke Schmerzen?
+Seit wann haben Sie tatsächlich so Schmerzen?
+Ja, das hat angefangen, ja, bestimmt schon...
+...vom Vierteljahr, so.
+Aber jetzt wird es in der letzten Zeit,
+so in den letzten 2, 3 Wochen, es ist immer schlimmer geworden.
