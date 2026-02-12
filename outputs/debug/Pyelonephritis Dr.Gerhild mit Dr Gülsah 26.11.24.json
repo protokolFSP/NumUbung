@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pyelonephritis Dr.Gerhild mit Dr Gülsah 26.11.24.srt",
+  "picked": {
+    "start": 54.64,
+    "end": 91.63999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Podagra Fr Gerhild mit dr Gunes 28.05.24.srt",
+  "picked": {
+    "start": 77.21000000000001,
+    "end": 135.21,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

@@ -125,17 +125,17 @@
     "last_reason": "window_not_found_srt"
   },
   "Lymphpm Dr Gerhild mit Dr Gül 23.01.25": {
+    "attempts": 3,
+    "permanent": true,
+    "last_reason": "window_not_found_srt"
+  },
+  "pAVK dr Heiko mit dr Serdar 20.03.25": {
     "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
-  "pAVK dr Heiko mit dr Serdar 20.03.25": {
-    "attempts": 1,
-    "permanent": false,
-    "last_reason": "window_not_found_srt"
-  },
   "Pertussis   Keuchhusten Fr Gerhild mit Dr Rana 17.07.25": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   }

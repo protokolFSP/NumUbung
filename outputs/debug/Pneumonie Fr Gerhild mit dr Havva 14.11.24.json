@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pneumonie Fr Gerhild mit dr Havva 14.11.24.srt",
+  "picked": {
+    "start": 64.44000000000001,
+    "end": 89.33,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

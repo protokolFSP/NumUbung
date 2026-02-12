@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Phlebothrombose Fr Gerhild mit dr isa 21.05.24.srt",
+  "picked": {
+    "start": 80.30000000000001,
+    "end": 140.84,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

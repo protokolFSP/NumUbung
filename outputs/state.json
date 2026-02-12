@@ -1,14 +1,14 @@
 {
   "identifier": "vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25",
   "limit_total": 252,
-  "done": 160,
-  "pending": 68,
+  "done": 180,
+  "pending": 47,
   "target_produced": 20,
   "max_attempts": 160,
   "mode": "srt_strict_first_minutes",
   "first_minutes": 3.0,
   "max_clip_seconds": 70.0,
   "this_run_produced": 20,
-  "this_run_tried": 24,
-  "last_batch_mp3": "outputs/ubung/batch_009.mp3"
+  "this_run_tried": 23,
+  "last_batch_mp3": "outputs/ubung/batch_010.mp3"
 }

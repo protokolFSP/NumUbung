@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pulmonalembolie Dr Heiko mit Dr Gül 23.05.25.srt",
+  "picked": {
+    "start": 55.1,
+    "end": 83.1,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

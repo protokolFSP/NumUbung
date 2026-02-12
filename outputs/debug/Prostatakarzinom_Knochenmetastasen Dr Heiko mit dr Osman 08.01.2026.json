@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Prostatakarzinom_Knochenmetastasen Dr Heiko mit dr Osman 08.01.2026.srt",
+  "picked": {
+    "start": 93.16000000000001,
+    "end": 121.83999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

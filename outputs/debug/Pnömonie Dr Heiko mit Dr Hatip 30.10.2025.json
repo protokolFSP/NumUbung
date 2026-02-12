@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pnömonie Dr Heiko mit Dr Hatip 30.10.2025.srt",
+  "picked": {
+    "start": 78.18,
+    "end": 120.63999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

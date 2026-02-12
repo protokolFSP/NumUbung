@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pnömonie Dr Murat mit Dr Remzi 04.05.25.srt",
+  "picked": {
+    "start": 41.33,
+    "end": 68.02,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

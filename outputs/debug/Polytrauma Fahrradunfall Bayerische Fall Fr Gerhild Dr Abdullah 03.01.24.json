@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Polytrauma Fahrradunfall Bayerische Fall Fr Gerhild Dr Abdullah 03.01.24.srt",
+  "picked": {
+    "start": 36.11,
+    "end": 80.03999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

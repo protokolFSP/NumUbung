@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pneumonie Dr Murat Mit Dr Kemal 28.12.2025.srt",
+  "picked": {
+    "start": 30.27,
+    "end": 59.87,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

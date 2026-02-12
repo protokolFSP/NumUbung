@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/RA Dr Murat mit Dr Gül 11.05.25.srt",
+  "picked": {
+    "start": 53.9,
+    "end": 86.24,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

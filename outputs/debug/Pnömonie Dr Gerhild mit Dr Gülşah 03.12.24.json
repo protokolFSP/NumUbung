@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pnömonie Dr Gerhild mit Dr Gülşah 03.12.24.srt",
+  "picked": {
+    "start": 44.9,
+    "end": 69.5,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

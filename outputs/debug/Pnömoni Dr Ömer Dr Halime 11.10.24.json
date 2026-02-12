@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pnömoni Dr Ömer Dr Halime 11.10.24.srt",
+  "picked": {
+    "start": 76.73,
+    "end": 121.72999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

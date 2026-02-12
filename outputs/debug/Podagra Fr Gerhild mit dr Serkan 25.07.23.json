@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Podagra Fr Gerhild mit dr Serkan 25.07.23.srt",
+  "picked": {
+    "start": 46.35,
+    "end": 88.6,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

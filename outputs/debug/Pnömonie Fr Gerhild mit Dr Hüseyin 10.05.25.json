@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pnömonie Fr Gerhild mit Dr Hüseyin 10.05.25.srt",
+  "picked": {
+    "start": 42.15,
+    "end": 71.86999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}
