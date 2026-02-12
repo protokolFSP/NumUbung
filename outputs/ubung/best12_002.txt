@@ -1,0 +1,175 @@
+--- 01 | Cholelithiasis Fr Gerhild mit Dr Ibrahim 21.08.2025 | 49.6s | digits=12 | score=36.00 ---
+Hannah HAAAA. Okay, Frau Müller. Wie alt sind Sie? Müller, bitte Müller, mit Ö, O,
+umlaut. Nicht U, umlaut. Müller. Wie alt sind Sie? Ich bin 42. Und wann wurden Sie
+genau geboren? Am 20.07.83. 83. Okay. Wie groß sind Sie? Ich bin 1,69. 1,69.
+1,69. Und wie viel wegen Sie? Ja, ich wiege so 68 Kilo. Können Sie wiederholen, bitte?
+
+--- 02 | Podagra Fr Gerhild mit dr Gunes 28.05.24 | 58.1s | digits=13 | score=38.00 ---
+Herr Betke, wie alt sind Sie denn?
+Ich bin 46.
+Okay, wann sind Sie genau geboren?
+Am 8.03.46.
+66, oder?
+46.
+Ach, ich bin 46 Jahre alt.
+Sorry, natürlich, 78.
+78, okay.
+Ja, das ist normal, das ist kein Problem.
+Wie groß sind Sie?
+1,78 m.
+Wie viel wiegen Sie so seit?
+Müssen Sie sich jetzt vorstellen. Ja, so 114, 115 kg wiegen ich.
+
+--- 03 | Leberzirrhose Fr Gerhild mit Dr Şule31.07.25 | 50.0s | digits=22 | score=54.00 ---
+Ich bin 48 Jahre alt.
+48, okay. Und wann sind Sie genau geboren?
+Am 6.07.77.
+6.07.77.
+Könnten Sie wiederholen?
+Am 6.07.77.
+7.07.77.
+Okay, ja, ich verstehe. Danke schön.
+Und wie groß sind Sie?
+Ich bin 81.
+80.
+1,80 Meter, ne?
+Ja. Und wie viel wiegen Sie?
+Über so 86, 87 Kilo.
+7,80. Okay.
+
+--- 04 | PodAgra_Akuter_Gichtanfall Fr Gerhild mit Dr Zahit 06.11.2025 | 39.2s | digits=15 | score=42.00 ---
+Okay, und wie alt sind Sie?
+Ich bin 46 Jahre.
+46 Jahre?
+Und wann wurden Sie genauer geboren?
+Am 8.03.1979.
+8.03.1979 und?
+70.
+70. Okay, und wie groß sind Sie?
+Oh, ich bin so 1.78.
+70. Und wie viel wiegen Sie zuzeit?
+114 Kilo.
+114 Kilo.
+
+--- 05 | Ösophaguskarzinom_Speiseröhrenkrebs Fr Gerhil mit Dr Sümeyra 22.01.2026 | 66.8s | digits=14 | score=40.00 ---
+Wie alt sind Sie, Herr Schuster?
+Wie alt? Ich bin 54.
+54 Jahre.
+Wie alt sind Sie geboren?
+Am 6.08.1979.
+6.08.1979.
+Genau.
+Okay. Wie groß sind Sie, Herr Schuster?
+Ich bin 178.
+178 und wie viel wiegen Sie so seit?
+Ja, ich wiege zu seit nur noch 72 Kilo.
+Ich habe irgendwie, ich habe sonst immer 81 gewogen, aber jetzt wiege ich nur noch 72, ja.
+Ah, Sie haben 8 Kilo abgenommen?
+Ja, ich habe viel abgenommen, ja.
+Ich habe keine Gründe, warum ich hier bin, ja.
+Ah, okay, verstehe.
+Ja, in welchem Zeitraum haben Sie diese Gewicht abgenommen?
+
+--- 06 | Infektiöse Mononukleose (EBV) Dr Heiko mit Dr Gül 11.12.2025 | 38.0s | digits=12 | score=32.00 ---
+Herr Schlüter, wie alt sind Sie?
+Ich bin 24 Jahre alt.
+24 Jahre alt?
+Sie sind sehr jung.
+Weil Sie sich einbauen?
+Am 17. Mai 2001.
+Am 17. Mai 2001.
+Okay.
+Und wissen Sie aktuell, wie groß Sie sind und wie viel Sie liegen?
+Ich bin 1,84 m groß.
+Ich bin 1,84 m.
+Natürlich wiege 76 kg.
+76 kg.
+
+--- 07 | akute Gastroenteritis_LebenSmitteLvergiftung  Fr Gerhild mit Dr Zülal 20.01.2026 | 39.9s | digits=15 | score=42.00 ---
+Wie alt sind Sie, Frau Döpfer?
+Noch bin ich 60 Jahre alt.
+60 Jahre alt?
+Und wann sind Sie genau geboren?
+Am 1. 3. 64.
+64, okay.
+Ich werde in einem Monat, 1,5 Monaten, werde ich eigentlich ein.
+Ja, okay.
+Und wie groß sind Sie?
+1,69.
+1,69, wie viel wiegt sie zur Zeit?
+Ja, bestimmt 70 Kilo.
+70 Kilo, okay.
+70, okay.
+
+--- 08 | Erysipel Fr Gerhild mit dr Gu nes 10.09.24 | 46.8s | digits=11 | score=34.00 ---
+Frau Schmidt, wie alt sind Sie?
+Ich bin 56 Jahre.
+56, wann sind Sie genau geworden?
+Am 11.06.68.
+16.06.1960.
+Okay. Frau Schmidt, wie groß sind Sie?
+Ich bin 168.
+Wie viel wiegen Sie so seit?
+Ja, so 79 kg.
+79 kg.
+
+--- 09 | Allergisches Asthma bronchiale Fr Gerhild mit Dr Kemal Düsseldorf 29.01.2026 | 46.0s | digits=21 | score=54.00 ---
+Herr Bach, wie alt sind Sie und wann genau sind Sie geboren?
+Ich bin noch 51 Jahre alt.
+51.
+Und wann genau sind Sie geboren?
+Am 8. 04.74.
+Das ist ein sehr guter Punkt.
+Am 8. 04.74.
+Am 8. 04.1900.
+1974.
+74.
+Wie groß sind Sie und wie viel wegen Sie, Herr Bach?
+Ich bin 1,81 m und wiege so um die 75 kg.
+75 kg.
+75.
+Nicht 70, 75.
+75, okay.
+
+--- 10 | Akute Pankreatitis Dr Heiko mit Dr Serkan 30.01.25 | 42.1s | digits=11 | score=34.00 ---
+Frau Klasing, wie alt sind Sie?
+Ich bin 57 Jahre alt.
+Und wann sind Sie genau geboren?
+Am 18. Oktober 1967.
+Wie groß sind Sie?
+58. 1 Meter 66 und ich wiege 78 Kilo.
+78 Kilo.
+Ja.
+Und Sie sind 1 Meter 66.
+Groß und?
+Ja.
+78 Kilo schwer.
+
+--- 11 | akute Pankreatitis Dr Murat mit Dr Sümeyra 28.12.2025 | 36.7s | digits=11 | score=34.00 ---
+M. Müller. Okay. Wie alt sind Sie, M. Müller?
+45 Jahre alt.
+45 Jahre alt. Wann genau sind Sie geboren?
+Ich bin am 22. Juni 1979 geboren.
+Okay. 22. Juni 1979 geboren.
+Wie groß sind Sie, M. Müller?
+Ich bin 1,80 m groß und wiege circa 90 kg.
+Okay. Sie sind 180 cm groß und sie wiegt 90 kg.
+Genau.
+
+--- 12 | Phlebothrombose Fr Gerhild mit dr isa 21.05.24 | 60.6s | digits=12 | score=34.00 ---
+I?
+Und der Familienname ist Pfeiffer P-F-E-I-Double-F-E-R.
+D-F-E-R.
+Pfeiffer.
+E-R-Sch.
+Herr Pfeiffer, könnten Sie mir Ihre Gebustatem verraten?
+Ja, ich bin am 14.09.87 geboren.
+47.89?
+87.
+87, ja.
+Sind Sie 36 Jahre alt?
+Okay, okay. Wie viel wiegen Sie?
+92 Kilo.
+Und wie groß sind Sie?
+1,84 m.
+84.

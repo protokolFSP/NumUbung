@@ -1,0 +1,212 @@
+rank,stem,score,duration_s,digits,group,has_age_q,has_dob,has_height,has_weight,has_transition
+1,Allergisches Asthma bronchiale Fr Gerhild mit Dr Kemal Düsseldorf 29.01.2026,54.00,46.0,21,allergisches asthma bronchiale fr gerhild mit,1,1,1,1,0
+2,Leberzirrhose Fr Gerhild mit Dr Şule31.07.25,54.00,50.0,22,leberzirrhose fr gerhild mit,0,1,1,1,0
+3,MS neuroborreliose dr Heiko dr iskender 10.10.24,48.00,60.1,20,ms neuroborreliose,1,0,1,1,0
+4,Akute Appendizitis Dr. Gerhild mit Dr İsa 05.12.24,46.00,41.6,19,akute appendizitis dr. gerhild mit,1,0,1,1,0
+5,ACS dr Ömer mit dr Halime 05.10.24,42.00,56.3,15,acs,1,1,1,1,0
+6,akute Gastroenteritis_LebenSmitteLvergiftung  Fr Gerhild mit Dr Zülal 20.01.2026,42.00,39.9,15,akute gastroenteritis lebensmittelvergiftung fr gerhild mit,1,1,1,1,0
+7,Chronische Pankreatitis Fr Gerhild mit Dr Ilay. 08.05.25,42.00,40.5,15,chronische pankreatitis fr gerhild mit,1,1,1,1,0
+8,Myokardinfarkt Fr Gerhild mit Dr Şule 29.07.25,42.00,46.5,15,myokardinfarkt fr gerhild mit,1,1,1,1,0
+9,PodAgra_Akuter_Gichtanfall Fr Gerhild mit Dr Zahit 06.11.2025,42.00,39.2,15,podagra akuter gichtanfall fr gerhild mit,1,1,1,1,0
+10,Morbus Crohn dr Murat mit dr Ilay 18.05.25,41.00,44.7,16,morbus crohn,1,1,1,0,0
+11,Anemie_Eisenmangel Dr Murat mit Dr Zülal 18.01.2026,40.00,46.8,14,anemie eisenmangel,1,1,1,1,0
+12,Chronische Pankreatitis  Fr Gerhild mit Dr Zahit 06.01.2026,40.00,61.1,14,chronische pankreatitis fr gerhild mit,1,1,1,1,0
+13,Herzinsuffizienz Dr Rüveyda mit Dr Hatice 09.05.25,40.00,67.7,14,herzinsuffizienz,1,1,1,1,0
+14,OGIB Fr Gerhild mit dr Isa 04.06.24,40.00,48.7,16,ogib fr gerhild mit,1,0,1,1,0
+15,Ösophaguskarzinom_Speiseröhrenkrebs Fr Gerhil mit Dr Sümeyra 22.01.2026,40.00,66.8,14,o sophaguskarzinom speisero hrenkrebs fr gerhil mit,1,1,1,1,0
+16,TVT_tiefe Venenthrombose Fr Gerhil mit Dr Sümeyra 27.01.2026,40.00,33.0,14,tvt tiefe venenthrombose fr gerhil mit,1,1,1,1,0
+17,Ulcus cruris Fr Gerhild mit Dr Sadi 03.06.25,40.00,34.6,14,ulcus cruris fr gerhild mit,1,1,1,1,0
+18,Urolithiasis Dr Ömer mit Dr Sedat 06.04.25,40.00,43.0,14,urolithiasis,1,1,1,1,0
+19,Bronchialkarzinom dr Heiko mit dr Gülsah 07.11.24,38.00,48.9,13,bronchialkarzinom,1,1,1,1,0
+20,Cholezystitis Fr Gerhild mit Dr FatihH 05.08.2025,38.00,51.7,13,cholezystitis fr gerhild mit,1,1,1,1,0
+21,Podagra Fr Gerhild mit dr Gunes 28.05.24,38.00,58.1,13,podagra fr gerhild mit,1,1,1,1,0
+22,Pyelonephritis Dr.Gerhild mit Dr Gülsah 26.11.24,38.00,37.0,13,pyelonephritis dr.gerhild mit,1,1,1,1,0
+23,Gonarthrose dr Hu seyin mit dr Sonne 11.06.24,37.00,66.1,14,gonarthrose,1,1,1,0,0
+24,Cholelithiasis Fr Gerhild mit Dr Ibrahim 21.08.2025,36.00,49.6,12,cholelithiasis fr gerhild mit,1,1,1,1,0
+25,Lungenembolie Dr Murat mit Dr Melih 01.02.2026,36.00,37.2,12,lungenembolie,1,1,1,1,0
+26,obstruktive Cholelithiasis dr Murat mit dr Funda 08.09.24,36.00,52.0,12,obstruktive cholelithiasis,1,1,1,1,0
+27,Pathologische Fraktur dr Heiko mit dr Hatice 20.06.24,36.00,47.1,12,pathologische fraktur,1,1,1,1,0
+28,Polytrauma Fahrradunfal Fr Gerhild mit Dr Fatih 22.07.2025,36.00,48.1,12,polytrauma fahrradunfal fr gerhild mit,1,1,1,1,0
+29,Transitorische ischaemische Attacke Dr Murat mit Dr Bayrak  24.11.24,36.00,35.6,12,transitorische ischaemische attacke,1,1,1,1,0
+30,Endometriose Dr Ömer mit Dr Osman 06.12.24,35.00,56.3,13,endometriose,1,1,1,0,0
+31,ACS Dr Heiko mit Dr Sümeyra 29.01.2026,34.00,32.7,12,acs,0,1,1,1,0
+32,Akute Pankreatitis Dr Heiko mit Dr Serkan 30.01.25,34.00,42.1,11,akute pankreatitis,1,1,1,1,0
+33,akute Pankreatitis Dr Murat mit Dr Sümeyra 28.12.2025,34.00,36.7,11,akute pankreatitis,1,1,1,1,0
+34,costovertebrale Gelenkblockade links dr Hüseyin mit dr Ali 15.10.24,34.00,41.6,11,costovertebrale gelenkblockade links,1,1,1,1,0
+35,Erysipel Fr Gerhild mit dr Gu nes 10.09.24,34.00,46.8,11,erysipel fr gerhild mit,1,1,1,1,0
+36,Gastroenteritis Fr Gerhild mit Dr Hüseyin 20.05.25,34.00,36.8,11,gastroenteritis fr gerhild mit,1,1,1,1,0
+37,Hemiparasie Dr Murat dr gülsah 03.11.24,34.00,30.3,11,hemiparasie,1,1,1,1,0
+38,Hypertensivenkrise Dr Heiko mit dr Zeiko 08.08.24,34.00,37.4,11,hypertensivenkrise,1,1,1,1,0
+39,Infektiöse Mononukleos_Lymphom Fr Gerhild mit Dr Fatih 14.10.2025,34.00,34.8,11,infektio se mononukleos lymphom fr gerhild mit,1,1,1,1,0
+40,Lumboischialgie dr Hüseyin mit dr Umut 30.04.24,34.00,41.4,11,lumboischialgie,1,1,1,1,0
+41,Phlebothrombose Fr Gerhild mit dr isa 21.05.24,34.00,60.6,12,phlebothrombose fr gerhild mit,0,1,1,1,0
+42,Adenokarzinom dr Hu sameddin mit dr Mehmet 22.05.24,32.00,56.2,11,adenokarzinom,0,1,1,1,0
+43,AKS Fr Gerhild mit dr Mustafa 05.09.24,32.00,51.5,10,aks fr gerhild mit,1,1,1,1,0
+44,AppendiZitis Fr Gerhild mit Dr Esra 18.11.2025,32.00,40.9,10,appendizitis fr gerhild mit,1,1,1,1,0
+45,Cholangiokarzinom (Gallengangskrebs) Dr Ömer mit Dr Sümeyra 23.01.2026,32.00,36.6,12,cholangiokarzinom gallengangskrebs,1,0,1,1,0
+46,Cholelithiasis dr Rüveyda mit dr Seyfettin 04.10.24,32.00,39.7,10,cholelithiasis,1,1,1,1,0
+47,Cholelithiasis Fr Gerhild dr iskender 24.10.24,32.00,34.3,10,cholelithiasis fr gerhild,1,1,1,1,0
+48,Colitis UlCerosa § MChron Dr Omer Mit Dr Emre 02.05.25,32.00,34.1,10,colitis ulcerosa mchron,1,1,1,1,0
+49,CVI Veno ses Ulcus cruris Fr Gerhild mit dr Hafsa 02.05.24,32.00,41.0,10,cvi veno ses ulcus cruris fr gerhild mit,1,1,1,1,0
+50,Gastroenteritis Brechdurchfall Dr Murat§Dr Dilruba 10.10.24,32.00,41.0,10,gastroenteritis brechdurchfall,1,1,1,1,0
+51,Infektiöse Mononukleose (EBV) Dr Heiko mit Dr Gül 11.12.2025,32.00,38.0,12,infektio se mononukleose ebv,1,0,1,1,0
+52,InstabilE Angina Fr Gerhild und Dr Şadi 19.08.2025,32.00,31.6,10,instabile angina fr gerhild und,1,1,1,1,0
+53,Lungenkarzinom Dr Murat Dr Berk 17.11.24,32.00,33.7,11,lungenkarzinom,0,1,1,1,0
+54,Lymphödem_ Mainzer Fall Fr Gerhild mit Dr Zahit 28.10.2025,32.00,45.7,10,lympho dem mainzer fall fr gerhild mit,1,1,1,1,0
+55,Nephrolithiasis Fr Gerhild mit dr Iskender 05.11.24,32.00,32.4,10,nephrolithiasis fr gerhild mit,1,1,1,1,0
+56,pAVK Fr Gerhild mit Dr Hatice 30.01.25,32.00,46.3,10,pavk fr gerhild mit,1,1,1,1,0
+57,Pyelonephritis § Nierenbeckenentzündung Fr Gerhild mit Dr Ibrahim 14.08.2024,32.00,33.9,10,pyelonephritis nierenbeckenentzu ndung fr gerhild mit,1,1,1,1,0
+58,ACS dr Rüveyda mit dr Bilal 21.07.23,30.00,48.6,9,acs,1,1,1,1,0
+59,Adnexitis  Dr Heiko mit Dr Dilara 4.12.2025,30.00,70.2,9,adnexitis,1,1,1,1,0
+60,Cholelithiasis dr Murat mit dr Umut 05.05.24,30.00,31.2,11,cholelithiasis,1,0,1,1,0
+61,Divertikulitis dr Heiko dr iskender 21.11.24,30.00,25.9,9,divertikulitis,1,1,1,1,0
+62,epileptische Anfall Fr Gerhild mit Dr Elif 08.04.25,30.00,24.7,10,epileptische anfall fr gerhild mit,0,1,1,1,0
+63,Herzinsuffizienz Dr Murat mit Dr Zülal 11.01.2026,30.00,32.5,9,herzinsuffizienz,1,1,1,1,0
+64,HWS sydrom Fr Gerhild mit Dr Elif 17.04.25,30.00,39.0,9,hws sydrom fr gerhild mit,1,1,1,1,0
+65,Influenza_echte Grippe Dr Ömer Mit Dr Zülal 09.01.2026,30.00,56.0,9,influenza echte grippe,1,1,1,1,0
+66,Kolonkarzinom Fr Gerhild mit Dr Şadi 15.04.25,30.00,29.6,9,kolonkarzinom fr gerhild mit,1,1,1,1,0
+67,Magenkarzinom Fr Gerhild und Dr Şadi 12.08.2025,30.00,33.0,9,magenkarzinom fr gerhild und,1,1,1,1,0
+68,pAVK dr Rüveyda mit dr Funda 26.09.24,30.00,59.7,11,pavk,1,0,1,1,0
+69,Pneumonie Dr Murat Mit Dr Kemal 28.12.2025,30.00,29.6,9,pneumonie,1,1,1,1,0
+70,Polytrauma Fahrradunfall Bayerische Fall Fr Gerhild Dr Abdullah 03.01.24,30.00,44.0,9,polytrauma fahrradunfall bayerische fall fr gerhild,1,1,1,1,0
+71,TVT dr Akin mit dr Melih 13.05.24,30.00,36.0,11,tvt,1,0,1,1,0
+72,Urolithiasis dr Omer mit dr Iskender 05.10.24,30.00,31.6,11,urolithiasis,1,0,1,1,0
+73,Atypische Pneumonie dr Murat mit dr Emre 20.04.25,29.00,33.0,11,atypische pneumonie,0,1,1,0,0
+74,Nephrolithiasis Dr Omer mit Yunus m4a 10.01.25,29.00,50.4,10,nephrolithiasis,1,1,1,0,0
+75,A Pankreatitis dr Ömer mit dr Sedat 29.03.25,28.00,53.6,8,a pankreatitis,1,1,1,1,0
+76,Ana mie Fr Gerhild mit dr Rabia 06.08.24,28.00,35.6,8,ana mie fr gerhild mit,1,1,1,1,0
+77,Asthma Bronchiale dr Gerhild dr Ali Osman 02.09.24,28.00,60.0,8,asthma bronchiale,1,1,1,1,0
+78,Bronchialkarzinom Fr Gerhild mit Dr Zeynep 16.10.25,28.00,32.3,8,bronchialkarzinom fr gerhild mit,1,1,1,1,0
+79,Diabetischer Fu dr O mer mit dr Havva 15.11.24,28.00,43.1,8,diabetischer fu,1,1,1,1,0
+80,Divertikulitis Dr Murat mit Dr Kemal 11.01.2026,28.00,27.7,9,divertikulitis,0,1,1,1,0
+81,DM unkontrollierte und aHT Fr Gerhild mit dr Rabia 15.08.24,28.00,33.9,8,dm unkontrollierte und aht fr gerhild mit,1,1,1,1,0
+82,Extrauteringravidität (EUG) dr Heiko mit dr Seyma 25.04.24,28.00,65.1,9,extrauteringraviditaet eug,0,1,1,1,0
+83,Fremdanamnese Apoplexie dr Heiko mit dr Rabia 27.06.24,28.00,41.3,8,fremdanamnese apoplexie,1,1,1,1,0
+84,Kolonkarzinom Fr Gerhild mit Dr Zeynep 04.11.25,28.00,29.0,8,kolonkarzinom fr gerhild mit,1,1,1,1,0
+85,Leberzirrhose Dr Gerhild mit dr isa 19.11.24,28.00,48.0,9,leberzirrhose,0,1,1,1,0
+86,Lymphom § Malaria Dr Heiko mit Dr Sadi 07.05.25,28.00,32.6,8,lymphom malaria,1,1,1,1,0
+87,Malaria Infektive Endokarditis Dr Heiko Dr Yasar 27.11.24,28.00,42.2,11,malaria infektive endokarditis,0,0,1,1,0
+88,Metastasenbildung Fr Gerhild Mit Dr Rana 19.06.25,28.00,46.6,8,metastasenbildung fr gerhild mit,1,1,1,1,0
+89,Milzruptur _Fahrrad Unfall_ Fr Gerhild mit Dr Yavuz 02.09.2025,28.00,41.3,11,milzruptur fahrrad unfall fr gerhild mit,0,0,1,1,0
+90,Ösophaguskarzinom Fr Gerhild mit Dr Hatice 18.06.25,28.00,29.1,8,o sophaguskarzinom fr gerhild mit,1,1,1,1,0
+91,pAVK dr Heiko mit dr Gu nes 02.05.24,28.00,39.6,8,pavk,1,1,1,1,0
+92,Pfortaderthrombose dr O mer mit dr Abdullah 18.10.24,28.00,38.6,8,pfortaderthrombose,1,1,1,1,0
+93,Pnömonie Dr Heiko mit Dr Hatip 30.10.2025,28.00,42.5,8,pno monie,1,1,1,1,0
+94,Pnömonie Fr Gerhild mit Dr Hüseyin 10.05.25,28.00,29.8,8,pno monie fr gerhild mit,1,1,1,1,0
+95,Podagra Fr Gerhild mit dr Serkan 25.07.23,28.00,42.3,10,podagra fr gerhild mit,1,0,1,1,0
+96,Schlaganfall Dr Heiko mit Dr Sümeyra 18.12.2025,28.00,38.8,8,schlaganfall,1,1,1,1,0
+97,Supinationstrauma dr Hu seyin mit dr Seyfettin 24.09.24,28.00,69.0,8,supinationstrauma,1,1,1,1,0
+98,Urolithiasis Nephrolithiasis Fr Gerhild mit Dr Elif 12.05.25,28.00,36.0,8,urolithiasis nephrolithiasis fr gerhild mit,1,1,1,1,0
+99,Enteropathie Zo liakie dr Murat mit dr Seyfettin 29.09.24,27.00,42.0,9,enteropathie zo liakie,1,1,1,0,0
+100,ACS dr Ömer mit dr Esad 23.05.24,26.00,70.2,7,acs,1,1,1,1,0
+101,Bronchialkarzinom Dr Heiko mit Dr Fatih 21.08.25,26.00,43.4,9,bronchialkarzinom,1,0,1,1,0
+102,Diskusprolaps_Zervikaler Bandscheibenvorfall  Dr Heiko mit Dr Zahit 15.01.2026,26.00,27.6,7,diskusprolaps zervikaler bandscheibenvorfall,1,1,1,1,0
+103,Diskusprolapsus HWS DR ömer mit dr seniha 10.01.25,26.00,38.2,7,diskusprolapsus hws,1,1,1,1,0
+104,DivertiKULitis Dr Gerhild mit Dr. Seniha 21.01.25,26.00,33.7,7,divertikulitis,1,1,1,1,0
+105,Gastroenteritis Fr Gerhild mit dr Seyma 25.07.24,26.00,35.9,9,gastroenteritis fr gerhild mit,1,0,1,1,0
+106,Inguinalhernie Dr Heiko mit Dr Huseyin 29.05.25,26.00,36.6,9,inguinalhernie,1,0,1,1,0
+107,Kolorektales Karzinom Fr Gerhild mit dr Nur 07.05.24,26.00,42.0,7,kolorektales karzinom fr gerhild mit,1,1,1,1,0
+108,LWS-Syndrom dr Hüseyin mit dr Gülsah 05.11.24,26.00,41.3,9,lws-syndrom,1,0,1,1,0
+109,Lymphom Dr Heiko mit Dr Rana 26.06.25,26.00,70.2,7,lymphom,1,1,1,1,0
+110,Lymphödem Fr Gerhild mit Dr Oğuzhan 06.02.25,26.00,34.8,8,lympho dem fr gerhild mit,0,1,1,1,0
+111,Magenperforation Dr Akın mit Dr İskender 02.12.24,26.00,26.6,7,magenperforation,1,1,1,1,0
+112,Malaria dr Heiko mit dr Mustafa 29.08.24,26.00,41.3,7,malaria,1,1,1,1,0
+113,Morbus Menière Dr Heiko mit Dr Ilay 17.04.25,26.00,38.5,7,morbus menie re,1,1,1,1,0
+114,obere GIS Blutung Fr. Gerhild mit dr Halime 12.09.24,26.00,30.9,7,obere gis blutung fr. gerhild mit,1,1,1,1,0
+115,P Embolie dr Rüveyda mit dr Halime 28.09.24,26.00,39.0,7,p embolie,1,1,1,1,0
+116,Panikattacke Dr Omer mit Dr Ilay 23.05.25,26.00,43.0,7,panikattacke,1,1,1,1,0
+117,PankreasKarzinom Dr Akın mit Dr Zübeyde 28.04.25,26.00,39.0,9,pankreaskarzinom,1,0,1,1,0
+118,PAVK dr Heiko dr Ali Osman 24.10.24,26.00,30.3,7,pavk,1,1,1,1,0
+119,pAVK Dr Heiko mit Dr Alim 19.06.25,26.00,32.1,9,pavk,1,0,1,1,0
+120,pAVK Fr Gerhild mit dr Ali 17.10.24,26.00,29.4,7,pavk fr gerhild mit,1,1,1,1,0
+121,Unfall Motorroller Fr Gerhild mit Dr Mehmet 13.02.25,26.00,34.4,7,unfall motorroller fr gerhild mit,1,1,1,1,0
+122,Vorhofflimmern bei bekannter KHK Dr Oemer Dr Remzi 09.05.25,26.00,42.1,7,vorhofflimmern bei bekannter khk,1,1,1,1,0
+123,Nephrolithiasis Dr Murrat mit Dr Şadi 25.05.25,25.00,28.0,8,nephrolithiasis,1,1,1,0,0
+124,A Cholezystitis dr Heiko mit dr Mehtap 15.08.24,24.00,21.6,8,a cholezystitis,1,0,1,1,0
+125,a Divertikulitis dr Murat mit dr Hatice 29.09.24,24.00,24.8,6,a divertikulitis,1,1,1,1,0
+126,ACS dr Heiko mit dr Rabia 04.07.24,24.00,34.5,6,acs,1,1,1,1,0
+127,akute Gastroenteritis Dr Heiko mit Dr Şule 31.07.25,24.00,33.0,6,akute gastroenteritis,1,1,1,1,0
+128,Ana mie dr Murat mit dr Ali 01.06.24,24.00,51.7,6,ana mie,1,1,1,1,0
+129,Bronchialkarzinom dr Akin mit dr Havva 04.11.24,24.00,35.0,6,bronchialkarzinom,1,1,1,1,0
+130,Bronchopneumonie Dr Heiko mit Dr Gül 28.11.2025,24.00,29.0,8,bronchopneumonie,1,0,1,1,0
+131,Cholelithiasis dr Murat mit dr Sedat 23.03.25,24.00,40.4,8,cholelithiasis,1,0,1,1,0
+132,Cholelithiasis_CED_Dr Ömer mit Dr Kemal 30.01.2026,24.00,35.3,6,cholelithiasis ced dr o mer mit,1,1,1,1,0
+133,Cholezystitis dr Hu sameddin mit dr Abdullah 24.09.24,24.00,40.0,7,cholezystitis,0,1,1,1,0
+134,COPD § √Lungenkarzinom Dr Heiko mit Dr Şadi 10.04.25,24.00,34.4,6,copd lungenkarzinom,1,1,1,1,0
+135,Divertikulitis Hypertyreose Dr Heiko mit Dr Fatih 11.09.2025,24.00,38.2,8,divertikulitis hypertyreose,1,0,1,1,0
+136,DM LADA Dr Murat mit Dr Yakup 04.05.25,24.00,39.4,8,dm lada,1,0,1,1,0
+137,ERYsipel Dr Akın mit Dr Seniha 20.01.25,24.00,31.2,6,erysipel,1,1,1,1,0
+138,Hypothyreose Dr Ömer mit Dr Seniha 17.01.25,24.00,70.2,8,hypothyreose,1,0,1,1,0
+139,Ileus dr Heiko mit dr Halime 05.09.24,24.00,30.0,6,ileus,1,1,1,1,0
+140,Infektiöse Mononukleose Fr Gerhild mit Dr Alim 26.06.25,24.00,22.8,6,infektio se mononukleose fr gerhild mit,1,1,1,1,0
+141,Magenkarzinom Fr Gerhild mit dr Hafsa 16.04.24,24.00,45.7,6,magenkarzinom fr gerhild mit,1,1,1,1,0
+142,Ossäre Metastase des Bronchialkarzinoms Dr Heiko mit Dr Seniha 09.01.25,24.00,38.0,6,ossa re metastase des bronchialkarzinoms,1,1,1,1,0
+143,Pnömoni Dr Ömer Dr Halime 11.10.24,24.00,45.0,6,pno moni,1,1,1,1,0
+144,Prostatakarzinom_Knochenmetastasen Dr Heiko mit dr Osman 08.01.2026,24.00,28.7,6,prostatakarzinom knochenmetastasen,1,1,1,1,0
+145,RA Dr Murat mit Dr Gül 11.05.25,24.00,32.4,9,ra,0,0,1,1,0
+146,Refluxoesophagitis dr Murat mit dr Halime 22.09.24,24.00,54.3,6,refluxoesophagitis,1,1,1,1,0
+147,subakute Thyreoiditis Dr Murat mit Dr Seniha 11.01.25,24.00,40.9,6,subakute thyreoiditis,1,1,1,1,0
+148,Ulcus ventriculi Fr Gerhild mit Dr Zeynep 30.10.25,24.00,30.7,6,ulcus ventriculi fr gerhild mit,1,1,1,1,0
+149,Bronchialkarzinom dr Murat mit dr Abdullah 27.10.24,23.00,45.2,7,bronchialkarzinom,1,1,1,0,0
+150,Pankreaskopfkarzinom Dr Murat mit Dr Zeynep 08.02.2026,23.00,29.1,8,pankreaskopfkarzinom,0,1,1,0,0
+151,a Pneumonie Fr Gerhild mit dr Funda 17.09.24,22.00,38.4,7,a pneumonie fr gerhild mit,1,0,1,1,0
+152,ACS Fr Gerhild mit dr Mehmet 23.05.24,22.00,32.1,7,acs fr gerhild mit,1,0,1,1,0
+153,Choledocholithiasis Dr Murat mit Dr Umut 01.02.2026,22.00,32.0,7,choledocholithiasis,1,0,1,1,0
+154,Dekompensierte Leberzirrhose Dr. Akın dr Berk 18.11.24,22.00,27.4,5,dekompensierte leberzirrhose dr. ak n,1,1,1,1,0
+155,Dekompensierte Leberzirrhose Dr. Ömer mit Dr Seniha 03.01.25,22.00,38.0,7,dekompensierte leberzirrhose dr. o mer mit,1,0,1,1,0
+156,Einseitige eitrige Tonsillitis Dr Omer mit Dr Sadi 16.05.25,22.00,34.2,6,einseitige eitrige tonsillitis,0,1,1,1,0
+157,Femurfraktur Fr Gerhild mit Dr Fatih 07.08.2025,22.00,61.7,5,femurfraktur fr gerhild mit,1,1,1,1,0
+158,hypertensive Krise_GlauKomAnfall Dr Heiko mit Dr Osman 05.02.2026,22.00,53.7,8,hypertensive krise glaukomanfall,0,0,1,1,0
+159,Hypertyreose Dr Heiko mit Dr Fatih 24.07.25,22.00,51.0,7,hypertyreose,1,0,1,1,0
+160,InfluenzA Dr murat mit dr mehmet 19.01.25,22.00,26.9,5,influenza,1,1,1,1,0
+161,Interkostalneuralgie Dr Heiko dr iskender 31.10.24,22.00,25.0,7,interkostalneuralgie,1,0,1,1,0
+162,Kolon CA Fr Gerhild dr Ali Osman  22.10.24,22.00,38.6,7,kolon ca fr gerhild,1,0,1,1,0
+163,pAVK Fr Gerhil md Dr Yakup 06.05.25,22.00,27.3,7,pavk fr gerhil md,1,0,1,1,0
+164,pAVK Fr Gerhild mit Dr Dilara 18.11.2025,22.00,28.6,7,pavk fr gerhild mit,1,0,1,1,0
+165,Pneumonie Fr Gerhild mit dr Havva 14.11.24,22.00,24.9,6,pneumonie fr gerhild mit,0,1,1,1,0
+166,Pulmonalembolie Dr Heiko mit Dr Gül 23.05.25,22.00,28.0,8,pulmonalembolie,0,0,1,1,0
+167,DM dr Murat mit dr Mehmet 26.05.24,21.00,37.4,6,dm,1,1,1,0,0
+168,HWS Syndrom √Wirbelmetastasen Dr Ömer mit Dr Emre 11.04.25,21.00,70.2,6,hws syndrom wirbelmetastasen,1,1,1,0,0
+169,A Abdomen inkarzerierte Hernie dr Heiko mit dr Yunus 03.04.2025,20.00,52.1,6,a abdomen inkarzerierte hernie,1,0,1,1,0
+170,A Cholezystitis dr Heiko mit dr Hafsa 13.05.24,20.00,30.6,6,a cholezystitis,1,0,1,1,0
+171,A Pankreatitis dr Ömer mit dr Umut 25.04.24,20.00,26.6,6,a pankreatitis,1,0,1,1,0
+172,akutes Koronarsyndrom (ACS) Fr Gerhild mit dr Dilara 08.01.2026,20.00,22.0,5,akutes koronarsyndrom acs fr gerhild mit,0,1,1,1,0
+173,COPD § Bronchialkarzinom Dr Murat mit Dr Rana 06.04.25,20.00,28.0,6,copd bronchialkarzinom,1,0,1,1,0
+174,Covid 19 dr O mer mit dr Funda 13.09.24,20.00,41.1,6,covid 19,1,0,1,1,0
+175,dekompensierten HI Dr Heiko mit Dr Gül 14.05.25,20.00,19.0,6,dekompensierten hi,1,0,1,1,0
+176,Divertikulitis dr Akin mit dr Mehtap 10.06.24,20.00,24.7,6,divertikulitis,1,0,1,1,0
+177,HWS dr Heiko mit dr Gül 23.05.24,20.00,27.9,6,hws,1,0,1,1,0
+178,hypertensive Krise Fr Gerhild mit Dr Ilay 27.05.25,20.00,34.9,6,hypertensive krise fr gerhild mit,1,0,1,1,0
+179,Hyperthyreose dr Heiko mit dr isa 18.04.24,20.00,26.1,6,hyperthyreose,1,0,1,1,0
+180,infekTiöse Mononukleose Dr Heiko Dr Oğuzhan 06.02.25,20.00,31.7,7,infektio se mononukleose,0,0,1,1,0
+181,Interkostalneuralgie dr O mer mit dr Gu nes 16.05.24,20.00,45.2,5,interkostalneuralgie,0,1,1,1,0
+182,Lymphoma dr Heiko mit dr Korkmaz 27.07.23,20.00,44.1,6,lymphoma,1,0,1,1,0
+183,Multiple Sklerose Dr Heiko mit Dr Gül 20.11.2025,20.00,31.0,7,multiple sklerose,0,0,1,1,0
+184,a Pankreatitis dr Murat mit dr Melih 19.05.24,18.00,54.3,7,a pankreatitis,0,1,0,0,0
+185,ACS Fr Gerhild mit dr Dr Serdar 01.04.25,18.00,25.0,5,acs fr gerhild mit,1,0,1,1,0
+186,Akute Pankreatitis Dr Heiko mit Dr Zulal 22.01.2026,18.00,26.9,6,akute pankreatitis,0,0,1,1,0
+187,Aortenaneurysma Dr Ömer mit Dr Serdar 06.04.25,18.00,21.0,6,aortenaneurysma,0,0,1,1,0
+188,Arterielle Hypertonie Dr Akın mit Dr Sedat 07.04.25,18.00,16.0,5,arterielle hypertonie,1,0,1,1,0
+189,BWS Syndrom interkostal neuralgie Dr Hüseyin mit Dr gül 07.01.25,18.00,21.9,5,bws syndrom interkostal neuralgie,1,0,1,1,0
+190,Diskusprolaps dr Heiko mit dr Havva 12.09.24,18.00,44.0,5,diskusprolaps,1,0,1,1,0
+191,DM Entgleisung Fr Gerhild mit dr Umut 23.04.24,18.00,24.2,5,dm entgleisung fr gerhild mit,1,0,1,1,0
+192,Femurkopffraktur Fr Gerhild mit dr Mehtap 08.08.24,18.00,28.4,5,femurkopffraktur fr gerhild mit,1,0,1,1,0
+193,Herzinsuffizienz dr Rüveyda mit dr Merve 18.09.24,18.00,24.4,5,herzinsuffizienz,1,0,1,1,0
+194,Hypothyreose Fr Gerhild mit dr Havva 07.11.24,18.00,19.0,5,hypothyreose fr gerhild mit,1,0,1,1,0
+195,Morbus Chron peritonitis ileus Dr Akın mit Dr Gül 06.01.25,18.00,20.6,6,morbus chron peritonitis ileus,0,0,1,1,0
+196,a Appendizitis dr Omer mit dr Hafsa 13.06.2024,17.00,24.7,4,a appendizitis,1,1,1,0,0
+197,Pnömonie Dr Murat mit Dr Remzi 04.05.25,17.00,26.7,6,pno monie,1,0,1,0,0
+198,Akutes BWS Syndrom dr Heiko mit dr Hafsa 11.04.24,16.00,21.8,5,akutes bws syndrom,0,0,1,1,0
+199,Bronchialkarzinom Fr gerhild Dr Merve 10.01.24,16.00,21.0,4,bronchialkarzinom fr gerhild,1,0,1,1,0
+200,Cholezystitis Fr Gerhild mit Dr Zeynep 21.10.25,16.00,59.9,5,cholezystitis fr gerhild mit,0,0,1,1,0
+201,Dekompensierte Herzinsuffizienz Dr Heiko mit Dr Gül 19.12.24,16.00,16.2,4,dekompensierte herzinsuffizienz,1,0,1,1,0
+202,divertikulitis Dr Heiko mit Dr Ilay 25.04.25,16.00,20.6,4,divertikulitis,1,0,1,1,0
+203,FahrradUnfall Dr Osman mit Dr Havva 13.10.24,16.00,22.0,4,fahrradunfall,1,0,1,1,0
+204,Panikattacke dr O mer mit dr Umut 03.05.24,16.00,35.0,4,panikattacke,1,0,1,1,0
+205,Pnömonie Dr Gerhild mit Dr Gülşah 03.12.24,16.00,24.6,4,pno monie,1,0,1,1,0
+206,Nephrolithiasis dr ömer§dr berk 08.11.24,15.00,30.2,3,nephrolithiasis,1,1,1,0,0
+207,Akute CholeZYSTitis Fr Gerhild mit Dr Serkan 02.02.25,14.00,28.3,4,akute cholezystitis fr gerhild mit,0,0,1,1,0
+208,Cholelithiasis Fr Gerhild mit Dr Rana 10.04.25,14.00,45.3,3,cholelithiasis fr gerhild mit,1,0,1,1,0
+209,HWS  dr Ömer mit dr Yunus 29.03.25,14.00,25.9,3,hws,1,0,1,1,0
+210,Diskusprolapsus Dr ömer mit dr Yunus 17.01.25,13.00,23.9,4,diskusprolapsus,1,0,0,1,0
+211,Ulkus ventriculi Dr Murat mit Dr Fatih 13.04.25,13.00,25.4,4,ulkus ventriculi,1,0,1,0,0
