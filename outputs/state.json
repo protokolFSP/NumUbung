@@ -2,7 +2,7 @@
   "identifier": "vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25",
   "limit_total": 252,
   "done": 213,
-  "pending": 11,
+  "pending": 0,
   "target_produced": 20,
   "max_attempts": 160,
   "mode": "srt_strict_first_minutes",
