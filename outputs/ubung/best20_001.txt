@@ -1,0 +1,306 @@
+--- 01 | ACS Dr Heiko mit Dr Sümeyra 29.01.2026 | 32.7s | digits=12 | score=34.00 ---
+Ich bin 62 Jahre alt.
+62 Jahre alt? Wann genau sind Sie geboren?
+Am 21. Oktober 1963.
+Okay, 21. Sente 1963.
+Ja.
+Wie groß sind Sie, Herr Holthkamp?
+1,76 m.
+1,76 m? Wie viel wiegen Sie?
+90 kg.
+90 kg.
+
+--- 02 | ACS dr Ömer mit dr Halime 05.10.24 | 56.3s | digits=15 | score=42.00 ---
+Okay, Herr Kanton. Wie alt sind Sie?
+Ich bin 48 Jahre alt.
+Wie waren Sie genau geboren?
+Am 23. August, 1900, was habe ich gesagt, 48?
+76? Nein, 78.
+78, ja.
+76?
+Ja, 76.
+Pardon.
+Wie groß sind Sie, Herr Kanton?
+1,95 m.
+Wie viel wiegen Sie zurzeit?
+Ja, ein Moment, ein bisschen viel, 123 kg.
+132?
+23.
+23, okay.
+
+--- 03 | OGIB Fr Gerhild mit dr Isa 04.06.24 | 48.7s | digits=16 | score=40.00 ---
+Wie alt sind Sie?
+Noch bin ich 67 Jahre alt.
+67 Jahre alt.
+Könnten Sie mir Ihr Gewusstrat verraten?
+Ja, natürlich. Der 9., 10. 56.
+9., der 9., 10. 56.
+56.
+Okay.
+Wie schwer und wie groß sind Sie?
+Ich bin 79 kg schwer und ich bin so 1,68 groß.
+War ich zumindest mal.
+60 groß.
+1,68 m.
+
+--- 04 | MS neuroborreliose dr Heiko dr iskender 10.10.24 | 60.1s | digits=20 | score=48.00 ---
+Wie alt sind Sie?
+43.
+42.
+Und wann sind Sie? Genau, Herr Bohrmann.
+Am 16. April 1981.
+81.
+Und wie groß sind Sie?
+1,72 m und 65 kg schwer.
+Ungefähr.
+1,72 m groß und 65 kg schwer.
+Hören Sie mich noch?
+Okay, ich habe akustisch nicht gut verstanden.
+Also, Sie sind 1,62 m groß und 60 kg schwer.
+1,72 m.
+1,72 m und 65 kg schwer.
+65 kg schwer.
+
+--- 05 | Phlebothrombose Fr Gerhild mit dr isa 21.05.24 | 60.6s | digits=12 | score=34.00 ---
+I?
+Und der Familienname ist Pfeiffer P-F-E-I-Double-F-E-R.
+D-F-E-R.
+Pfeiffer.
+E-R-Sch.
+Herr Pfeiffer, könnten Sie mir Ihre Gebustatem verraten?
+Ja, ich bin am 14.09.87 geboren.
+47.89?
+87.
+87, ja.
+Sind Sie 36 Jahre alt?
+Okay, okay. Wie viel wiegen Sie?
+92 Kilo.
+Und wie groß sind Sie?
+1,84 m.
+84.
+
+--- 06 | Morbus Crohn dr Murat mit dr Ilay 18.05.25 | 44.7s | digits=16 | score=41.00 ---
+Wie alt sind Sie, Frau Müller?
+Ich bin 24 Jahre alt.
+24, wann sind Sie geboren?
+Ich bin am 12. Dezember 1925 geboren.
+2.000.
+Sorry.
+2.000.
+12. Dezember 2000.
+2.000, okay. Wie groß sind Sie?
+Ich bin 1,72 m groß und wiege ungefähr 63 Kilogramm.
+63.
+
+--- 07 | Gonarthrose dr Hu seyin mit dr Sonne 11.06.24 | 66.1s | digits=14 | score=37.00 ---
+Wie?
+E-Mail hat Nordpol E-Mail Richard.
+Herr Werner. Okay. Vielen Dank für Ihre Geduld.
+Wie alt sind Sie denn?
+Ich bin 75 Jahre alt.
+75.
+Wann sind Sie genau geboren?
+Ich bin 75 Jahre alt.
+Wie alt sind Sie denn?
+Ich bin 75 Jahre alt.
+75.
+Wann sind Sie genau geboren?
+Am 1. 1. 1944.
+44.
+Wie groß sind Sie?
+Ich bin 1 Meter 71 groß.
+Darf ich fragen, wie viel Sie aktuell wiegen?
+Ungefähr 92 Kilogramm.
+92.
+92.
+
+--- 08 | Ösophaguskarzinom_Speiseröhrenkrebs Fr Gerhil mit Dr Sümeyra 22.01.2026 | 66.8s | digits=14 | score=40.00 ---
+Wie alt sind Sie, Herr Schuster?
+Wie alt? Ich bin 54.
+54 Jahre.
+Wie alt sind Sie geboren?
+Am 6.08.1979.
+6.08.1979.
+Genau.
+Okay. Wie groß sind Sie, Herr Schuster?
+Ich bin 178.
+178 und wie viel wiegen Sie so seit?
+Ja, ich wiege zu seit nur noch 72 Kilo.
+Ich habe irgendwie, ich habe sonst immer 81 gewogen, aber jetzt wiege ich nur noch 72, ja.
+Ah, Sie haben 8 Kilo abgenommen?
+Ja, ich habe viel abgenommen, ja.
+Ich habe keine Gründe, warum ich hier bin, ja.
+Ah, okay, verstehe.
+Ja, in welchem Zeitraum haben Sie diese Gewicht abgenommen?
+
+--- 09 | Allergisches Asthma bronchiale Fr Gerhild mit Dr Kemal Düsseldorf 29.01.2026 | 46.0s | digits=21 | score=54.00 ---
+Herr Bach, wie alt sind Sie und wann genau sind Sie geboren?
+Ich bin noch 51 Jahre alt.
+51.
+Und wann genau sind Sie geboren?
+Am 8. 04.74.
+Das ist ein sehr guter Punkt.
+Am 8. 04.74.
+Am 8. 04.1900.
+1974.
+74.
+Wie groß sind Sie und wie viel wegen Sie, Herr Bach?
+Ich bin 1,81 m und wiege so um die 75 kg.
+75 kg.
+75.
+Nicht 70, 75.
+75, okay.
+
+--- 10 | Leberzirrhose Fr Gerhild mit Dr Şule31.07.25 | 50.0s | digits=22 | score=54.00 ---
+Ich bin 48 Jahre alt.
+48, okay. Und wann sind Sie genau geboren?
+Am 6.07.77.
+6.07.77.
+Könnten Sie wiederholen?
+Am 6.07.77.
+7.07.77.
+Okay, ja, ich verstehe. Danke schön.
+Und wie groß sind Sie?
+Ich bin 81.
+80.
+1,80 Meter, ne?
+Ja. Und wie viel wiegen Sie?
+Über so 86, 87 Kilo.
+7,80. Okay.
+
+--- 11 | Ulcus cruris Fr Gerhild mit Dr Sadi 03.06.25 | 34.6s | digits=14 | score=40.00 ---
+Wie alt sind Sie, Herr Münder?
+Ich bin noch 69.
+69.
+Wann sind Sie genau geboren?
+Am 18.09.55.
+55.
+Okay. Wie groß sind Sie, Herr Münder?
+Ich bin so 1,74.
+1,74.
+1,74, okay, okay, Herr Schuldiger.
+Wie viel wiegen Sie aktuelle, wiegen Sie?
+Ja, so ungefähr 83, 84 Kilo.
+
+--- 12 | Pyelonephritis Dr.Gerhild mit Dr Gülsah 26.11.24 | 37.0s | digits=13 | score=38.00 ---
+Wie alt sind Sie denn?
+Ich bin 75.
+Wann sind Sie genau geboren, Frau Cremor?
+4.8.1989.
+Ja, 49 Zolli, natürlich.
+49.
+4.8.1949.
+Wie schwer und wie groß Sie sind?
+Also in meinem Pass steht 1.68, das stimmt glaube ich immer noch.
+Und ich bringe so ungefähr 80 kg auf die Waage.
+Ach, 80 kg, sehr gut.
+
+--- 13 | Podagra Fr Gerhild mit dr Gunes 28.05.24 | 58.1s | digits=13 | score=38.00 ---
+Herr Betke, wie alt sind Sie denn?
+Ich bin 46.
+Okay, wann sind Sie genau geboren?
+Am 8.03.46.
+66, oder?
+46.
+Ach, ich bin 46 Jahre alt.
+Sorry, natürlich, 78.
+78, okay.
+Ja, das ist normal, das ist kein Problem.
+Wie groß sind Sie?
+1,78 m.
+Wie viel wiegen Sie so seit?
+Müssen Sie sich jetzt vorstellen. Ja, so 114, 115 kg wiegen ich.
+
+--- 14 | AKS Fr Gerhild mit dr Mustafa 05.09.24 | 51.5s | digits=10 | score=32.00 ---
+Frau Baumgart, wie alt sind Sie?
+Ich bin 16 Jahre.
+Schön.
+Wann sind Sie genau geboren?
+Am 8. Februar, 58.
+58.
+Na gut.
+Wie groß sind Sie?
+Ich bin 1,56.
+56.
+Und wie viel wiegen Sie so seit?
+Muss ich Ihnen das verraten?
+Ja, ja, es wäre toll, wenn Sie es haben.
+Ja, es sind 84 Kilo.
+Wie bitte? Ich habe apostisch nicht gehört.
+84 Kilo.
+80.
+
+--- 15 | CVI Veno ses Ulcus cruris Fr Gerhild mit dr Hafsa 02.05.24 | 41.0s | digits=10 | score=32.00 ---
+Hein Müller, wie alt sind Sie?
+Ich bin 69 noch.
+Okay. Und wann genau sind Sie geboren?
+Am 18.09.54.
+54. Okay. Hein Müller, wie groß sind Sie?
+Ich bin 1,74 m.
+74.
+Okay. Und kennen Sie, wie viel wiegen Sie aktuell?
+Ja, das ist so immer um die 83 kg. Mal ein bisschen weniger, mal ein bisschen mehr, aber 83 kg kann man sagen.
+
+--- 16 | Gastroenteritis Fr Gerhild mit Dr Hüseyin 20.05.25 | 36.8s | digits=11 | score=34.00 ---
+Wie alt sind Sie, Frau Sauter?
+Ich bin 60 Jahre gerade.
+60 Jahre?
+Okay.
+Wann sind Sie genau geboren?
+Am 1. März 65.
+65, okay.
+Wie groß sind Sie?
+Ich wiege so 70 kg.
+70 kg? Gut.
+Und ich bin 1.64 groß.
+1.64.
+
+--- 17 | Pyelonephritis § Nierenbeckenentzündung Fr Gerhild mit Dr Ibrahim 14.08.2024 | 33.9s | digits=10 | score=32.00 ---
+Frau Cremor, wie alt sind Sie?
+Genau.
+Ich bin 76 Jahre.
+76.
+Und wann wurden Sie genau geboren?
+Am 4.8. 1949.
+Und wie groß sind Sie?
+1.68, weiß ich zumindest mal.
+1.68.
+Und wie viel wiegen Sie?
+Ich wiege so um die 80 Kilo.
+
+--- 18 | Hypertensivenkrise Dr Heiko mit dr Zeiko 08.08.24 | 37.4s | digits=11 | score=34.00 ---
+Herr Bornehmann, wie alt sind Sie?
+Ich bin 61.
+61?
+Wann sind Sie genau geboren?
+Am 7. August 1963.
+63?
+Wie groß sind Sie?
+1,86 m.
+Wie viel wiegen Sie das für das Zeit?
+95 kg.
+Danke schön, Herr Bornehmann.
+Was für ein solches Auto?
+Ich habe ungefähr 3 Stunden sehr starke Kopfschmerzen.
+3 Stunden.
+Ja, seit 3 Stunden.
+
+--- 19 | Polytrauma Fahrradunfal Fr Gerhild mit Dr Fatih 22.07.2025 | 48.1s | digits=12 | score=36.00 ---
+Okay, wann sind Sie genau geboren? Am 7.02.1997. Könnten Sie bitte wiederholen?
+Am 7.02.1997. Wie alt sind Sie? 28.
+Schon wärst du. Wie groß sind Sie? 1.74. Wie wiegen Sie?
+Wie viel? Wie viel? Ja, so knapp 80 Kilo 79, 80.
+
+--- 20 | Lumboischialgie dr Hüseyin mit dr Umut 30.04.24 | 41.4s | digits=11 | score=34.00 ---
+Okay. Wie alt sind Sie?
+Ich bin 50 Jahre alt.
+50 Jahre alt.
+Wann sind Sie genau geboren?
+Wie bitte?
+Wann sind Sie genau geboren?
+Am 14.04.1974.
+14.04.1974.
+Okay. Wie groß sind Sie?
+Ich bin 1,76 m groß.
+Wissen Sie, wie viel Sie wiegen?
+Ja, so um die 85 kg.
