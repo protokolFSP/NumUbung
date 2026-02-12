@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Urolithiasis Dr Ömer mit Dr Sedat 06.04.25.srt",
+  "picked": {
+    "start": 58.47,
+    "end": 101.46999999999998,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

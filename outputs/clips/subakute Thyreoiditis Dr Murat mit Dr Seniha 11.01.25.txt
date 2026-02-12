@@ -1,0 +1,8 @@
+Danke und wie alt sind Sie?
+Ich bin 42 Jahre alt.
+Wann genau sind Sie geboren?
+Ich bin geboren am 19. Januar 1982.
+Wie groß sind Sie?
+Ich bin ungefähr 1,79 m groß.
+Und wie viel wiegen Sie?
+Ich wiege ca. 76 kg.

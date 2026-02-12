@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/subakute Thyreoiditis Dr Murat mit Dr Seniha 11.01.25.srt",
+  "picked": {
+    "start": 40.44,
+    "end": 81.30999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

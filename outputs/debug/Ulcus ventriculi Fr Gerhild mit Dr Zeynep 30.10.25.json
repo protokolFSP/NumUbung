@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Ulcus ventriculi Fr Gerhild mit Dr Zeynep 30.10.25.srt",
+  "picked": {
+    "start": 42.58,
+    "end": 73.23,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

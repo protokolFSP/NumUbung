@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Urolithiasis Nephrolithiasis Fr Gerhild mit Dr Elif 12.05.25.srt",
+  "picked": {
+    "start": 66.69000000000001,
+    "end": 102.69,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

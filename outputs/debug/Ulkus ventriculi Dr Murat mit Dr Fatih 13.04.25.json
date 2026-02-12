@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Ulkus ventriculi Dr Murat mit Dr Fatih 13.04.25.srt",
+  "picked": {
+    "start": 64.23,
+    "end": 89.60999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

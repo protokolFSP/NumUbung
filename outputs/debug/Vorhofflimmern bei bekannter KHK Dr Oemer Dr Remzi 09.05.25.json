@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Vorhofflimmern bei bekannter KHK Dr Oemer Dr Remzi 09.05.25.srt",
+  "picked": {
+    "start": 109.48,
+    "end": 151.6,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

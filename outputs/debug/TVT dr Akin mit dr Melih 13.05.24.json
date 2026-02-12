@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/TVT dr Akin mit dr Melih 13.05.24.srt",
+  "picked": {
+    "start": 53.05,
+    "end": 89.05,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

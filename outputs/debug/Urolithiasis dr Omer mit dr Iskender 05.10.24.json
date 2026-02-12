@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Urolithiasis dr Omer mit dr Iskender 05.10.24.srt",
+  "picked": {
+    "start": 56.449999999999996,
+    "end": 88.05,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

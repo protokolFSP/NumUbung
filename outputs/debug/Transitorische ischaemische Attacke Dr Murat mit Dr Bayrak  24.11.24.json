@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Transitorische ischaemische Attacke Dr Murat mit Dr Bayrak  24.11.24.srt",
+  "picked": {
+    "start": 28.2,
+    "end": 63.8,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

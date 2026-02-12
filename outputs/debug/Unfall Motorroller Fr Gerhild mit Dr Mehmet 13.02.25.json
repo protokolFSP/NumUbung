@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Unfall Motorroller Fr Gerhild mit Dr Mehmet 13.02.25.srt",
+  "picked": {
+    "start": 60.04,
+    "end": 94.41,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

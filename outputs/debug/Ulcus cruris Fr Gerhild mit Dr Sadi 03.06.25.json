@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Ulcus cruris Fr Gerhild mit Dr Sadi 03.06.25.srt",
+  "picked": {
+    "start": 46.8,
+    "end": 81.4,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}
