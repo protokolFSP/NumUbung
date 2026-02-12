@@ -140,58 +140,58 @@
     "last_reason": "window_not_found_srt"
   },
   "Spinalkanalstenose Fr Gerhild mit dr Isa 06.06.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Subduralhematoma Dr Heiko mit dr Yunus 27.03.25": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "TVT Fr Gerhild mit dr Dilruba 12.11.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "TVT Fr Gerhild mit Dr Gül 22.04.25": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Ulcus Ventriculi Dr Gerhild mit Dr Selim 19.12.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Ulcus ventriculi Fr Gergild mit Dr Hüseyin 05.06.25": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "z Aufklærung06-EKG": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "z Aufklærung07-Belastung EKG": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "z Aufklærung08-Langzeit EKG": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "z Aufklærung09-Biopsie": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "z Aufklærung10-USG": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   }
 }
