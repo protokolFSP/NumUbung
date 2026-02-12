@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Nephrolithiasis dr ömer§dr berk 08.11.24.srt",
+  "picked": {
+    "start": 20.47,
+    "end": 50.68,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

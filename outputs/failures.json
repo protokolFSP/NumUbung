@@ -105,21 +105,26 @@
     "last_reason": "window_not_found_srt"
   },
   "Hyperthyreose Kontrastmittelinduzierte Iod Dr Heiko mit Dr Yakup 30.04.25": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Hyperthyreose_Morbus Basedow Dr Murat mit Dr Osman 08.02.2026": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Hypothyreose Fr Gerhild mit Dr Şule 24.07.25": {
+    "attempts": 3,
+    "permanent": true,
+    "last_reason": "window_not_found_srt"
+  },
+  "Lymphom Dr Heiko mit Dr Selim 12.12.24": {
     "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
-  "Lymphom Dr Heiko mit Dr Selim 12.12.24": {
+  "Lymphpm Dr Gerhild mit Dr Gül 23.01.25": {
     "attempts": 1,
     "permanent": false,
     "last_reason": "window_not_found_srt"

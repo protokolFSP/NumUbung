@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Magenkarzinom Fr Gerhild mit dr Hafsa 16.04.24.srt",
+  "picked": {
+    "start": 43.589999999999996,
+    "end": 89.22,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

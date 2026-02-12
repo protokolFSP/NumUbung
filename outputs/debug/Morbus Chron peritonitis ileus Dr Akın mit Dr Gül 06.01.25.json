@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Morbus Chron peritonitis ileus Dr Akın mit Dr Gül 06.01.25.srt",
+  "picked": {
+    "start": 36.16,
+    "end": 56.76,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

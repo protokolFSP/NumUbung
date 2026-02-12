@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Nephrolithiasis Dr Murrat mit Dr Şadi 25.05.25.srt",
+  "picked": {
+    "start": 58.47,
+    "end": 86.46999999999998,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

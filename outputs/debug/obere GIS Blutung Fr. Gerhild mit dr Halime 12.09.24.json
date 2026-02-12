@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/obere GIS Blutung Fr. Gerhild mit dr Halime 12.09.24.srt",
+  "picked": {
+    "start": 63.0,
+    "end": 93.83,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

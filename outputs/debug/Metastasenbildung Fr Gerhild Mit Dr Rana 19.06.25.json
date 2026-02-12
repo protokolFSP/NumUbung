@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Metastasenbildung Fr Gerhild Mit Dr Rana 19.06.25.srt",
+  "picked": {
+    "start": 60.1,
+    "end": 106.64,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

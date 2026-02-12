@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Nephrolithiasis Dr Omer mit Yunus m4a 10.01.25.srt",
+  "picked": {
+    "start": 65.32000000000001,
+    "end": 115.63,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

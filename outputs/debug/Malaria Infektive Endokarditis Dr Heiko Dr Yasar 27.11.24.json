@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Malaria Infektive Endokarditis Dr Heiko Dr Yasar 27.11.24.srt",
+  "picked": {
+    "start": 69.16000000000001,
+    "end": 111.30999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

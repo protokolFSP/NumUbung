@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Morbus Crohn dr Murat mit dr Ilay 18.05.25.srt",
+  "picked": {
+    "start": 36.54,
+    "end": 81.23,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

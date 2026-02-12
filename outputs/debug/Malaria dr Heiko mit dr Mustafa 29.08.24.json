@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Malaria dr Heiko mit dr Mustafa 29.08.24.srt",
+  "picked": {
+    "start": 78.80000000000001,
+    "end": 120.08,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

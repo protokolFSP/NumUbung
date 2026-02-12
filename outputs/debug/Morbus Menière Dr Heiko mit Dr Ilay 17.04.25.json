@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Morbus Menière Dr Heiko mit Dr Ilay 17.04.25.srt",
+  "picked": {
+    "start": 54.12,
+    "end": 92.63,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

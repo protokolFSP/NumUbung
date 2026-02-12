@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Magenkarzinom Fr Gerhild und Dr Şadi 12.08.2025.srt",
+  "picked": {
+    "start": 50.9,
+    "end": 83.91999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}
