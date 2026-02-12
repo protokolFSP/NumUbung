@@ -1,29 +1,15 @@
-# =========================================
-# file: tools/build_best12_from_existing.py
-# =========================================
 """
-Build the best 12-clip practice MP3 from existing outputs/clips/*.mp3 + *.txt.
+Build an Übung MP3 by selecting the best N clips from outputs/clips (mp3+txt).
 
-Usage:
-  python tools/build_best12_from_existing.py \
-    --clips-dir outputs/clips \
-    --out-dir outputs/ubung \
-    --count 12 \
-    --min-duration 12 \
-    --max-duration 80 \
-    --min-digits 2 \
-    --silence-seconds 0.6 \
-    --max-per-group 2 \
-    --lambda-score 0.75
+- Scores by digits + demographic signals (age/dob/height/weight)
+- Penalizes "aktuelle Anamnese" transitions (Was führt Sie..., Beschwerden...)
+- MMR-style diversity (rapidfuzz optional)
+- Concats via WAV + filter_complex concat (no concat list path issues)
 
 Outputs:
-  outputs/ubung/best12_###.mp3
-  outputs/ubung/best12_###.txt
-  outputs/ubung/best12_###.json
-
-Notes:
-- Requires ffmpeg/ffprobe available in PATH.
-- rapidfuzz is optional (better diversity). If missing, falls back to simple selection.
+  outputs/ubung/best{N}_###.mp3
+  outputs/ubung/best{N}_###.txt
+  outputs/ubung/best{N}_###.json
 """
 
 from __future__ import annotations
@@ -43,8 +29,6 @@ try:
 except Exception:
     fuzz = None  # type: ignore
 
-
-# --- Heuristics (tune here) ---
 TRANSITION_RE = re.compile(
     r"\b(was\s+f(ü|ue)hrt\s+sie(\s+zu\s+uns|\s+heute|\s+her)?)\b|"
     r"\b(was\s+kann\s+ich\s+f(ü|ue)r\s+sie\s+tun)\b|"
@@ -118,18 +102,16 @@ def ffprobe_duration_s(ffprobe: str, mp3_path: Path) -> float:
 
 
 def group_key_from_stem(stem: str) -> str:
-    # Try to keep diagnosis/case group stable across variants
-    s = stem
-    low = s.lower()
+    low = stem.lower()
     if " dr " in low:
-        cut = low.split(" dr ")[0]
-        return _norm(cut)
-    # fallback: first 2 words
-    parts = _norm(s).split()
-    return " ".join(parts[:2]) if parts else _norm(s)
+        return _norm(low.split(" dr ")[0])
+    parts = _norm(stem).split()
+    return " ".join(parts[:2]) if parts else _norm(stem)
 
 
-def score_clip(text: str, duration_s: float, min_duration: float, max_duration: float) -> Tuple[float, Dict[str, bool], int]:
+def score_clip(
+    text: str, duration_s: float, min_duration: float, max_duration: float
+) -> Tuple[float, Dict[str, bool], int]:
     n = _norm(text)
     digits = len(NUM_RE.findall(n))
 
@@ -139,7 +121,6 @@ def score_clip(text: str, duration_s: float, min_duration: float, max_duration: 
     has_weight = bool(WEIGHT_RE.search(n) or re.search(r"\b\d{2,3}\s*(kg|kilo)\b", n))
     has_transition = bool(TRANSITION_RE.search(n))
 
-    # Base points: numbers + demographic completeness
     score = 0.0
     score += digits * 2.0
     score += 2.0 if has_age_q else 0.0
@@ -147,15 +128,14 @@ def score_clip(text: str, duration_s: float, min_duration: float, max_duration: 
     score += 3.0 if has_height else 0.0
     score += 3.0 if has_weight else 0.0
 
-    # Penalties
     if has_transition:
-        score -= 10.0  # keep "aktuelle Anamnese" out
+        score -= 12.0
     if duration_s < min_duration:
         score -= (min_duration - duration_s) * 1.0
     if duration_s > max_duration:
         score -= (duration_s - max_duration) * 0.7
     if digits == 0:
-        score -= 8.0
+        score -= 10.0
 
     feats = {
         "has_age_q": has_age_q,
@@ -182,9 +162,9 @@ def pick_best_mmr(
     if not candidates:
         return []
 
-    # Normalize scores to [0,1]
     infos = [c[0] for c in candidates]
     texts = {c[0].stem: c[1] for c in candidates}
+
     smin = min(i.score for i in infos)
     smax = max(i.score for i in infos)
     denom = (smax - smin) if (smax - smin) > 1e-9 else 1.0
@@ -192,7 +172,6 @@ def pick_best_mmr(
     def norm_score(x: float) -> float:
         return (x - smin) / denom
 
-    # Start with best score
     remaining = candidates[:]
     remaining.sort(key=lambda t: t[0].score, reverse=True)
 
@@ -223,10 +202,9 @@ def pick_best_mmr(
                 best_idx = idx
 
         if best_idx == -1:
-            # group constraint blocks; relax
-            ci, _txt = remaining.pop(0)
+            ci, _ = remaining.pop(0)
         else:
-            ci, _txt = remaining.pop(best_idx)
+            ci, _ = remaining.pop(best_idx)
 
         selected.append(ci)
         per_group[ci.group] = per_group.get(ci.group, 0) + 1
@@ -234,8 +212,7 @@ def pick_best_mmr(
     return selected
 
 
-def make_silence_mp3(ffmpeg: str, out_mp3: Path, seconds: float) -> None:
-    out_mp3.parent.mkdir(parents=True, exist_ok=True)
+def make_silence_wav(ffmpeg: str, out_wav: Path, seconds: float, sample_rate: int) -> None:
     subprocess.run(
         [
             ffmpeg,
@@ -245,49 +222,56 @@ def make_silence_mp3(ffmpeg: str, out_mp3: Path, seconds: float) -> None:
             "-f",
             "lavfi",
             "-i",
-            "anullsrc=channel_layout=mono:sample_rate=44100",
+            f"anullsrc=r={sample_rate}:cl=mono",
             "-t",
             f"{seconds:.3f}",
             "-c:a",
-            "libmp3lame",
-            "-b:a",
-            "96k",
-            str(out_mp3),
+            "pcm_s16le",
+            str(out_wav),
         ],
         check=True,
     )
 
 
-def concat_mp3(ffmpeg: str, mp3s: List[Path], out_mp3: Path) -> None:
-    out_mp3.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="concat_") as td:
-        tdir = Path(td)
-        lst = tdir / "list.txt"
-        lines = []
-        for p in mp3s:
-            lines.append(f"file '{p.as_posix()}'")
-        lst.write_text("\n".join(lines) + "\n", encoding="utf-8")
+def mp3_to_wav(ffmpeg: str, mp3: Path, wav: Path, sample_rate: int) -> None:
+    wav.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(
+        [
+            ffmpeg,
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-i",
+            str(mp3),
+            "-vn",
+            "-ac",
+            "1",
+            "-ar",
+            str(sample_rate),
+            "-c:a",
+            "pcm_s16le",
+            str(wav),
+        ],
+        check=True,
+    )
 
-        subprocess.run(
-            [
-                ffmpeg,
-                "-hide_banner",
-                "-loglevel",
-                "error",
-                "-f",
-                "concat",
-                "-safe",
-                "0",
-                "-i",
-                str(lst),
-                "-c:a",
-                "libmp3lame",
-                "-b:a",
-                "96k",
-                str(out_mp3),
-            ],
-            check=True,
-        )
+
+def concat_wavs_to_mp3(ffmpeg: str, wavs: List[Path], out_mp3: Path) -> None:
+    out_mp3.parent.mkdir(parents=True, exist_ok=True)
+
+    cmd: List[str] = [ffmpeg, "-hide_banner", "-loglevel", "error"]
+    for w in wavs:
+        cmd += ["-i", str(w)]
+
+    if len(wavs) == 1:
+        cmd += ["-c:a", "libmp3lame", "-b:a", "96k", str(out_mp3)]
+        subprocess.run(cmd, check=True)
+        return
+
+    inputs = "".join([f"[{i}:a]" for i in range(len(wavs))])
+    filt = f"{inputs}concat=n={len(wavs)}:v=0:a=1[a]"
+    cmd += ["-filter_complex", filt, "-map", "[a]", "-c:a", "libmp3lame", "-b:a", "96k", str(out_mp3)]
+    subprocess.run(cmd, check=True)
 
 
 def next_index(out_dir: Path, prefix: str) -> int:
@@ -311,6 +295,8 @@ def main() -> int:
     ap.add_argument("--min-digits", type=int, default=2)
 
     ap.add_argument("--silence-seconds", type=float, default=0.6)
+    ap.add_argument("--sample-rate", type=int, default=16000)
+
     ap.add_argument("--max-per-group", type=int, default=2)
     ap.add_argument("--lambda-score", type=float, default=0.75)
 
@@ -340,10 +326,10 @@ def main() -> int:
             continue
 
         dur = ffprobe_duration_s(ffprobe, mp3_path)
-        score, feats, digits = score_clip(text, dur, args.min_duration, args.max_duration)
-
         if dur <= 0.0:
             continue
+
+        score, feats, digits = score_clip(text, dur, args.min_duration, args.max_duration)
         if digits < args.min_digits:
             continue
 
@@ -364,9 +350,8 @@ def main() -> int:
         candidates.append((ci, text))
 
     if not candidates:
-        raise SystemExit("No eligible candidates after filtering (min_durations/min_digits).")
+        raise SystemExit("No eligible candidates after filtering.")
 
-    # Prefer non-transition clips; still keep them as fallback
     candidates.sort(key=lambda t: t[0].score, reverse=True)
 
     selected = pick_best_mmr(
@@ -377,36 +362,41 @@ def main() -> int:
     )
 
     if not selected:
-        raise SystemExit("Selection failed unexpectedly.")
-
-    selected.sort(key=lambda x: x.score, reverse=True)
+        raise SystemExit("Selection empty. Try relaxing filters.")
 
     if args.dry_run:
         for i, s in enumerate(selected, 1):
-            print(f"{i:02d}. {s.stem}  score={s.score:.2f} dur={s.duration_s:.1f}s digits={s.digits} group={s.group}")
+            print(f"{i:02d}. {s.stem} score={s.score:.2f} dur={s.duration_s:.1f}s digits={s.digits} group={s.group}")
         return 0
 
-    idx = next_index(out_dir, "best12")
-    base = f"best12_{idx:03d}"
+    idx = next_index(out_dir, f"best{args.count}")
+    base = f"best{args.count}_{idx:03d}"
+
     out_mp3 = out_dir / f"{base}.mp3"
     out_txt = out_dir / f"{base}.txt"
     out_json = out_dir / f"{base}.json"
 
-    # Build concat list with optional silence
-    mp3s: List[Path] = []
-    silence_mp3: Optional[Path] = None
-    if args.silence_seconds > 0.0:
-        silence_mp3 = out_dir / "_silence.mp3"
-        make_silence_mp3(ffmpeg, silence_mp3, args.silence_seconds)
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    for i, s in enumerate(selected):
-        mp3s.append(Path(s.mp3))
-        if silence_mp3 and i != (len(selected) - 1):
-            mp3s.append(silence_mp3)
+    with tempfile.TemporaryDirectory(prefix="best_concat_") as td:
+        tdir = Path(td)
+        tmp_wavs_dir = tdir / "wavs"
+        tmp_wavs_dir.mkdir(parents=True, exist_ok=True)
 
-    concat_mp3(ffmpeg, mp3s, out_mp3)
+        silence_wav = tdir / "silence.wav"
+        if args.silence_seconds > 0:
+            make_silence_wav(ffmpeg, silence_wav, args.silence_seconds, args.sample_rate)
 
-    # Write combined transcript
+        wavs: List[Path] = []
+        for i, s in enumerate(selected):
+            wav = tmp_wavs_dir / f"{i:02d}.wav"
+            mp3_to_wav(ffmpeg, Path(s.mp3), wav, args.sample_rate)
+            wavs.append(wav)
+            if args.silence_seconds > 0 and i != (len(selected) - 1):
+                wavs.append(silence_wav)
+
+        concat_wavs_to_mp3(ffmpeg, wavs, out_mp3)
+
     parts: List[str] = []
     for i, s in enumerate(selected, 1):
         t = Path(s.txt).read_text(encoding="utf-8", errors="ignore").strip()
@@ -423,6 +413,7 @@ def main() -> int:
                     "max_duration": args.max_duration,
                     "min_digits": args.min_digits,
                     "silence_seconds": args.silence_seconds,
+                    "sample_rate": args.sample_rate,
                     "max_per_group": args.max_per_group,
                     "lambda_score": args.lambda_score,
                 },
@@ -442,4 +433,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
