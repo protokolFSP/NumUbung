@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Panikattacke dr O mer mit dr Umut 03.05.24.srt",
+  "picked": {
+    "start": 62.83,
+    "end": 97.8,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

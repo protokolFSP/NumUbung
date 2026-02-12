@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/pAVK Fr Gerhild mit Dr Dilara 18.11.2025.srt",
+  "picked": {
+    "start": 53.9,
+    "end": 82.5,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

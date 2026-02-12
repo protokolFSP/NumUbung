@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Panikattacke Dr Omer mit Dr Ilay 23.05.25.srt",
+  "picked": {
+    "start": 63.33,
+    "end": 106.32,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

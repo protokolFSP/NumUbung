@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/pAVK Fr Gerhild mit Dr Hatice 30.01.25.srt",
+  "picked": {
+    "start": 52.71,
+    "end": 99.00999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

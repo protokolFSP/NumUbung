@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Ossäre Metastase des Bronchialkarzinoms Dr Heiko mit Dr Seniha 09.01.25.srt",
+  "picked": {
+    "start": 64.33000000000001,
+    "end": 102.28999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

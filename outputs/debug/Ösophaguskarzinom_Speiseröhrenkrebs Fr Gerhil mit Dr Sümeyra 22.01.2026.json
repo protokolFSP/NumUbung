@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Ösophaguskarzinom_Speiseröhrenkrebs Fr Gerhil mit Dr Sümeyra 22.01.2026.srt",
+  "picked": {
+    "start": 85.51,
+    "end": 152.24,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/OGIB Fr Gerhild mit dr Isa 04.06.24.srt",
+  "picked": {
+    "start": 82.9,
+    "end": 131.52,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

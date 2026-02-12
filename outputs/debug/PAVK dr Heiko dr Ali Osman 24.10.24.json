@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/PAVK dr Heiko dr Ali Osman 24.10.24.srt",
+  "picked": {
+    "start": 75.05000000000001,
+    "end": 105.35,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

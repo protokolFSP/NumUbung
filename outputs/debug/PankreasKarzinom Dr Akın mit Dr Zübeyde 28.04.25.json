@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/PankreasKarzinom Dr Akın mit Dr Zübeyde 28.04.25.srt",
+  "picked": {
+    "start": 34.9,
+    "end": 73.89999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

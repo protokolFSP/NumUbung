@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/pAVK Dr Heiko mit Dr Alim 19.06.25.srt",
+  "picked": {
+    "start": 55.769999999999996,
+    "end": 87.83,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

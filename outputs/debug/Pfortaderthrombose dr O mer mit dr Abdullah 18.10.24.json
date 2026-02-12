@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Pfortaderthrombose dr O mer mit dr Abdullah 18.10.24.srt",
+  "picked": {
+    "start": 43.9,
+    "end": 82.44999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}
