@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Lymphödem Fr Gerhild mit Dr Oğuzhan 06.02.25.srt",
+  "picked": {
+    "start": 70.73,
+    "end": 105.52,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

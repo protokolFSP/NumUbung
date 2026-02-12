@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/InfluenzA Dr murat mit dr mehmet 19.01.25.srt",
+  "picked": {
+    "start": 54.059999999999995,
+    "end": 80.96,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

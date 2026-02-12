@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Interkostalneuralgie Dr Heiko dr iskender 31.10.24.srt",
+  "picked": {
+    "start": 60.839999999999996,
+    "end": 85.82,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

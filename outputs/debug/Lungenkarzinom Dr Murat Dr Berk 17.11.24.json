@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Lungenkarzinom Dr Murat Dr Berk 17.11.24.srt",
+  "picked": {
+    "start": 28.439999999999998,
+    "end": 62.14,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

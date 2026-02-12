@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Influenza_echte Grippe Dr Ömer Mit Dr Zülal 09.01.2026.srt",
+  "picked": {
+    "start": 69.35000000000001,
+    "end": 125.35,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

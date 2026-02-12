@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Lungenembolie Dr Murat mit Dr Melih 01.02.2026.srt",
+  "picked": {
+    "start": 63.199999999999996,
+    "end": 100.36999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

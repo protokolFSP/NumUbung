@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Lymphom § Malaria Dr Heiko mit Dr Sadi 07.05.25.srt",
+  "picked": {
+    "start": 75.14,
+    "end": 107.74,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

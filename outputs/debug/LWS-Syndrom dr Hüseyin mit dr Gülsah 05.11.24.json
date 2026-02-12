@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/LWS-Syndrom dr Hüseyin mit dr Gülsah 05.11.24.srt",
+  "picked": {
+    "start": 36.72,
+    "end": 78.00999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

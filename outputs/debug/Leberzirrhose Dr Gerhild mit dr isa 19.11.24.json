@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Leberzirrhose Dr Gerhild mit dr isa 19.11.24.srt",
+  "picked": {
+    "start": 79.36,
+    "end": 127.35999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

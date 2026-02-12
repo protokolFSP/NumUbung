@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/InstabilE Angina Fr Gerhild und Dr Şadi 19.08.2025.srt",
+  "picked": {
+    "start": 51.01,
+    "end": 82.60999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

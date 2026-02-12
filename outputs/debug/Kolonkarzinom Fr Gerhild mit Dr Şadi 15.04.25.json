@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Kolonkarzinom Fr Gerhild mit Dr Şadi 15.04.25.srt",
+  "picked": {
+    "start": 64.53,
+    "end": 94.13,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

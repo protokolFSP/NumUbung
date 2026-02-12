@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Lymphom Dr Heiko mit Dr Rana 26.06.25.srt",
+  "picked": {
+    "start": 78.0,
+    "end": 148.2,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

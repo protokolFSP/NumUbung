@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Lymphoma dr Heiko mit dr Korkmaz 27.07.23.srt",
+  "picked": {
+    "start": 41.48,
+    "end": 85.56,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

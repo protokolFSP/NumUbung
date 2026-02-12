@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Kolon CA Fr Gerhild dr Ali Osman  22.10.24.srt",
+  "picked": {
+    "start": 51.269999999999996,
+    "end": 89.80999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

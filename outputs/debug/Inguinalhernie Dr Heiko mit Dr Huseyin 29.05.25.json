@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Inguinalhernie Dr Heiko mit Dr Huseyin 29.05.25.srt",
+  "picked": {
+    "start": 48.92,
+    "end": 85.44,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

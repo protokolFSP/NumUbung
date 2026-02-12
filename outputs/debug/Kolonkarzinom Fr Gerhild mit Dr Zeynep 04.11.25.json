@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Kolonkarzinom Fr Gerhild mit Dr Zeynep 04.11.25.srt",
+  "picked": {
+    "start": 38.5,
+    "end": 67.49999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

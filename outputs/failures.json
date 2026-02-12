@@ -80,41 +80,46 @@
     "last_reason": "window_not_found_srt"
   },
   "Divertikülitis Dr Murat mit Dr İsa 01.12.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "ER_Diabetes_Triage_Algorithm Dr Ömer hoca 30.01.2026": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Gastroenteritis Dr Murat§Dr Dilruba 10.10.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "GastroösophagealE Refluxkrankheit (GERD) Fr Gerhild mit Dr Yavuz 02.09.2025": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Gichtarthritis PODagra Arthritis uriCa Fr Gerhild mit Dr Gül 11.02.25": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Hyperthyreose Kontrastmittelinduzierte Iod Dr Heiko mit Dr Yakup 30.04.25": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Hyperthyreose_Morbus Basedow Dr Murat mit Dr Osman 08.02.2026": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Hypothyreose Fr Gerhild mit Dr Şule 24.07.25": {
+    "attempts": 2,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "Lymphom Dr Heiko mit Dr Selim 12.12.24": {
     "attempts": 1,
     "permanent": false,
     "last_reason": "window_not_found_srt"

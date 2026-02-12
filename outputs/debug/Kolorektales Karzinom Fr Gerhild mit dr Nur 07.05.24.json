@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Kolorektales Karzinom Fr Gerhild mit dr Nur 07.05.24.srt",
+  "picked": {
+    "start": 42.08,
+    "end": 84.08,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}
