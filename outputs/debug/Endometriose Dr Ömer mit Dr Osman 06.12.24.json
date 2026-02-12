@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Endometriose Dr Ömer mit Dr Osman 06.12.24.srt",
+  "picked": {
+    "start": 123.80000000000001,
+    "end": 180.1,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

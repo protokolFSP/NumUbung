@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/epileptische Anfall Fr Gerhild mit Dr Elif 08.04.25.srt",
+  "picked": {
+    "start": 51.059999999999995,
+    "end": 75.77999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

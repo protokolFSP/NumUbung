@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/FahrradUnfall Dr Osman mit Dr Havva 13.10.24.srt",
+  "picked": {
+    "start": 49.4,
+    "end": 71.32,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

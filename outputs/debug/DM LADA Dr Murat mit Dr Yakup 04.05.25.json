@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/DM LADA Dr Murat mit Dr Yakup 04.05.25.srt",
+  "picked": {
+    "start": 37.57,
+    "end": 76.93,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Gastroenteritis Fr Gerhild mit dr Seyma 25.07.24.srt",
+  "picked": {
+    "start": 52.01,
+    "end": 87.88,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

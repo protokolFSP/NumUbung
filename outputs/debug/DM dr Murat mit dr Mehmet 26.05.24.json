@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/DM dr Murat mit dr Mehmet 26.05.24.srt",
+  "picked": {
+    "start": 37.62,
+    "end": 74.99999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

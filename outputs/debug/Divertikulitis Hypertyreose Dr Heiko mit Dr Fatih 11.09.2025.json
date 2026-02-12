@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Divertikulitis Hypertyreose Dr Heiko mit Dr Fatih 11.09.2025.srt",
+  "picked": {
+    "start": 65.07000000000001,
+    "end": 103.24,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

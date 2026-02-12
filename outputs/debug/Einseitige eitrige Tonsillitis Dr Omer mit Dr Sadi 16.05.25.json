@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Einseitige eitrige Tonsillitis Dr Omer mit Dr Sadi 16.05.25.srt",
+  "picked": {
+    "start": 55.75,
+    "end": 89.95,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

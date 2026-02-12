@@ -1,0 +1,8 @@
+Wie alt sind Sie?
+Ich bin 60.
+Wie groß sind Sie?
+Ich bin 1,61 m.
+Und wissen Sie, wie viel Sie wiegen?
+Ja, leider.
+Ich wiege 97 kg.
+97 kg.

@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Erysipel Fr Gerhild mit dr Gu nes 10.09.24.srt",
+  "picked": {
+    "start": 59.24,
+    "end": 105.99999999999999,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

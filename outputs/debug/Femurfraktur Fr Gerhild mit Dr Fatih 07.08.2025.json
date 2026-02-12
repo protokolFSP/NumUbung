@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Femurfraktur Fr Gerhild mit Dr Fatih 07.08.2025.srt",
+  "picked": {
+    "start": 51.74,
+    "end": 113.41999999999999,
+    "reason": "age=True;dob=False;h_or_w=True;max_search=180.0"
+  }
+}

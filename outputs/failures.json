@@ -55,26 +55,51 @@
     "last_reason": "window_not_found_srt"
   },
   "Bronchialkarzinom dr Hu samettin mit dr Isa 11.04.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Choledocholithiasis dr O mer mit dr Mehmet 09.05.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "Cholezystitis Dr Gerhild mit Dr İskender 21.11.24": {
-    "attempts": 2,
-    "permanent": false,
+    "attempts": 3,
+    "permanent": true,
     "last_reason": "window_not_found_srt"
   },
   "COPD Dr Heiko mit Dr Zeynep 16.10.2025": {
-    "attempts": 1,
+    "attempts": 2,
     "permanent": false,
     "last_reason": "window_not_found_srt"
   },
   "Diskusprolaps dr Heiko mit dr Iskender 14.11.24": {
+    "attempts": 2,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "Divertikülitis Dr Murat mit Dr İsa 01.12.24": {
+    "attempts": 1,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "ER_Diabetes_Triage_Algorithm Dr Ömer hoca 30.01.2026": {
+    "attempts": 1,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "Gastroenteritis Dr Murat§Dr Dilruba 10.10.24": {
+    "attempts": 1,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "GastroösophagealE Refluxkrankheit (GERD) Fr Gerhild mit Dr Yavuz 02.09.2025": {
+    "attempts": 1,
+    "permanent": false,
+    "last_reason": "window_not_found_srt"
+  },
+  "Gichtarthritis PODagra Arthritis uriCa Fr Gerhild mit Dr Gül 11.02.25": {
     "attempts": 1,
     "permanent": false,
     "last_reason": "window_not_found_srt"

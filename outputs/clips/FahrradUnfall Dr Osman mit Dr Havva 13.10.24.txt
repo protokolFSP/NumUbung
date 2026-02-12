@@ -1,0 +1,7 @@
+Wie alt sind Sie?
+Ich bin 28 Jahre alt.
+Wie groß sind Sie?
+Ich bin 1,76 m groß.
+Wie schwer sind Sie?
+Du sagst.
+Ich bin circa 89 kg.

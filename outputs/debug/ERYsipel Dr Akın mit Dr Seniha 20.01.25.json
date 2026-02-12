@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/ERYsipel Dr Akın mit Dr Seniha 20.01.25.srt",
+  "picked": {
+    "start": 44.36,
+    "end": 75.55,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

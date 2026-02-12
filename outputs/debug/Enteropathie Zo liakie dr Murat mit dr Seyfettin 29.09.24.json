@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Enteropathie Zo liakie dr Murat mit dr Seyfettin 29.09.24.srt",
+  "picked": {
+    "start": 43.48,
+    "end": 85.46999999999998,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}

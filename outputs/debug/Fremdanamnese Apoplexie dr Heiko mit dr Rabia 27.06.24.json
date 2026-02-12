@@ -1,0 +1,8 @@
+{
+  "srt": "_srt_repo/transcripts/Fremdanamnese Apoplexie dr Heiko mit dr Rabia 27.06.24.srt",
+  "picked": {
+    "start": 101.71000000000001,
+    "end": 142.97,
+    "reason": "age=True;dob=True;h_or_w=True;max_search=180.0"
+  }
+}
