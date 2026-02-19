@@ -1,0 +1,99 @@
+name: Build Ubung (SRT -> 4-cue clips) for 2 sources
+
+on:
+  workflow_dispatch:
+    inputs:
+      # Source 1
+      ia_id_1:
+        required: true
+        default: "FSP21_23"
+      srt_subdir_1:
+        required: true
+        default: "FSP21_23"
+      out_dir_1:
+        required: true
+        default: "ubung1"
+
+      # Source 2
+      ia_id_2:
+        required: true
+        default: "vorhofflimmern-bei-bekannter-khk-dr-oemer-dr-remzi-09.05.25"
+      srt_subdir_2:
+        required: true
+        default: ""   # transcripts root
+      out_dir_2:
+        required: true
+        default: "ubung2"
+
+      first_minutes:
+        required: true
+        default: "6"
+      max_clip_seconds:
+        required: true
+        default: "90"
+      max_files_per_source:
+        required: true
+        default: "9999"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ubung-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+
+      - name: Build ubung1
+        run: |
+          python tools/build_ubung.py \
+            --ia-id "${{ inputs.ia_id_1 }}" \
+            --srt-subdir "${{ inputs.srt_subdir_1 }}" \
+            --out "outputs/${{ inputs.out_dir_1 }}" \
+            --first-minutes "${{ inputs.first_minutes }}" \
+            --max-clip-seconds "${{ inputs.max_clip_seconds }}" \
+            --max-files "${{ inputs.max_files_per_source }}"
+
+      - name: Build ubung2
+        run: |
+          python tools/build_ubung.py \
+            --ia-id "${{ inputs.ia_id_2 }}" \
+            --srt-subdir "${{ inputs.srt_subdir_2 }}" \
+            --out "outputs/${{ inputs.out_dir_2 }}" \
+            --first-minutes "${{ inputs.first_minutes }}" \
+            --max-clip-seconds "${{ inputs.max_clip_seconds }}" \
+            --max-files "${{ inputs.max_files_per_source }}"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: outputs
+          path: outputs/**
+
+      - name: Commit & push outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outputs tools requirements.txt .github/workflows/build_ubung.yml || true
+          git commit -m "Build ubung clips (2 sources)" || exit 0
+          git pull --rebase || true
+          git push || true
